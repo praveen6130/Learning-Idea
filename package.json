@@ -1,0 +1,15 @@
+{
+  "name": "ai-learning-platform",
+  "version": "1.0.0",
+  "description": "AI Learning Platform: Basic-to-Advanced Roadmaps with AI Video Generation and Host Approval",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"magenta,cyan\" \"npm run server\" \"npm run client\"",
+    "start": "node server/src/server.js",
+    "server": "node server/src/server.js",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -1,0 +1,4018 @@
+{
+  "users": [
+    {
+      "id": "user-host-1",
+      "name": "Platform Host (You)",
+      "email": "host@learningidea.com",
+      "passwordHash": "$2b$10$4ei1M/26HyuewbkcQVTmveH1u6i9tjze8YhBQ7koK0tXk5OEC2zl.",
+      "role": "host",
+      "status": "approved",
+      "createdAt": "2026-10-10T02:58:29.198Z",
+      "bio": "Platform Host & Super Administrator with full approval authority.",
+      "assignedCourses": [
+        "course-sample-ai-web"
+      ],
+      "phoneNumber": "+1 555-010-0000"
+    },
+    {
+      "id": "user-admin-1",
+      "name": "Lead Instructor Elena",
+      "email": "elena.instructor@learningidea.com",
+      "passwordHash": "$2b$10$4ei1M/26HyuewbkcQVTmvevu/E3L8e9OW6VouhIZA.GyX/opDuaJ6",
+      "role": "admin",
+      "status": "approved",
+      "createdAt": "2026-10-07T02:58:29.303Z",
+      "bio": "Senior AI Curriculum Designer",
+      "assignedCourses": [
+        "course-sample-ai-web"
+      ],
+      "phoneNumber": "+1 555-010-0002"
+    },
+    {
+      "id": "user-student-1",
+      "name": "Alex Chen",
+      "email": "alex.student@learningidea.com",
+      "passwordHash": "$2b$10$4ei1M/26HyuewbkcQVTmveK8986C9cc2jRr00QF0NmOXQYCdl5mSm",
+      "role": "student",
+      "status": "approved",
+      "createdAt": "2026-10-08T02:58:29.420Z",
+      "bio": "Fullstack learner building portfolio projects",
+      "assignedCourses": [
+        "course-sample-ai-web"
+      ],
+      "phoneNumber": "+1 555-010-0003"
+    },
+    {
+      "id": "user-student-2",
+      "name": "Sarah Jenkins",
+      "email": "sarah.jenkins@learningidea.com",
+      "passwordHash": "$2b$10$4ei1M/26HyuewbkcQVTmveK8986C9cc2jRr00QF0NmOXQYCdl5mSm",
+      "role": "student",
+      "status": "pending",
+      "createdAt": "2026-10-09T22:58:29.529Z",
+      "bio": "University student hoping to learn Python & AI from basic to advanced.",
+      "assignedCourses": [],
+      "phoneNumber": "+1 555-010-0004"
+    },
+    {
+      "id": "user-admin-2",
+      "name": "Dr. Marcus Vance",
+      "email": "marcus.vance@learningidea.com",
+      "passwordHash": "$2b$10$4ei1M/26HyuewbkcQVTmvevu/E3L8e9OW6VouhIZA.GyX/opDuaJ6",
+      "role": "admin",
+      "status": "approved",
+      "createdAt": "2026-10-09T18:58:29.634Z",
+      "bio": "Applied Scientist requesting Admin instructor credentials.",
+      "assignedCourses": [],
+      "rejectedAt": "2026-10-10T03:10:33.232Z",
+      "rejectionReason": "Host declined registration access.",
+      "phoneNumber": "+1 555-010-0000",
+      "approvedAt": "2026-10-10T03:38:49.428Z",
+      "approvedBy": "Platform Host (You) (host)"
+    },
+    {
+      "id": "user-2c4ec192",
+      "name": "Praveen",
+      "email": "praveen@learningidea.com",
+      "passwordHash": "$2b$10$BIOgkt7XLfYzjWnbAKrDTOmzN6rVm.m1OP6GiIQunZmYLcFIvVsaC",
+      "role": "student",
+      "status": "approved",
+      "bio": "i want to learn something",
+      "createdAt": "2026-10-10T03:21:40.463Z",
+      "assignedCourses": [],
+      "approvedAt": "2026-10-10T03:22:19.479Z",
+      "approvedBy": "host@learningidea.com",
+      "phoneNumber": "+1 555-010-0000"
+    },
+    {
+      "id": "user-0a922c57",
+      "name": "Praveen",
+      "email": "praveen@gmail.com",
+      "passwordHash": "$2b$10$HayBwHTX3srCgFxJ/Q08t.FIdr2bG.LP7QdmqM00sWW//owKycUK6",
+      "role": "student",
+      "status": "approved",
+      "bio": "Learner interested in AI and skill development.",
+      "createdAt": "2026-10-10T03:24:28.402Z",
+      "assignedCourses": [],
+      "approvedAt": "2026-10-10T03:24:51.541Z",
+      "approvedBy": "host@learningidea.com",
+      "phoneNumber": "+1 555-010-0000"
+    },
+    {
+      "id": "user-08865500",
+      "name": "John Doe",
+      "email": "student.test.1791603466267@gmail.com",
+      "phoneNumber": "+1 555-777-8899",
+      "passwordHash": "$2b$10$W2E7d45thLpsW6rKyyxaH.yY1eYvxADhoFYDcdlutfQW0s7WOneti",
+      "role": "student",
+      "status": "pending",
+      "bio": "Excited to learn Python from basic to advanced.",
+      "createdAt": "2026-10-10T03:37:46.485Z",
+      "assignedCourses": []
+    },
+    {
+      "id": "user-1fc99ef7",
+      "name": "John Doe",
+      "email": "student.test.1791603528631@gmail.com",
+      "phoneNumber": "+1 555-777-8899",
+      "passwordHash": "$2b$10$j9jW09WcKyATrSci8sCQC.sNcyDNPqJZG6goQK66Ef3ZE9I3f3NNG",
+      "role": "student",
+      "status": "approved",
+      "bio": "Excited to learn Python from basic to advanced.",
+      "createdAt": "2026-10-10T03:38:48.838Z",
+      "assignedCourses": [],
+      "approvedAt": "2026-10-10T03:38:49.302Z",
+      "approvedBy": "Lead Instructor Elena (admin)"
+    },
+    {
+      "id": "user-5d60c8f1",
+      "name": "Praveen",
+      "email": "praveen01@gmail.com",
+      "phoneNumber": "+91 9342046130",
+      "passwordHash": "$2b$10$2.ZVAiwVitSiyuMdk.iYrOzsZqK4QlcMpMxegsBqE1V8Rpwo201CO",
+      "role": "student",
+      "status": "approved",
+      "bio": "Learner interested in AI and skill development.",
+      "createdAt": "2026-10-10T04:10:44.320Z",
+      "assignedCourses": [],
+      "approvedAt": "2026-10-10T04:11:35.120Z",
+      "approvedBy": "Platform Host (You) (host)"
+    },
+    {
+      "id": "user-7dec172b",
+      "name": "Test Student",
+      "email": "teststudent@example.com",
+      "phoneNumber": "+1 555-987-6543",
+      "passwordHash": "$2b$10$ZRdzoFfdjvapxsD5eFU1xezeG7SsxJI9.90K9TWTkK8jZUxb8a6Fq",
+      "role": "student",
+      "status": "pending",
+      "bio": "Learner interested in AI and skill development.",
+      "createdAt": "2026-10-10T15:10:24.062Z",
+      "assignedCourses": []
+    },
+    {
+      "id": "user-b6e0db78",
+      "name": "Test Student",
+      "email": "teststudent_2@example.com",
+      "phoneNumber": "+1 555-987-6543",
+      "passwordHash": "$2b$10$Rs17nFtMkh58zy7JvcYa..zDvavk2WrbLroTyhcgJqL1thN/NEns6",
+      "role": "student",
+      "status": "pending",
+      "bio": "Learner interested in AI and skill development.",
+      "createdAt": "2026-10-10T15:11:04.345Z",
+      "assignedCourses": []
+    },
+    {
+      "id": "user-ce3708b6",
+      "name": "Candidate Admin",
+      "email": "candidate.admin@example.com",
+      "phoneNumber": "+1 555-111-2222",
+      "passwordHash": "$2b$10$9vZU3cKk92kqdz5lbYCzu.DTBJqQ5KMu39a1CTJ27QWuMCCbkbyea",
+      "role": "student",
+      "status": "approved",
+      "bio": "Learner interested in AI and skill development.",
+      "createdAt": "2026-10-10T15:11:04.853Z",
+      "assignedCourses": [],
+      "approvedAt": "2026-10-10T15:11:04.862Z",
+      "approvedBy": "Platform Host (You) (host)"
+    },
+    {
+      "id": "user-a67694e1",
+      "name": "Praveen",
+      "email": "praveen02@gmail.com",
+      "phoneNumber": "+91 9999999999",
+      "passwordHash": "$2b$10$p9gwTIuAiYFPHGGulbhFlOwkVCKHoRbvYnfKY3Jwr2n6/.DrmOk4e",
+      "role": "student",
+      "status": "approved",
+      "bio": "Learner interested in AI and skill development.",
+      "createdAt": "2026-10-10T15:13:25.461Z",
+      "assignedCourses": [],
+      "approvedAt": "2026-10-10T15:14:47.679Z",
+      "approvedBy": "Platform Host (You) (host)"
+    }
+  ],
+  "courses": [
+    {
+      "id": "course-1791645310558",
+      "title": "Python (Basic to Advanced Masterclass)",
+      "topic": "Python",
+      "targetGoal": "Comprehensive Mastery (Basic to Advanced)",
+      "level": "Comprehensive (Basic to Advanced)",
+      "duration": "24 Hours • 5 Mastery Levels",
+      "createdAt": "2026-10-10T15:15:10.558Z",
+      "description": "A master-level structured curriculum designed to guide any learner from basic fundamentals to expert-level mastery of Python using AI-generated visual videos, sub-topic drills, and real-world projects.",
+      "levels": [
+        {
+          "levelNumber": 1,
+          "levelTitle": "Stage 1: Basic Foundations (From Starting to Ending of Basics)",
+          "description": "Complete zero-to-hero basics of Python. Covering every foundational topic from initial setup, mental models, and terminology to writing your first real project.",
+          "badge": "Basic Track (Start to End)",
+          "trackCategory": "basic",
+          "modules": [
+            {
+              "id": "mod-1791645310558-1",
+              "title": "Starting Point: What is Python & Environment Setup",
+              "estimatedTime": "2.5 Hours",
+              "subTopicsSummary": [
+                "1.1 Core Definition",
+                "1.2 First Principles",
+                "1.3 Tooling Installation",
+                "1.4 First Run"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791645310558-1-1",
+                  "title": "Absolute Starting Point: What is Python? Core Mental Model",
+                  "duration": "12 min",
+                  "summary": "Understand what Python is, why it matters, and the core intuition behind how it works without confusing jargon.",
+                  "visualType": "concept_blueprint",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "First Principles",
+                    "Visual Mental Model",
+                    "Core Intuition",
+                    "Foundational Glossary"
+                  ],
+                  "subTopics": [
+                    "Origin and why it was created",
+                    "Real-world beginner analogy & mental model",
+                    "Core terminology every beginner must know",
+                    "What you can build once you finish this basic stage"
+                  ]
+                },
+                {
+                  "id": "les-1791645310558-1-2",
+                  "title": "Workspace & Tooling: Setting Up Python from Scratch",
+                  "duration": "15 min",
+                  "summary": "Step-by-step setup walkthrough to get your development environment ready, write your first script, and run it.",
+                  "visualType": "code_walkthrough",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "Workspace Setup",
+                    "CLI & Terminal",
+                    "First Execution",
+                    "Troubleshooting"
+                  ],
+                  "subTopics": [
+                    "Prerequisites and installation checklist",
+                    "Configuring your editor and extensions",
+                    "Running your very first Hello World execution",
+                    "Verifying installation and fixing common setup errors"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mod-1791645310558-2",
+              "title": "Building Blocks: Variables, Data Types & Expressions",
+              "estimatedTime": "3 Hours",
+              "subTopicsSummary": [
+                "2.1 Data Storage",
+                "2.2 Type Systems",
+                "2.3 Operations & Math",
+                "2.4 String Mechanics"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791645310558-2-1",
+                  "title": "Memory, Variables & Primitive Data Types in Python",
+                  "duration": "16 min",
+                  "summary": "Learn how variables hold values in memory, different data representations, and how to manipulate values safely.",
+                  "visualType": "code_walkthrough",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "Variables",
+                    "Primitive Types",
+                    "Memory Storage",
+                    "Immutability"
+                  ],
+                  "subTopics": [
+                    "Declaring variables and naming conventions",
+                    "Numbers, text strings, booleans, and null values",
+                    "The storage container analogy in memory",
+                    "Common beginner traps when assigning data"
+                  ]
+                },
+                {
+                  "id": "les-1791645310558-2-2",
+                  "title": "Logic & Decision Making: Conditionals and Branching",
+                  "duration": "18 min",
+                  "summary": "Control how your program behaves based on rules, if-else statements, and boolean truth tables.",
+                  "visualType": "algorithm_flowchart",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "If-Else Branching",
+                    "Boolean Algebra",
+                    "Comparison Operators",
+                    "Truthiness"
+                  ],
+                  "subTopics": [
+                    "Comparison operators (equals, greater, lesser)",
+                    "Combining conditions with AND / OR logic",
+                    "Writing clean if, else-if, and else decision trees",
+                    "Avoiding nested conditional spaghetti code"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mod-1791645310558-3",
+              "title": "Ending the Basics: Loops, Functions & First Mini-Project",
+              "estimatedTime": "3.5 Hours",
+              "subTopicsSummary": [
+                "3.1 Loops & Iteration",
+                "3.2 Modular Functions",
+                "3.3 Scope Rules",
+                "3.4 Basic Capstone"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791645310558-3-1",
+                  "title": "Repetition & Automation: Loops, Iteration & Collections",
+                  "duration": "18 min",
+                  "summary": "Harness computational power by repeating tasks automatically without writing duplicate code.",
+                  "visualType": "algorithm_flowchart",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "For Loops",
+                    "While Loops",
+                    "Array Iteration",
+                    "Break & Continue"
+                  ],
+                  "subTopics": [
+                    "The mechanics of counting and repeating",
+                    "Iterating through lists and collections",
+                    "Preventing dangerous infinite loops",
+                    "Practical exercises in repetitive data transformation"
+                  ]
+                },
+                {
+                  "id": "les-1791645310558-3-2",
+                  "title": "Ending the Basics Capstone: Modular Functions & First Real Project",
+                  "duration": "22 min",
+                  "summary": "Bring all basic knowledge together to build your first functioning, complete application from start to finish.",
+                  "visualType": "code_walkthrough",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "Function Anatomy",
+                    "Parameter Passing",
+                    "Return Values",
+                    "Basic Capstone"
+                  ],
+                  "subTopics": [
+                    "Packaging logic into clean, reusable functions",
+                    "Understanding local vs global variable scope",
+                    "Step-by-step assembly of the Basic mini-project",
+                    "Congratulations & graduation from the Basic Track"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 2,
+          "levelTitle": "Stage 2: Main Body - Core Architecture & Implementation",
+          "description": "Transitioning into the main body of Python. Master core implementation patterns, state lifecycles, and component architecture.",
+          "badge": "Main Body Track (Core Implementation)",
+          "trackCategory": "main_body",
+          "modules": [
+            {
+              "id": "mod-1791645310558-4",
+              "title": "Main Body Mechanisms & Architectural Patterns",
+              "estimatedTime": "4 Hours",
+              "subTopicsSummary": [
+                "4.1 Data Lifecycles",
+                "4.2 Modularity",
+                "4.3 Error Resilience",
+                "4.4 State Sync"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791645310558-4-1",
+                  "title": "Core Architectural Patterns & Structural Conventions",
+                  "duration": "20 min",
+                  "summary": "Master the main structural patterns used by professional engineers to build scalable codebases.",
+                  "visualType": "architecture_diagram",
+                  "trackCategory": "main_body",
+                  "keyConcepts": [
+                    "Separation of Concerns",
+                    "Clean Architecture",
+                    "Encapsulation",
+                    "Design Patterns"
+                  ],
+                  "subTopics": [
+                    "Monolithic vs modular code organization",
+                    "Encapsulating logic into isolated services",
+                    "Dependency management and clean imports",
+                    "Design patterns: Factory, Singleton, and Observer"
+                  ]
+                },
+                {
+                  "id": "les-1791645310558-4-2",
+                  "title": "Asynchronous Pipelines & External Service Integrations",
+                  "duration": "22 min",
+                  "summary": "Handle asynchronous data fetching, web APIs, event listeners, and background processing.",
+                  "visualType": "code_walkthrough",
+                  "trackCategory": "main_body",
+                  "keyConcepts": [
+                    "Async Workflows",
+                    "Promise Lifecycles",
+                    "API Consumption",
+                    "Error Boundaries"
+                  ],
+                  "subTopics": [
+                    "Understanding the asynchronous event loop",
+                    "Making robust API requests with timeout fallbacks",
+                    "Graceful error handling and retry mechanisms",
+                    "Real-time streaming and websocket basics"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 3,
+          "levelTitle": "Stage 3: Main Body - Full System Integration & State Management",
+          "description": "The heart of Python. Connect frontend interfaces, backend datastores, and complex synchronized state pipelines.",
+          "badge": "Main Body Track (Full Integration)",
+          "trackCategory": "main_body",
+          "modules": [
+            {
+              "id": "mod-1791645310558-5",
+              "title": "Advanced State Lifecycles & Relational Data Engineering",
+              "estimatedTime": "4.5 Hours",
+              "subTopicsSummary": [
+                "5.1 State Trees",
+                "5.2 Persistence",
+                "5.3 Caching Layers",
+                "5.4 Security Guards"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791645310558-5-1",
+                  "title": "Global State Management & Unidirectional Data Flow",
+                  "duration": "24 min",
+                  "summary": "Build predictable, debuggable state architectures that eliminate race conditions across your system.",
+                  "visualType": "algorithm_flowchart",
+                  "trackCategory": "main_body",
+                  "keyConcepts": [
+                    "Unidirectional Flow",
+                    "Immutability",
+                    "State Machines",
+                    "Action Pipelines"
+                  ],
+                  "subTopics": [
+                    "The dangers of two-way state drift",
+                    "Designing predictable state reducers and stores",
+                    "Optimistic UI updates with rollback protection",
+                    "Profiling state re-renders and memory footprints"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 4,
+          "levelTitle": "Stage 4: Master Level - High Scale, Internals & Zero-Trust Security",
+          "description": "Enter the elite Master tier. Dive under the hood into compiler and runtime internals, micro-optimizations, and enterprise security.",
+          "badge": "Master Track (Deep Internals)",
+          "trackCategory": "master",
+          "modules": [
+            {
+              "id": "mod-1791645310558-6",
+              "title": "Engine Internals, Memory Profiling & High Concurrency",
+              "estimatedTime": "5 Hours",
+              "subTopicsSummary": [
+                "6.1 Runtime Engine",
+                "6.2 Garbage Collection",
+                "6.3 Concurrency",
+                "6.4 Zero-Trust"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791645310558-6-1",
+                  "title": "Under the Hood: Engine Internals & Micro-Benchmark Optimization",
+                  "duration": "26 min",
+                  "summary": "Uncover the low-level virtual machine, memory allocation, and profiling techniques to achieve 10x throughput.",
+                  "visualType": "architecture_diagram",
+                  "trackCategory": "master",
+                  "keyConcepts": [
+                    "Engine Internals",
+                    "Garbage Collection Tuning",
+                    "Flame Graphs",
+                    "Throughput Optimization"
+                  ],
+                  "subTopics": [
+                    "How the underlying runtime compiles and executes your code",
+                    "Diagnosing memory leaks with heap snapshots and flame graphs",
+                    "Lock-free algorithms and parallel worker threads",
+                    "Benchmarking latency at the 99th percentile (p99)"
+                  ]
+                },
+                {
+                  "id": "les-1791645310558-6-2",
+                  "title": "Zero-Trust Security, Vulnerability Defense & Cryptographic Hardening",
+                  "duration": "25 min",
+                  "summary": "Protect production systems against injection exploits, token hijacking, and unauthorized privilege escalation.",
+                  "visualType": "security_matrix",
+                  "trackCategory": "master",
+                  "keyConcepts": [
+                    "Zero Trust",
+                    "Cryptographic Signatures",
+                    "Input Sanitization",
+                    "Pen-Testing"
+                  ],
+                  "subTopics": [
+                    "Threat modeling and common vulnerability vectors (OWASP)",
+                    "Cryptographic token generation and tamper-proof signatures",
+                    "Rate limiting, DDOS mitigation, and IP filtering",
+                    "Automated security scanning in CI/CD pipelines"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 5,
+          "levelTitle": "Stage 5: Master Level - Production Deployment & Grand Capstone",
+          "description": "The ultimate capstone. Deploy a portfolio-grade, enterprise-scale production project with global edge caching, CI/CD, and live telemetry.",
+          "badge": "Master Track (Production Capstone)",
+          "trackCategory": "master",
+          "modules": [
+            {
+              "id": "mod-1791645310558-7",
+              "title": "Enterprise Production Capstone & Global Deployment",
+              "estimatedTime": "5.5 Hours",
+              "subTopicsSummary": [
+                "7.1 Docker Containers",
+                "7.2 CI/CD Automation",
+                "7.3 Live Observability",
+                "7.4 Grand Showcase"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791645310558-7-1",
+                  "title": "Architecting the Flagship Master Capstone in Python",
+                  "duration": "28 min",
+                  "summary": "Architect and construct an autonomous, real-world flagship project demonstrating complete mastery from basic to expert.",
+                  "visualType": "architecture_diagram",
+                  "trackCategory": "master",
+                  "keyConcepts": [
+                    "System Design Blueprint",
+                    "Microservices",
+                    "Resilient DB Clustering",
+                    "Master Capstone"
+                  ],
+                  "subTopics": [
+                    "Writing a production System Architecture Document",
+                    "Multi-tier service decoupling and containerization",
+                    "Automated testing suites: Unit, Integration & E2E",
+                    "Deploying to scalable cloud infrastructure with zero downtime"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "createdBy": "user-a67694e1"
+    },
+    {
+      "id": "course-1791645064692",
+      "title": "React.js and Modern Web Development (Basic to Advanced Masterclass)",
+      "topic": "React.js and Modern Web Development",
+      "targetGoal": "Mastery from Basic to Advanced",
+      "level": "Comprehensive (Basic to Advanced)",
+      "duration": "24 Hours • 5 Mastery Levels",
+      "createdAt": "2026-10-10T15:11:04.692Z",
+      "description": "A master-level structured curriculum designed to guide any learner from basic fundamentals to expert-level mastery of React.js and Modern Web Development using AI-generated visual videos, sub-topic drills, and real-world projects.",
+      "levels": [
+        {
+          "levelNumber": 1,
+          "levelTitle": "Stage 1: Basic Foundations (From Starting to Ending of Basics)",
+          "description": "Complete zero-to-hero basics of React.js and Modern Web Development. Covering every foundational topic from initial setup, mental models, and terminology to writing your first real project.",
+          "badge": "Basic Track (Start to End)",
+          "trackCategory": "basic",
+          "modules": [
+            {
+              "id": "mod-1791645064692-1",
+              "title": "Starting Point: What is React.js and Modern Web Development & Environment Setup",
+              "estimatedTime": "2.5 Hours",
+              "subTopicsSummary": [
+                "1.1 Core Definition",
+                "1.2 First Principles",
+                "1.3 Tooling Installation",
+                "1.4 First Run"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791645064692-1-1",
+                  "title": "Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model",
+                  "duration": "12 min",
+                  "summary": "Understand what React.js and Modern Web Development is, why it matters, and the core intuition behind how it works without confusing jargon.",
+                  "visualType": "concept_blueprint",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "First Principles",
+                    "Visual Mental Model",
+                    "Core Intuition",
+                    "Foundational Glossary"
+                  ],
+                  "subTopics": [
+                    "Origin and why it was created",
+                    "Real-world beginner analogy & mental model",
+                    "Core terminology every beginner must know",
+                    "What you can build once you finish this basic stage"
+                  ]
+                },
+                {
+                  "id": "les-1791645064692-1-2",
+                  "title": "Workspace & Tooling: Setting Up React.js and Modern Web Development from Scratch",
+                  "duration": "15 min",
+                  "summary": "Step-by-step setup walkthrough to get your development environment ready, write your first script, and run it.",
+                  "visualType": "code_walkthrough",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "Workspace Setup",
+                    "CLI & Terminal",
+                    "First Execution",
+                    "Troubleshooting"
+                  ],
+                  "subTopics": [
+                    "Prerequisites and installation checklist",
+                    "Configuring your editor and extensions",
+                    "Running your very first Hello World execution",
+                    "Verifying installation and fixing common setup errors"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mod-1791645064692-2",
+              "title": "Building Blocks: Variables, Data Types & Expressions",
+              "estimatedTime": "3 Hours",
+              "subTopicsSummary": [
+                "2.1 Data Storage",
+                "2.2 Type Systems",
+                "2.3 Operations & Math",
+                "2.4 String Mechanics"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791645064692-2-1",
+                  "title": "Memory, Variables & Primitive Data Types in React.js and Modern Web Development",
+                  "duration": "16 min",
+                  "summary": "Learn how variables hold values in memory, different data representations, and how to manipulate values safely.",
+                  "visualType": "code_walkthrough",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "Variables",
+                    "Primitive Types",
+                    "Memory Storage",
+                    "Immutability"
+                  ],
+                  "subTopics": [
+                    "Declaring variables and naming conventions",
+                    "Numbers, text strings, booleans, and null values",
+                    "The storage container analogy in memory",
+                    "Common beginner traps when assigning data"
+                  ]
+                },
+                {
+                  "id": "les-1791645064692-2-2",
+                  "title": "Logic & Decision Making: Conditionals and Branching",
+                  "duration": "18 min",
+                  "summary": "Control how your program behaves based on rules, if-else statements, and boolean truth tables.",
+                  "visualType": "algorithm_flowchart",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "If-Else Branching",
+                    "Boolean Algebra",
+                    "Comparison Operators",
+                    "Truthiness"
+                  ],
+                  "subTopics": [
+                    "Comparison operators (equals, greater, lesser)",
+                    "Combining conditions with AND / OR logic",
+                    "Writing clean if, else-if, and else decision trees",
+                    "Avoiding nested conditional spaghetti code"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mod-1791645064692-3",
+              "title": "Ending the Basics: Loops, Functions & First Mini-Project",
+              "estimatedTime": "3.5 Hours",
+              "subTopicsSummary": [
+                "3.1 Loops & Iteration",
+                "3.2 Modular Functions",
+                "3.3 Scope Rules",
+                "3.4 Basic Capstone"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791645064692-3-1",
+                  "title": "Repetition & Automation: Loops, Iteration & Collections",
+                  "duration": "18 min",
+                  "summary": "Harness computational power by repeating tasks automatically without writing duplicate code.",
+                  "visualType": "algorithm_flowchart",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "For Loops",
+                    "While Loops",
+                    "Array Iteration",
+                    "Break & Continue"
+                  ],
+                  "subTopics": [
+                    "The mechanics of counting and repeating",
+                    "Iterating through lists and collections",
+                    "Preventing dangerous infinite loops",
+                    "Practical exercises in repetitive data transformation"
+                  ]
+                },
+                {
+                  "id": "les-1791645064692-3-2",
+                  "title": "Ending the Basics Capstone: Modular Functions & First Real Project",
+                  "duration": "22 min",
+                  "summary": "Bring all basic knowledge together to build your first functioning, complete application from start to finish.",
+                  "visualType": "code_walkthrough",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "Function Anatomy",
+                    "Parameter Passing",
+                    "Return Values",
+                    "Basic Capstone"
+                  ],
+                  "subTopics": [
+                    "Packaging logic into clean, reusable functions",
+                    "Understanding local vs global variable scope",
+                    "Step-by-step assembly of the Basic mini-project",
+                    "Congratulations & graduation from the Basic Track"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 2,
+          "levelTitle": "Stage 2: Main Body - Core Architecture & Implementation",
+          "description": "Transitioning into the main body of React.js and Modern Web Development. Master core implementation patterns, state lifecycles, and component architecture.",
+          "badge": "Main Body Track (Core Implementation)",
+          "trackCategory": "main_body",
+          "modules": [
+            {
+              "id": "mod-1791645064692-4",
+              "title": "Main Body Mechanisms & Architectural Patterns",
+              "estimatedTime": "4 Hours",
+              "subTopicsSummary": [
+                "4.1 Data Lifecycles",
+                "4.2 Modularity",
+                "4.3 Error Resilience",
+                "4.4 State Sync"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791645064692-4-1",
+                  "title": "Core Architectural Patterns & Structural Conventions",
+                  "duration": "20 min",
+                  "summary": "Master the main structural patterns used by professional engineers to build scalable codebases.",
+                  "visualType": "architecture_diagram",
+                  "trackCategory": "main_body",
+                  "keyConcepts": [
+                    "Separation of Concerns",
+                    "Clean Architecture",
+                    "Encapsulation",
+                    "Design Patterns"
+                  ],
+                  "subTopics": [
+                    "Monolithic vs modular code organization",
+                    "Encapsulating logic into isolated services",
+                    "Dependency management and clean imports",
+                    "Design patterns: Factory, Singleton, and Observer"
+                  ]
+                },
+                {
+                  "id": "les-1791645064692-4-2",
+                  "title": "Asynchronous Pipelines & External Service Integrations",
+                  "duration": "22 min",
+                  "summary": "Handle asynchronous data fetching, web APIs, event listeners, and background processing.",
+                  "visualType": "code_walkthrough",
+                  "trackCategory": "main_body",
+                  "keyConcepts": [
+                    "Async Workflows",
+                    "Promise Lifecycles",
+                    "API Consumption",
+                    "Error Boundaries"
+                  ],
+                  "subTopics": [
+                    "Understanding the asynchronous event loop",
+                    "Making robust API requests with timeout fallbacks",
+                    "Graceful error handling and retry mechanisms",
+                    "Real-time streaming and websocket basics"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 3,
+          "levelTitle": "Stage 3: Main Body - Full System Integration & State Management",
+          "description": "The heart of React.js and Modern Web Development. Connect frontend interfaces, backend datastores, and complex synchronized state pipelines.",
+          "badge": "Main Body Track (Full Integration)",
+          "trackCategory": "main_body",
+          "modules": [
+            {
+              "id": "mod-1791645064692-5",
+              "title": "Advanced State Lifecycles & Relational Data Engineering",
+              "estimatedTime": "4.5 Hours",
+              "subTopicsSummary": [
+                "5.1 State Trees",
+                "5.2 Persistence",
+                "5.3 Caching Layers",
+                "5.4 Security Guards"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791645064692-5-1",
+                  "title": "Global State Management & Unidirectional Data Flow",
+                  "duration": "24 min",
+                  "summary": "Build predictable, debuggable state architectures that eliminate race conditions across your system.",
+                  "visualType": "algorithm_flowchart",
+                  "trackCategory": "main_body",
+                  "keyConcepts": [
+                    "Unidirectional Flow",
+                    "Immutability",
+                    "State Machines",
+                    "Action Pipelines"
+                  ],
+                  "subTopics": [
+                    "The dangers of two-way state drift",
+                    "Designing predictable state reducers and stores",
+                    "Optimistic UI updates with rollback protection",
+                    "Profiling state re-renders and memory footprints"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 4,
+          "levelTitle": "Stage 4: Master Level - High Scale, Internals & Zero-Trust Security",
+          "description": "Enter the elite Master tier. Dive under the hood into compiler and runtime internals, micro-optimizations, and enterprise security.",
+          "badge": "Master Track (Deep Internals)",
+          "trackCategory": "master",
+          "modules": [
+            {
+              "id": "mod-1791645064692-6",
+              "title": "Engine Internals, Memory Profiling & High Concurrency",
+              "estimatedTime": "5 Hours",
+              "subTopicsSummary": [
+                "6.1 Runtime Engine",
+                "6.2 Garbage Collection",
+                "6.3 Concurrency",
+                "6.4 Zero-Trust"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791645064692-6-1",
+                  "title": "Under the Hood: Engine Internals & Micro-Benchmark Optimization",
+                  "duration": "26 min",
+                  "summary": "Uncover the low-level virtual machine, memory allocation, and profiling techniques to achieve 10x throughput.",
+                  "visualType": "architecture_diagram",
+                  "trackCategory": "master",
+                  "keyConcepts": [
+                    "Engine Internals",
+                    "Garbage Collection Tuning",
+                    "Flame Graphs",
+                    "Throughput Optimization"
+                  ],
+                  "subTopics": [
+                    "How the underlying runtime compiles and executes your code",
+                    "Diagnosing memory leaks with heap snapshots and flame graphs",
+                    "Lock-free algorithms and parallel worker threads",
+                    "Benchmarking latency at the 99th percentile (p99)"
+                  ]
+                },
+                {
+                  "id": "les-1791645064692-6-2",
+                  "title": "Zero-Trust Security, Vulnerability Defense & Cryptographic Hardening",
+                  "duration": "25 min",
+                  "summary": "Protect production systems against injection exploits, token hijacking, and unauthorized privilege escalation.",
+                  "visualType": "security_matrix",
+                  "trackCategory": "master",
+                  "keyConcepts": [
+                    "Zero Trust",
+                    "Cryptographic Signatures",
+                    "Input Sanitization",
+                    "Pen-Testing"
+                  ],
+                  "subTopics": [
+                    "Threat modeling and common vulnerability vectors (OWASP)",
+                    "Cryptographic token generation and tamper-proof signatures",
+                    "Rate limiting, DDOS mitigation, and IP filtering",
+                    "Automated security scanning in CI/CD pipelines"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 5,
+          "levelTitle": "Stage 5: Master Level - Production Deployment & Grand Capstone",
+          "description": "The ultimate capstone. Deploy a portfolio-grade, enterprise-scale production project with global edge caching, CI/CD, and live telemetry.",
+          "badge": "Master Track (Production Capstone)",
+          "trackCategory": "master",
+          "modules": [
+            {
+              "id": "mod-1791645064692-7",
+              "title": "Enterprise Production Capstone & Global Deployment",
+              "estimatedTime": "5.5 Hours",
+              "subTopicsSummary": [
+                "7.1 Docker Containers",
+                "7.2 CI/CD Automation",
+                "7.3 Live Observability",
+                "7.4 Grand Showcase"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791645064692-7-1",
+                  "title": "Architecting the Flagship Master Capstone in React.js and Modern Web Development",
+                  "duration": "28 min",
+                  "summary": "Architect and construct an autonomous, real-world flagship project demonstrating complete mastery from basic to expert.",
+                  "visualType": "architecture_diagram",
+                  "trackCategory": "master",
+                  "keyConcepts": [
+                    "System Design Blueprint",
+                    "Microservices",
+                    "Resilient DB Clustering",
+                    "Master Capstone"
+                  ],
+                  "subTopics": [
+                    "Writing a production System Architecture Document",
+                    "Multi-tier service decoupling and containerization",
+                    "Automated testing suites: Unit, Integration & E2E",
+                    "Deploying to scalable cloud infrastructure with zero downtime"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "createdBy": "user-host-1"
+    },
+    {
+      "id": "course-1791605518669",
+      "title": "Cybersecurity & Ethical Hacking (Basic to Advanced Masterclass)",
+      "topic": "Cybersecurity & Ethical Hacking",
+      "targetGoal": "Career Transition & Portfolio Projects",
+      "level": "Comprehensive (Basic to Advanced)",
+      "duration": "19 Hours • 5 Progressive Levels",
+      "createdAt": "2026-10-10T04:11:58.669Z",
+      "description": "A master-level structured curriculum designed to guide any learner from basic fundamentals to expert-level mastery of Cybersecurity & Ethical Hacking using AI-generated visual videos and real-world projects.",
+      "levels": [
+        {
+          "levelNumber": 1,
+          "levelTitle": "Stage 1: Networking & OS Internals (Basic)",
+          "description": "Understand the absolute fundamentals of Cybersecurity & Ethical Hacking. Covering OSI model, TCP/UDP, Linux administration, and bash scripting.",
+          "badge": "Security Foundations",
+          "modules": [
+            {
+              "id": "mod-1791605518669-1",
+              "title": "Introductory Frameworks of Cybersecurity & Ethical Hacking",
+              "estimatedTime": "2 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791605518669-1-1",
+                  "title": "What is Cybersecurity & Ethical Hacking? Core Principles Explained Simply",
+                  "duration": "10 min",
+                  "summary": "Demystify the foundational concepts of Cybersecurity & Ethical Hacking without jargon, highlighting real-world importance and applications.",
+                  "visualType": "concept_blueprint",
+                  "keyConcepts": [
+                    "Foundational Concepts",
+                    "First Principles",
+                    "Mental Model",
+                    "Terminologies"
+                  ]
+                },
+                {
+                  "id": "les-1791605518669-1-2",
+                  "title": "Environment Setup, Key Tooling & First Hands-on Steps",
+                  "duration": "14 min",
+                  "summary": "Get completely set up with the modern tools and run your first foundational project in Cybersecurity & Ethical Hacking.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Workspace Setup",
+                    "Tooling",
+                    "First Execution",
+                    "Troubleshooting"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 2,
+          "levelTitle": "Stage 2: Containerization & Infrastructure Core",
+          "description": "Transition from beginner to confident practitioner. Delving into Docker containers, virtual machines, IAM policies, and basic firewall rules.",
+          "badge": "Infrastructure Core",
+          "modules": [
+            {
+              "id": "mod-1791605518669-2",
+              "title": "Core Mechanisms & Essential Patterns",
+              "estimatedTime": "3.5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791605518669-2-1",
+                  "title": "The Critical Mechanics of Cybersecurity & Ethical Hacking",
+                  "duration": "16 min",
+                  "summary": "Deep dive into the operational mechanics, data flow, and standard paradigms used by professionals.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "Data Flow",
+                    "Standard Conventions",
+                    "Common Paradigms",
+                    "Component Building"
+                  ]
+                },
+                {
+                  "id": "les-1791605518669-2-2",
+                  "title": "Error Handling, Debugging & Practical Exercises",
+                  "duration": "18 min",
+                  "summary": "Learn how to diagnose errors, trace anomalies, and write resilient logic in Cybersecurity & Ethical Hacking.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Debugging Strategies",
+                    "Error Mitigation",
+                    "Testing Basics",
+                    "Best Practices"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 3,
+          "levelTitle": "Stage 3: Cloud Orchestration & Threat Analysis",
+          "description": "Intermediate deep dive into complex dynamics. Focus on Kubernetes cluster management, VPC peering, and vulnerability scanning.",
+          "badge": "Cloud Specialist",
+          "modules": [
+            {
+              "id": "mod-1791605518669-3",
+              "title": "Intermediate Architectures & Performance Optimization",
+              "estimatedTime": "4 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791605518669-3-1",
+                  "title": "Advanced Data Structures & Asynchronous Workflows in Cybersecurity & Ethical Hacking",
+                  "duration": "20 min",
+                  "summary": "Handling high-concurrency, asynchronous data streams, and managing complex state.",
+                  "visualType": "algorithm_flowchart",
+                  "keyConcepts": [
+                    "Async Lifecycles",
+                    "State Sync",
+                    "Performance Profiling",
+                    "Efficiency"
+                  ]
+                },
+                {
+                  "id": "les-1791605518669-3-2",
+                  "title": "Modular Architecture & Reusability Systems",
+                  "duration": "18 min",
+                  "summary": "Structuring medium-to-large scale projects into decoupled, maintainable building blocks.",
+                  "visualType": "concept_blueprint",
+                  "keyConcepts": [
+                    "Decoupled Design",
+                    "SOLID / Modular Rules",
+                    "Clean Code",
+                    "API Design"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 4,
+          "levelTitle": "Stage 4: Zero Trust & Advanced Offensive/Defensive Protocols",
+          "description": "Advanced mastery level. Exploring cryptographic handshakes, SIEM monitoring, pen-testing, and automated intrusion defense.",
+          "badge": "Advanced Defender",
+          "modules": [
+            {
+              "id": "mod-1791605518669-4",
+              "title": "Elite Engineering, Scalability & Hardening",
+              "estimatedTime": "4.5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791605518669-4-1",
+                  "title": "System Internals & High-Throughput Optimization",
+                  "duration": "22 min",
+                  "summary": "Uncover the underlying engine internals, memory models, and micro-optimizations for peak performance.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "Engine Internals",
+                    "Memory Management",
+                    "Bottleneck Elimination",
+                    "Profiling Tools"
+                  ]
+                },
+                {
+                  "id": "les-1791605518669-4-2",
+                  "title": "Security Auditing, Resilience & Edge-Case Guardrails",
+                  "duration": "19 min",
+                  "summary": "Harden your Cybersecurity & Ethical Hacking systems against vulnerabilities, race conditions, and unauthorized exploits.",
+                  "visualType": "security_matrix",
+                  "keyConcepts": [
+                    "Attack Vectors",
+                    "Defensive Guardrails",
+                    "Zero-Trust Verification",
+                    "Fault Tolerance"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 5,
+          "levelTitle": "Stage 5: Enterprise Disaster Recovery & Global Defense Capstone",
+          "description": "Capstone excellence and expert synthesis. Focus on multi-region failover, compliance auditing, and resilient architecture.",
+          "badge": "Enterprise Master",
+          "modules": [
+            {
+              "id": "mod-1791605518669-5",
+              "title": "End-to-End Capstone Project & Production Release",
+              "estimatedTime": "5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791605518669-5-1",
+                  "title": "Capstone Architecture: Planning the Flagship Cybersecurity & Ethical Hacking Project",
+                  "duration": "25 min",
+                  "summary": "Design and architect a portfolio-grade, enterprise-scale capstone project incorporating all previous stages.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "System Design Document",
+                    "Spec Definition",
+                    "Milestone Planning",
+                    "Production Architecture"
+                  ]
+                },
+                {
+                  "id": "les-1791605518669-5-2",
+                  "title": "Production Deployment, CI/CD, Telemetry & Launch",
+                  "duration": "24 min",
+                  "summary": "Deploy your project to global infrastructure with automated testing, live telemetry, and user analytics.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Automated CI/CD",
+                    "Live Monitoring",
+                    "Observability",
+                    "Public Showcase"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "createdBy": "user-5d60c8f1"
+    },
+    {
+      "id": "course-1791603696141",
+      "title": "3D Game Design & Blender (Basic to Advanced Masterclass)",
+      "topic": "3D Game Design & Blender",
+      "targetGoal": "Comprehensive Mastery (Basic to Advanced)",
+      "level": "Comprehensive (Basic to Advanced)",
+      "duration": "19 Hours • 5 Progressive Levels",
+      "createdAt": "2026-10-10T03:41:36.141Z",
+      "description": "A master-level structured curriculum designed to guide any learner from basic fundamentals to expert-level mastery of 3D Game Design & Blender using AI-generated visual videos and real-world projects.",
+      "levels": [
+        {
+          "levelNumber": 1,
+          "levelTitle": "Stage 1: Visual Hierarchy & Fundamental Principles",
+          "description": "Understand the absolute fundamentals of 3D Game Design & Blender. Covering color theory, typography, negative space, and composition.",
+          "badge": "Design Fundamentals",
+          "modules": [
+            {
+              "id": "mod-1791603696141-1",
+              "title": "Introductory Frameworks of 3D Game Design & Blender",
+              "estimatedTime": "2 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791603696141-1-1",
+                  "title": "What is 3D Game Design & Blender? Core Principles Explained Simply",
+                  "duration": "10 min",
+                  "summary": "Demystify the foundational concepts of 3D Game Design & Blender without jargon, highlighting real-world importance and applications.",
+                  "visualType": "concept_blueprint",
+                  "keyConcepts": [
+                    "Foundational Concepts",
+                    "First Principles",
+                    "Mental Model",
+                    "Terminologies"
+                  ]
+                },
+                {
+                  "id": "les-1791603696141-1-2",
+                  "title": "Environment Setup, Key Tooling & First Hands-on Steps",
+                  "duration": "14 min",
+                  "summary": "Get completely set up with the modern tools and run your first foundational project in 3D Game Design & Blender.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Workspace Setup",
+                    "Tooling",
+                    "First Execution",
+                    "Troubleshooting"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 2,
+          "levelTitle": "Stage 2: Core Tooling & Component Systems",
+          "description": "Transition from beginner to confident practitioner. Delving into vector tools, atomic design principles, and responsive layout grids.",
+          "badge": "Visual Designer",
+          "modules": [
+            {
+              "id": "mod-1791603696141-2",
+              "title": "Core Mechanisms & Essential Patterns",
+              "estimatedTime": "3.5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791603696141-2-1",
+                  "title": "The Critical Mechanics of 3D Game Design & Blender",
+                  "duration": "16 min",
+                  "summary": "Deep dive into the operational mechanics, data flow, and standard paradigms used by professionals.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "Data Flow",
+                    "Standard Conventions",
+                    "Common Paradigms",
+                    "Component Building"
+                  ]
+                },
+                {
+                  "id": "les-1791603696141-2-2",
+                  "title": "Error Handling, Debugging & Practical Exercises",
+                  "duration": "18 min",
+                  "summary": "Learn how to diagnose errors, trace anomalies, and write resilient logic in 3D Game Design & Blender.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Debugging Strategies",
+                    "Error Mitigation",
+                    "Testing Basics",
+                    "Best Practices"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 3,
+          "levelTitle": "Stage 3: Interactive Prototyping & Motion Design",
+          "description": "Intermediate deep dive into complex dynamics. Focus on micro-interactions, user flow transitions, and usability testing.",
+          "badge": "Interaction Craftsman",
+          "modules": [
+            {
+              "id": "mod-1791603696141-3",
+              "title": "Intermediate Architectures & Performance Optimization",
+              "estimatedTime": "4 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791603696141-3-1",
+                  "title": "Advanced Data Structures & Asynchronous Workflows in 3D Game Design & Blender",
+                  "duration": "20 min",
+                  "summary": "Handling high-concurrency, asynchronous data streams, and managing complex state.",
+                  "visualType": "algorithm_flowchart",
+                  "keyConcepts": [
+                    "Async Lifecycles",
+                    "State Sync",
+                    "Performance Profiling",
+                    "Efficiency"
+                  ]
+                },
+                {
+                  "id": "les-1791603696141-3-2",
+                  "title": "Modular Architecture & Reusability Systems",
+                  "duration": "18 min",
+                  "summary": "Structuring medium-to-large scale projects into decoupled, maintainable building blocks.",
+                  "visualType": "concept_blueprint",
+                  "keyConcepts": [
+                    "Decoupled Design",
+                    "SOLID / Modular Rules",
+                    "Clean Code",
+                    "API Design"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 4,
+          "levelTitle": "Stage 4: Design Systems & High-Fidelity 3D Environments",
+          "description": "Advanced mastery level. Exploring tokenized design tokens, accessible color contrasts, and lighting mechanics.",
+          "badge": "Senior Art Director",
+          "modules": [
+            {
+              "id": "mod-1791603696141-4",
+              "title": "Elite Engineering, Scalability & Hardening",
+              "estimatedTime": "4.5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791603696141-4-1",
+                  "title": "System Internals & High-Throughput Optimization",
+                  "duration": "22 min",
+                  "summary": "Uncover the underlying engine internals, memory models, and micro-optimizations for peak performance.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "Engine Internals",
+                    "Memory Management",
+                    "Bottleneck Elimination",
+                    "Profiling Tools"
+                  ]
+                },
+                {
+                  "id": "les-1791603696141-4-2",
+                  "title": "Security Auditing, Resilience & Edge-Case Guardrails",
+                  "duration": "19 min",
+                  "summary": "Harden your 3D Game Design & Blender systems against vulnerabilities, race conditions, and unauthorized exploits.",
+                  "visualType": "security_matrix",
+                  "keyConcepts": [
+                    "Attack Vectors",
+                    "Defensive Guardrails",
+                    "Zero-Trust Verification",
+                    "Fault Tolerance"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 5,
+          "levelTitle": "Stage 5: Portfolio Showcase & Commercial Capstone",
+          "description": "Capstone excellence and expert synthesis. Focus on full commercial brand identity, client-ready interactive delivery.",
+          "badge": "Creative Director",
+          "modules": [
+            {
+              "id": "mod-1791603696141-5",
+              "title": "End-to-End Capstone Project & Production Release",
+              "estimatedTime": "5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791603696141-5-1",
+                  "title": "Capstone Architecture: Planning the Flagship 3D Game Design & Blender Project",
+                  "duration": "25 min",
+                  "summary": "Design and architect a portfolio-grade, enterprise-scale capstone project incorporating all previous stages.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "System Design Document",
+                    "Spec Definition",
+                    "Milestone Planning",
+                    "Production Architecture"
+                  ]
+                },
+                {
+                  "id": "les-1791603696141-5-2",
+                  "title": "Production Deployment, CI/CD, Telemetry & Launch",
+                  "duration": "24 min",
+                  "summary": "Deploy your project to global infrastructure with automated testing, live telemetry, and user analytics.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Automated CI/CD",
+                    "Live Monitoring",
+                    "Observability",
+                    "Public Showcase"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "createdBy": "user-0a922c57"
+    },
+    {
+      "id": "course-1791602726478",
+      "title": "Programming in C (Basic to Advanced Masterclass)",
+      "topic": "Programming in C",
+      "targetGoal": "Career Transition & Portfolio Projects",
+      "level": "Comprehensive (Basic to Advanced)",
+      "duration": "19 Hours • 5 Progressive Levels",
+      "createdAt": "2026-10-10T03:25:26.478Z",
+      "description": "A master-level structured curriculum designed to guide any learner from basic fundamentals to expert-level mastery of Programming in C using AI-generated visual videos and real-world projects.",
+      "levels": [
+        {
+          "levelNumber": 1,
+          "levelTitle": "Stage 1: Elementary Principles & Mindset (Basic)",
+          "description": "Understand the absolute fundamentals of Programming in C. Covering core definitions, basic mental models, and initial practice drills.",
+          "badge": "Foundational Knowledge",
+          "modules": [
+            {
+              "id": "mod-1791602726477-1",
+              "title": "Introductory Frameworks of Programming in C",
+              "estimatedTime": "2 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791602726477-1-1",
+                  "title": "What is Programming in C? Core Principles Explained Simply",
+                  "duration": "10 min",
+                  "summary": "Demystify the foundational concepts of Programming in C without jargon, highlighting real-world importance and applications.",
+                  "visualType": "concept_blueprint",
+                  "keyConcepts": [
+                    "Foundational Concepts",
+                    "First Principles",
+                    "Mental Model",
+                    "Terminologies"
+                  ]
+                },
+                {
+                  "id": "les-1791602726477-1-2",
+                  "title": "Environment Setup, Key Tooling & First Hands-on Steps",
+                  "duration": "14 min",
+                  "summary": "Get completely set up with the modern tools and run your first foundational project in Programming in C.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Workspace Setup",
+                    "Tooling",
+                    "First Execution",
+                    "Troubleshooting"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 2,
+          "levelTitle": "Stage 2: Skill Frameworks & Habit Loops (Elementary)",
+          "description": "Transition from beginner to confident practitioner. Delving into structured routines, feedback mechanisms, and practical exercises.",
+          "badge": "Practitioner",
+          "modules": [
+            {
+              "id": "mod-1791602726477-2",
+              "title": "Core Mechanisms & Essential Patterns",
+              "estimatedTime": "3.5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791602726477-2-1",
+                  "title": "The Critical Mechanics of Programming in C",
+                  "duration": "16 min",
+                  "summary": "Deep dive into the operational mechanics, data flow, and standard paradigms used by professionals.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "Data Flow",
+                    "Standard Conventions",
+                    "Common Paradigms",
+                    "Component Building"
+                  ]
+                },
+                {
+                  "id": "les-1791602726477-2-2",
+                  "title": "Error Handling, Debugging & Practical Exercises",
+                  "duration": "18 min",
+                  "summary": "Learn how to diagnose errors, trace anomalies, and write resilient logic in Programming in C.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Debugging Strategies",
+                    "Error Mitigation",
+                    "Testing Basics",
+                    "Best Practices"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 3,
+          "levelTitle": "Stage 3: Intermediate Execution & Flow State",
+          "description": "Intermediate deep dive into complex dynamics. Focus on overcoming common plateaus, analyzing edge cases, and accelerating output.",
+          "badge": "Skilled Performer",
+          "modules": [
+            {
+              "id": "mod-1791602726477-3",
+              "title": "Intermediate Architectures & Performance Optimization",
+              "estimatedTime": "4 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791602726477-3-1",
+                  "title": "Advanced Data Structures & Asynchronous Workflows in Programming in C",
+                  "duration": "20 min",
+                  "summary": "Handling high-concurrency, asynchronous data streams, and managing complex state.",
+                  "visualType": "algorithm_flowchart",
+                  "keyConcepts": [
+                    "Async Lifecycles",
+                    "State Sync",
+                    "Performance Profiling",
+                    "Efficiency"
+                  ]
+                },
+                {
+                  "id": "les-1791602726477-3-2",
+                  "title": "Modular Architecture & Reusability Systems",
+                  "duration": "18 min",
+                  "summary": "Structuring medium-to-large scale projects into decoupled, maintainable building blocks.",
+                  "visualType": "concept_blueprint",
+                  "keyConcepts": [
+                    "Decoupled Design",
+                    "SOLID / Modular Rules",
+                    "Clean Code",
+                    "API Design"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 4,
+          "levelTitle": "Stage 4: Advanced Nuance & Strategic Mastery",
+          "description": "Advanced mastery level. Exploring deep diagnostic skills, counter-intuitive techniques, and expert speed.",
+          "badge": "High-Level Specialist",
+          "modules": [
+            {
+              "id": "mod-1791602726477-4",
+              "title": "Elite Engineering, Scalability & Hardening",
+              "estimatedTime": "4.5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791602726477-4-1",
+                  "title": "System Internals & High-Throughput Optimization",
+                  "duration": "22 min",
+                  "summary": "Uncover the underlying engine internals, memory models, and micro-optimizations for peak performance.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "Engine Internals",
+                    "Memory Management",
+                    "Bottleneck Elimination",
+                    "Profiling Tools"
+                  ]
+                },
+                {
+                  "id": "les-1791602726477-4-2",
+                  "title": "Security Auditing, Resilience & Edge-Case Guardrails",
+                  "duration": "19 min",
+                  "summary": "Harden your Programming in C systems against vulnerabilities, race conditions, and unauthorized exploits.",
+                  "visualType": "security_matrix",
+                  "keyConcepts": [
+                    "Attack Vectors",
+                    "Defensive Guardrails",
+                    "Zero-Trust Verification",
+                    "Fault Tolerance"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 5,
+          "levelTitle": "Stage 5: Mastery Exhibition & Grand Capstone",
+          "description": "Capstone excellence and expert synthesis. Focus on creating original work, mentoring others, and public presentation.",
+          "badge": "Recognized Master",
+          "modules": [
+            {
+              "id": "mod-1791602726478-5",
+              "title": "End-to-End Capstone Project & Production Release",
+              "estimatedTime": "5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791602726478-5-1",
+                  "title": "Capstone Architecture: Planning the Flagship Programming in C Project",
+                  "duration": "25 min",
+                  "summary": "Design and architect a portfolio-grade, enterprise-scale capstone project incorporating all previous stages.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "System Design Document",
+                    "Spec Definition",
+                    "Milestone Planning",
+                    "Production Architecture"
+                  ]
+                },
+                {
+                  "id": "les-1791602726478-5-2",
+                  "title": "Production Deployment, CI/CD, Telemetry & Launch",
+                  "duration": "24 min",
+                  "summary": "Deploy your project to global infrastructure with automated testing, live telemetry, and user analytics.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Automated CI/CD",
+                    "Live Monitoring",
+                    "Observability",
+                    "Public Showcase"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "createdBy": "user-0a922c57"
+    },
+    {
+      "id": "course-1791602019217",
+      "title": "Java (Basic to Advanced Masterclass)",
+      "topic": "Java",
+      "targetGoal": "Comprehensive Mastery (Basic to Advanced)",
+      "level": "Comprehensive (Basic to Advanced)",
+      "duration": "19 Hours • 5 Progressive Levels",
+      "createdAt": "2026-10-10T03:13:39.217Z",
+      "description": "A master-level structured curriculum designed to guide any learner from basic fundamentals to expert-level mastery of Java using AI-generated visual videos and real-world projects.",
+      "levels": [
+        {
+          "levelNumber": 1,
+          "levelTitle": "Stage 1: Elementary Principles & Mindset (Basic)",
+          "description": "Understand the absolute fundamentals of Java. Covering core definitions, basic mental models, and initial practice drills.",
+          "badge": "Foundational Knowledge",
+          "modules": [
+            {
+              "id": "mod-1791602019217-1",
+              "title": "Introductory Frameworks of Java",
+              "estimatedTime": "2 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791602019217-1-1",
+                  "title": "What is Java? Core Principles Explained Simply",
+                  "duration": "10 min",
+                  "summary": "Demystify the foundational concepts of Java without jargon, highlighting real-world importance and applications.",
+                  "visualType": "concept_blueprint",
+                  "keyConcepts": [
+                    "Foundational Concepts",
+                    "First Principles",
+                    "Mental Model",
+                    "Terminologies"
+                  ]
+                },
+                {
+                  "id": "les-1791602019217-1-2",
+                  "title": "Environment Setup, Key Tooling & First Hands-on Steps",
+                  "duration": "14 min",
+                  "summary": "Get completely set up with the modern tools and run your first foundational project in Java.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Workspace Setup",
+                    "Tooling",
+                    "First Execution",
+                    "Troubleshooting"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 2,
+          "levelTitle": "Stage 2: Skill Frameworks & Habit Loops (Elementary)",
+          "description": "Transition from beginner to confident practitioner. Delving into structured routines, feedback mechanisms, and practical exercises.",
+          "badge": "Practitioner",
+          "modules": [
+            {
+              "id": "mod-1791602019217-2",
+              "title": "Core Mechanisms & Essential Patterns",
+              "estimatedTime": "3.5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791602019217-2-1",
+                  "title": "The Critical Mechanics of Java",
+                  "duration": "16 min",
+                  "summary": "Deep dive into the operational mechanics, data flow, and standard paradigms used by professionals.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "Data Flow",
+                    "Standard Conventions",
+                    "Common Paradigms",
+                    "Component Building"
+                  ]
+                },
+                {
+                  "id": "les-1791602019217-2-2",
+                  "title": "Error Handling, Debugging & Practical Exercises",
+                  "duration": "18 min",
+                  "summary": "Learn how to diagnose errors, trace anomalies, and write resilient logic in Java.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Debugging Strategies",
+                    "Error Mitigation",
+                    "Testing Basics",
+                    "Best Practices"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 3,
+          "levelTitle": "Stage 3: Intermediate Execution & Flow State",
+          "description": "Intermediate deep dive into complex dynamics. Focus on overcoming common plateaus, analyzing edge cases, and accelerating output.",
+          "badge": "Skilled Performer",
+          "modules": [
+            {
+              "id": "mod-1791602019217-3",
+              "title": "Intermediate Architectures & Performance Optimization",
+              "estimatedTime": "4 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791602019217-3-1",
+                  "title": "Advanced Data Structures & Asynchronous Workflows in Java",
+                  "duration": "20 min",
+                  "summary": "Handling high-concurrency, asynchronous data streams, and managing complex state.",
+                  "visualType": "algorithm_flowchart",
+                  "keyConcepts": [
+                    "Async Lifecycles",
+                    "State Sync",
+                    "Performance Profiling",
+                    "Efficiency"
+                  ]
+                },
+                {
+                  "id": "les-1791602019217-3-2",
+                  "title": "Modular Architecture & Reusability Systems",
+                  "duration": "18 min",
+                  "summary": "Structuring medium-to-large scale projects into decoupled, maintainable building blocks.",
+                  "visualType": "concept_blueprint",
+                  "keyConcepts": [
+                    "Decoupled Design",
+                    "SOLID / Modular Rules",
+                    "Clean Code",
+                    "API Design"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 4,
+          "levelTitle": "Stage 4: Advanced Nuance & Strategic Mastery",
+          "description": "Advanced mastery level. Exploring deep diagnostic skills, counter-intuitive techniques, and expert speed.",
+          "badge": "High-Level Specialist",
+          "modules": [
+            {
+              "id": "mod-1791602019217-4",
+              "title": "Elite Engineering, Scalability & Hardening",
+              "estimatedTime": "4.5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791602019217-4-1",
+                  "title": "System Internals & High-Throughput Optimization",
+                  "duration": "22 min",
+                  "summary": "Uncover the underlying engine internals, memory models, and micro-optimizations for peak performance.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "Engine Internals",
+                    "Memory Management",
+                    "Bottleneck Elimination",
+                    "Profiling Tools"
+                  ]
+                },
+                {
+                  "id": "les-1791602019217-4-2",
+                  "title": "Security Auditing, Resilience & Edge-Case Guardrails",
+                  "duration": "19 min",
+                  "summary": "Harden your Java systems against vulnerabilities, race conditions, and unauthorized exploits.",
+                  "visualType": "security_matrix",
+                  "keyConcepts": [
+                    "Attack Vectors",
+                    "Defensive Guardrails",
+                    "Zero-Trust Verification",
+                    "Fault Tolerance"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 5,
+          "levelTitle": "Stage 5: Mastery Exhibition & Grand Capstone",
+          "description": "Capstone excellence and expert synthesis. Focus on creating original work, mentoring others, and public presentation.",
+          "badge": "Recognized Master",
+          "modules": [
+            {
+              "id": "mod-1791602019217-5",
+              "title": "End-to-End Capstone Project & Production Release",
+              "estimatedTime": "5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791602019217-5-1",
+                  "title": "Capstone Architecture: Planning the Flagship Java Project",
+                  "duration": "25 min",
+                  "summary": "Design and architect a portfolio-grade, enterprise-scale capstone project incorporating all previous stages.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "System Design Document",
+                    "Spec Definition",
+                    "Milestone Planning",
+                    "Production Architecture"
+                  ]
+                },
+                {
+                  "id": "les-1791602019217-5-2",
+                  "title": "Production Deployment, CI/CD, Telemetry & Launch",
+                  "duration": "24 min",
+                  "summary": "Deploy your project to global infrastructure with automated testing, live telemetry, and user analytics.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Automated CI/CD",
+                    "Live Monitoring",
+                    "Observability",
+                    "Public Showcase"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "createdBy": "user-host-1"
+    },
+    {
+      "id": "course-1791601883806",
+      "title": "Java for oops (Basic to Advanced Masterclass)",
+      "topic": "Java for oops",
+      "targetGoal": "Comprehensive Mastery (Basic to Advanced)",
+      "level": "Comprehensive (Basic to Advanced)",
+      "duration": "19 Hours • 5 Progressive Levels",
+      "createdAt": "2026-10-10T03:11:23.806Z",
+      "description": "A master-level structured curriculum designed to guide any learner from basic fundamentals to expert-level mastery of Java for oops using AI-generated visual videos and real-world projects.",
+      "levels": [
+        {
+          "levelNumber": 1,
+          "levelTitle": "Stage 1: Elementary Principles & Mindset (Basic)",
+          "description": "Understand the absolute fundamentals of Java for oops. Covering core definitions, basic mental models, and initial practice drills.",
+          "badge": "Foundational Knowledge",
+          "modules": [
+            {
+              "id": "mod-1791601883806-1",
+              "title": "Introductory Frameworks of Java for oops",
+              "estimatedTime": "2 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791601883806-1-1",
+                  "title": "What is Java for oops? Core Principles Explained Simply",
+                  "duration": "10 min",
+                  "summary": "Demystify the foundational concepts of Java for oops without jargon, highlighting real-world importance and applications.",
+                  "visualType": "concept_blueprint",
+                  "keyConcepts": [
+                    "Foundational Concepts",
+                    "First Principles",
+                    "Mental Model",
+                    "Terminologies"
+                  ]
+                },
+                {
+                  "id": "les-1791601883806-1-2",
+                  "title": "Environment Setup, Key Tooling & First Hands-on Steps",
+                  "duration": "14 min",
+                  "summary": "Get completely set up with the modern tools and run your first foundational project in Java for oops.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Workspace Setup",
+                    "Tooling",
+                    "First Execution",
+                    "Troubleshooting"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 2,
+          "levelTitle": "Stage 2: Skill Frameworks & Habit Loops (Elementary)",
+          "description": "Transition from beginner to confident practitioner. Delving into structured routines, feedback mechanisms, and practical exercises.",
+          "badge": "Practitioner",
+          "modules": [
+            {
+              "id": "mod-1791601883806-2",
+              "title": "Core Mechanisms & Essential Patterns",
+              "estimatedTime": "3.5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791601883806-2-1",
+                  "title": "The Critical Mechanics of Java for oops",
+                  "duration": "16 min",
+                  "summary": "Deep dive into the operational mechanics, data flow, and standard paradigms used by professionals.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "Data Flow",
+                    "Standard Conventions",
+                    "Common Paradigms",
+                    "Component Building"
+                  ]
+                },
+                {
+                  "id": "les-1791601883806-2-2",
+                  "title": "Error Handling, Debugging & Practical Exercises",
+                  "duration": "18 min",
+                  "summary": "Learn how to diagnose errors, trace anomalies, and write resilient logic in Java for oops.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Debugging Strategies",
+                    "Error Mitigation",
+                    "Testing Basics",
+                    "Best Practices"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 3,
+          "levelTitle": "Stage 3: Intermediate Execution & Flow State",
+          "description": "Intermediate deep dive into complex dynamics. Focus on overcoming common plateaus, analyzing edge cases, and accelerating output.",
+          "badge": "Skilled Performer",
+          "modules": [
+            {
+              "id": "mod-1791601883806-3",
+              "title": "Intermediate Architectures & Performance Optimization",
+              "estimatedTime": "4 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791601883806-3-1",
+                  "title": "Advanced Data Structures & Asynchronous Workflows in Java for oops",
+                  "duration": "20 min",
+                  "summary": "Handling high-concurrency, asynchronous data streams, and managing complex state.",
+                  "visualType": "algorithm_flowchart",
+                  "keyConcepts": [
+                    "Async Lifecycles",
+                    "State Sync",
+                    "Performance Profiling",
+                    "Efficiency"
+                  ]
+                },
+                {
+                  "id": "les-1791601883806-3-2",
+                  "title": "Modular Architecture & Reusability Systems",
+                  "duration": "18 min",
+                  "summary": "Structuring medium-to-large scale projects into decoupled, maintainable building blocks.",
+                  "visualType": "concept_blueprint",
+                  "keyConcepts": [
+                    "Decoupled Design",
+                    "SOLID / Modular Rules",
+                    "Clean Code",
+                    "API Design"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 4,
+          "levelTitle": "Stage 4: Advanced Nuance & Strategic Mastery",
+          "description": "Advanced mastery level. Exploring deep diagnostic skills, counter-intuitive techniques, and expert speed.",
+          "badge": "High-Level Specialist",
+          "modules": [
+            {
+              "id": "mod-1791601883806-4",
+              "title": "Elite Engineering, Scalability & Hardening",
+              "estimatedTime": "4.5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791601883806-4-1",
+                  "title": "System Internals & High-Throughput Optimization",
+                  "duration": "22 min",
+                  "summary": "Uncover the underlying engine internals, memory models, and micro-optimizations for peak performance.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "Engine Internals",
+                    "Memory Management",
+                    "Bottleneck Elimination",
+                    "Profiling Tools"
+                  ]
+                },
+                {
+                  "id": "les-1791601883806-4-2",
+                  "title": "Security Auditing, Resilience & Edge-Case Guardrails",
+                  "duration": "19 min",
+                  "summary": "Harden your Java for oops systems against vulnerabilities, race conditions, and unauthorized exploits.",
+                  "visualType": "security_matrix",
+                  "keyConcepts": [
+                    "Attack Vectors",
+                    "Defensive Guardrails",
+                    "Zero-Trust Verification",
+                    "Fault Tolerance"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 5,
+          "levelTitle": "Stage 5: Mastery Exhibition & Grand Capstone",
+          "description": "Capstone excellence and expert synthesis. Focus on creating original work, mentoring others, and public presentation.",
+          "badge": "Recognized Master",
+          "modules": [
+            {
+              "id": "mod-1791601883806-5",
+              "title": "End-to-End Capstone Project & Production Release",
+              "estimatedTime": "5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791601883806-5-1",
+                  "title": "Capstone Architecture: Planning the Flagship Java for oops Project",
+                  "duration": "25 min",
+                  "summary": "Design and architect a portfolio-grade, enterprise-scale capstone project incorporating all previous stages.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "System Design Document",
+                    "Spec Definition",
+                    "Milestone Planning",
+                    "Production Architecture"
+                  ]
+                },
+                {
+                  "id": "les-1791601883806-5-2",
+                  "title": "Production Deployment, CI/CD, Telemetry & Launch",
+                  "duration": "24 min",
+                  "summary": "Deploy your project to global infrastructure with automated testing, live telemetry, and user analytics.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Automated CI/CD",
+                    "Live Monitoring",
+                    "Observability",
+                    "Public Showcase"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "createdBy": "user-host-1"
+    },
+    {
+      "id": "course-1791601659858",
+      "title": "Deep Learning & Neural Networks (Basic to Advanced Masterclass)",
+      "topic": "Deep Learning & Neural Networks",
+      "targetGoal": "Research Mastery",
+      "level": "Comprehensive (Basic to Advanced)",
+      "duration": "19 Hours • 5 Progressive Levels",
+      "createdAt": "2026-10-10T03:07:39.858Z",
+      "description": "A master-level structured curriculum designed to guide any learner from basic fundamentals to expert-level mastery of Deep Learning & Neural Networks using AI-generated visual videos and real-world projects.",
+      "levels": [
+        {
+          "levelNumber": 1,
+          "levelTitle": "Stage 1: Mathematics & Data Foundations",
+          "description": "Understand the absolute fundamentals of Deep Learning & Neural Networks. Covering linear algebra, probability, data preprocessing, and vector representations.",
+          "badge": "Mathematical Foundations",
+          "modules": [
+            {
+              "id": "mod-1791601659858-1",
+              "title": "Introductory Frameworks of Deep Learning & Neural Networks",
+              "estimatedTime": "2 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791601659858-1-1",
+                  "title": "What is Deep Learning & Neural Networks? Core Principles Explained Simply",
+                  "duration": "10 min",
+                  "summary": "Demystify the foundational concepts of Deep Learning & Neural Networks without jargon, highlighting real-world importance and applications.",
+                  "visualType": "concept_blueprint",
+                  "keyConcepts": [
+                    "Foundational Concepts",
+                    "First Principles",
+                    "Mental Model",
+                    "Terminologies"
+                  ]
+                },
+                {
+                  "id": "les-1791601659858-1-2",
+                  "title": "Environment Setup, Key Tooling & First Hands-on Steps",
+                  "duration": "14 min",
+                  "summary": "Get completely set up with the modern tools and run your first foundational project in Deep Learning & Neural Networks.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Workspace Setup",
+                    "Tooling",
+                    "First Execution",
+                    "Troubleshooting"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 2,
+          "levelTitle": "Stage 2: Classical Machine Learning & Modeling",
+          "description": "Transition from beginner to confident practitioner. Delving into supervised & unsupervised models, feature engineering, and evaluation metrics.",
+          "badge": "Modeling Specialist",
+          "modules": [
+            {
+              "id": "mod-1791601659858-2",
+              "title": "Core Mechanisms & Essential Patterns",
+              "estimatedTime": "3.5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791601659858-2-1",
+                  "title": "The Critical Mechanics of Deep Learning & Neural Networks",
+                  "duration": "16 min",
+                  "summary": "Deep dive into the operational mechanics, data flow, and standard paradigms used by professionals.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "Data Flow",
+                    "Standard Conventions",
+                    "Common Paradigms",
+                    "Component Building"
+                  ]
+                },
+                {
+                  "id": "les-1791601659858-2-2",
+                  "title": "Error Handling, Debugging & Practical Exercises",
+                  "duration": "18 min",
+                  "summary": "Learn how to diagnose errors, trace anomalies, and write resilient logic in Deep Learning & Neural Networks.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Debugging Strategies",
+                    "Error Mitigation",
+                    "Testing Basics",
+                    "Best Practices"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 3,
+          "levelTitle": "Stage 3: Deep Learning & Neural Architectures",
+          "description": "Intermediate deep dive into complex dynamics. Focus on backpropagation, CNNs, Transformers, attention mechanisms, and PyTorch/TensorFlow.",
+          "badge": "Neural Network Engineer",
+          "modules": [
+            {
+              "id": "mod-1791601659858-3",
+              "title": "Intermediate Architectures & Performance Optimization",
+              "estimatedTime": "4 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791601659858-3-1",
+                  "title": "Advanced Data Structures & Asynchronous Workflows in Deep Learning & Neural Networks",
+                  "duration": "20 min",
+                  "summary": "Handling high-concurrency, asynchronous data streams, and managing complex state.",
+                  "visualType": "algorithm_flowchart",
+                  "keyConcepts": [
+                    "Async Lifecycles",
+                    "State Sync",
+                    "Performance Profiling",
+                    "Efficiency"
+                  ]
+                },
+                {
+                  "id": "les-1791601659858-3-2",
+                  "title": "Modular Architecture & Reusability Systems",
+                  "duration": "18 min",
+                  "summary": "Structuring medium-to-large scale projects into decoupled, maintainable building blocks.",
+                  "visualType": "concept_blueprint",
+                  "keyConcepts": [
+                    "Decoupled Design",
+                    "SOLID / Modular Rules",
+                    "Clean Code",
+                    "API Design"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 4,
+          "levelTitle": "Stage 4: LLM Fine-Tuning & Multi-Agent Systems",
+          "description": "Advanced mastery level. Exploring RAG pipelines, quantized inference, prompt optimization, and autonomous agents.",
+          "badge": "Advanced AI Architect",
+          "modules": [
+            {
+              "id": "mod-1791601659858-4",
+              "title": "Elite Engineering, Scalability & Hardening",
+              "estimatedTime": "4.5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791601659858-4-1",
+                  "title": "System Internals & High-Throughput Optimization",
+                  "duration": "22 min",
+                  "summary": "Uncover the underlying engine internals, memory models, and micro-optimizations for peak performance.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "Engine Internals",
+                    "Memory Management",
+                    "Bottleneck Elimination",
+                    "Profiling Tools"
+                  ]
+                },
+                {
+                  "id": "les-1791601659858-4-2",
+                  "title": "Security Auditing, Resilience & Edge-Case Guardrails",
+                  "duration": "19 min",
+                  "summary": "Harden your Deep Learning & Neural Networks systems against vulnerabilities, race conditions, and unauthorized exploits.",
+                  "visualType": "security_matrix",
+                  "keyConcepts": [
+                    "Attack Vectors",
+                    "Defensive Guardrails",
+                    "Zero-Trust Verification",
+                    "Fault Tolerance"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 5,
+          "levelTitle": "Stage 5: Production AI Deployment & MLOps Capstone",
+          "description": "Capstone excellence and expert synthesis. Focus on low-latency model serving, guardrails, continuous monitoring, and capstone launch.",
+          "badge": "Autonomous AI Master",
+          "modules": [
+            {
+              "id": "mod-1791601659858-5",
+              "title": "End-to-End Capstone Project & Production Release",
+              "estimatedTime": "5 Hours",
+              "lessons": [
+                {
+                  "id": "les-1791601659858-5-1",
+                  "title": "Capstone Architecture: Planning the Flagship Deep Learning & Neural Networks Project",
+                  "duration": "25 min",
+                  "summary": "Design and architect a portfolio-grade, enterprise-scale capstone project incorporating all previous stages.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "System Design Document",
+                    "Spec Definition",
+                    "Milestone Planning",
+                    "Production Architecture"
+                  ]
+                },
+                {
+                  "id": "les-1791601659858-5-2",
+                  "title": "Production Deployment, CI/CD, Telemetry & Launch",
+                  "duration": "24 min",
+                  "summary": "Deploy your project to global infrastructure with automated testing, live telemetry, and user analytics.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Automated CI/CD",
+                    "Live Monitoring",
+                    "Observability",
+                    "Public Showcase"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "createdBy": "user-student-2"
+    },
+    {
+      "id": "course-sample-ai-web",
+      "title": "Full-Stack Modern AI Web Applications",
+      "topic": "Full-Stack Modern AI Web Applications",
+      "targetGoal": "Build & Deploy Autonomous AI-Powered Web Platforms",
+      "level": "Comprehensive (Basic to Advanced)",
+      "duration": "18 Hours • 5 Mastery Levels",
+      "createdAt": "2026-10-10T02:58:29.086Z",
+      "createdBy": "user-host-1",
+      "description": "Master web development from core HTML/CSS/JavaScript foundations to building complex React architectures, backend APIs, and integrating cutting-edge LLMs and AI Agents.",
+      "levels": [
+        {
+          "levelNumber": 1,
+          "levelTitle": "Stage 1: Core Fundamentals (Basic)",
+          "description": "Master the core building blocks of the web, client-server models, and programming syntax.",
+          "badge": "Beginner Foundations",
+          "modules": [
+            {
+              "id": "mod-1",
+              "title": "Web Architecture & Modern JavaScript Essentials",
+              "estimatedTime": "2.5 hrs",
+              "lessons": [
+                {
+                  "id": "les-1-1",
+                  "title": "How Web Browsers & Client-Server Systems Really Work",
+                  "duration": "12 min",
+                  "summary": "Understand HTTP/HTTPS, DNS lookups, DOM rendering cycles, and REST requests.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "HTTP Protocol",
+                    "DOM Tree",
+                    "Event Loop",
+                    "Request/Response Cycle"
+                  ]
+                },
+                {
+                  "id": "les-1-2",
+                  "title": "Modern Asynchronous JavaScript & Promises",
+                  "duration": "15 min",
+                  "summary": "Master async/await, callback queues, microtasks, and error-handling patterns.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Promises",
+                    "async/await",
+                    "Event Loop",
+                    "Fetch API"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 2,
+          "levelTitle": "Stage 2: Frontend Engineering & React Core (Elementary)",
+          "description": "Construct responsive single-page web applications with state synchronization and component composition.",
+          "badge": "Interactive UI Craftsman",
+          "modules": [
+            {
+              "id": "mod-2",
+              "title": "React Fundamentals & Reactive State",
+              "estimatedTime": "3.5 hrs",
+              "lessons": [
+                {
+                  "id": "les-2-1",
+                  "title": "Declarative UI, JSX, and Component Hierarchies",
+                  "duration": "14 min",
+                  "summary": "Breaking design mockups into reusable component trees with strict unidirectional data flow.",
+                  "visualType": "concept_blueprint",
+                  "keyConcepts": [
+                    "JSX Virtual DOM",
+                    "Props",
+                    "Component Trees",
+                    "Pure Functions"
+                  ]
+                },
+                {
+                  "id": "les-2-2",
+                  "title": "State Management with Hooks (useState & useEffect)",
+                  "duration": "18 min",
+                  "summary": "Managing lifecycle side-effects, synchronization, cleanups, and avoiding infinite loops.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "useState",
+                    "useEffect Dependency Arrays",
+                    "Custom Hooks"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 3,
+          "levelTitle": "Stage 3: Scalable Backend & Real-Time APIs (Intermediate)",
+          "description": "Architecting robust Node.js and Express REST & WebSocket backends with persistent datastores.",
+          "badge": "Fullstack Integrator",
+          "modules": [
+            {
+              "id": "mod-3",
+              "title": "RESTful API Engineering & Secure Auth",
+              "estimatedTime": "4 hrs",
+              "lessons": [
+                {
+                  "id": "les-3-1",
+                  "title": "Designing Clean REST APIs with Node & Express",
+                  "duration": "16 min",
+                  "summary": "Routing, middleware pipelines, error handling, and request validation.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "Express Middleware",
+                    "CRUD Routing",
+                    "Status Codes",
+                    "Input Validation"
+                  ]
+                },
+                {
+                  "id": "les-3-2",
+                  "title": "JWT Token Security & Role-Based Access Control",
+                  "duration": "15 min",
+                  "summary": "Implementing cryptographic tokens, password hashing with bcrypt, and protected routes.",
+                  "visualType": "security_matrix",
+                  "keyConcepts": [
+                    "JWT Signature",
+                    "Bcrypt Hashing",
+                    "Auth Guards",
+                    "Session Security"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 4,
+          "levelTitle": "Stage 4: AI & LLM Systems Integration (Advanced)",
+          "description": "Integrating multimodal AI, embeddings, streaming tokens, and agentic tool-use into web apps.",
+          "badge": "AI Systems Architect",
+          "modules": [
+            {
+              "id": "mod-4",
+              "title": "Generative AI Pipelines & Streaming UI",
+              "estimatedTime": "4.5 hrs",
+              "lessons": [
+                {
+                  "id": "les-4-1",
+                  "title": "Server-Sent Events & Real-time AI Token Streaming",
+                  "duration": "20 min",
+                  "summary": "Streaming chunked AI completions directly to the frontend for sub-second user responses.",
+                  "visualType": "code_walkthrough",
+                  "keyConcepts": [
+                    "Server-Sent Events",
+                    "ReadableStreams",
+                    "Prompt Templating",
+                    "Latency Optimization"
+                  ]
+                },
+                {
+                  "id": "les-4-2",
+                  "title": "Autonomous Function Calling & Agentic Workflows",
+                  "duration": "22 min",
+                  "summary": "Equipping LLMs with structured schemas to call backend APIs and perform automated actions.",
+                  "visualType": "algorithm_flowchart",
+                  "keyConcepts": [
+                    "Tool Calling",
+                    "JSON Schema",
+                    "Agent Loops",
+                    "Validation Guards"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 5,
+          "levelTitle": "Stage 5: Production Deployment & Capstone (Mastery)",
+          "description": "Hardening security, CI/CD pipeline automation, edge caching, and launching complete AI applications.",
+          "badge": "Production Master",
+          "modules": [
+            {
+              "id": "mod-5",
+              "title": "Production Readiness & Real-World Capstone",
+              "estimatedTime": "3.5 hrs",
+              "lessons": [
+                {
+                  "id": "les-5-1",
+                  "title": "Deploying High-Availability Full-Stack AI Services",
+                  "duration": "18 min",
+                  "summary": "Containerization, environment configuration, rate limiting, and observability.",
+                  "visualType": "architecture_diagram",
+                  "keyConcepts": [
+                    "Dockerization",
+                    "Rate Limiting",
+                    "Cost Telemetry",
+                    "Cloud Deployments"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "progress": [
+    {
+      "userId": "user-student-1",
+      "courseId": "course-sample-ai-web",
+      "completedLessons": [
+        "les-1-1"
+      ],
+      "lastAccessedLesson": "les-1-2",
+      "quizScores": {
+        "les-1-1": 100
+      },
+      "updatedAt": "2026-10-10T02:58:29.634Z"
+    }
+  ],
+  "generatedVideos": {
+    "course-1791601659858:les-1791601659858-1-1": {
+      "id": "video-1791601659866",
+      "title": "AI Video: What is Deep Learning & Neural Networks? Core Principles Explained Simply",
+      "topic": "Deep Learning & Neural Networks",
+      "lessonTitle": "What is Deep Learning & Neural Networks? Core Principles Explained Simply",
+      "levelNumber": 1,
+      "durationSeconds": 160,
+      "durationFormatted": "2m 40s",
+      "narratorVoice": "Nova (Warm AI Educator)",
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "type": "hook",
+          "durationSeconds": 28,
+          "title": "Welcome & Core Objective",
+          "narration": "Welcome to this masterclass lesson on What is Deep Learning & Neural Networks? Core Principles Explained Simply. In this session, we will break down the essential concepts of Deep Learning & Neural Networks step by step. By the end of this video, you will not only understand the theory, but also know exactly how to apply it in real-world scenarios. Let's dive right in!",
+          "visual": {
+            "headline": "What is Deep Learning & Neural Networks? Core Principles Explained Simply",
+            "subheadline": "Course: Deep Learning & Neural Networks • Stage 1",
+            "points": [
+              "Fundamental principles of What is Deep Learning & Neural Networks? Core Principles Explained Simply",
+              "Practical implementation step-by-step",
+              "Industry pitfalls to avoid and key mental models"
+            ],
+            "badgeText": "Stage 1 Mastery",
+            "visualStyle": "nebula_glow"
+          }
+        },
+        {
+          "sceneNumber": 2,
+          "type": "diagram",
+          "durationSeconds": 34,
+          "title": "Architectural Mental Model & Flow",
+          "narration": "To truly grasp What is Deep Learning & Neural Networks? Core Principles Explained Simply, we must understand the core architecture. Notice how the data flows through each layer: starting from the initial trigger, through the transformation pipeline, and finally to verified delivery. Breaking it down this way ensures scalability and eliminates guesswork.",
+          "visual": {
+            "headline": "System Architecture & Data Flow",
+            "subheadline": "How information propagates through the system",
+            "diagramNodes": [
+              {
+                "id": "n1",
+                "label": "1. Input & Trigger",
+                "desc": "Raw data / user event initiated",
+                "status": "active"
+              },
+              {
+                "id": "n2",
+                "label": "2. Transformation Layer",
+                "desc": "Validation & business logic",
+                "status": "ready"
+              },
+              {
+                "id": "n3",
+                "label": "3. Execution Engine",
+                "desc": "Optimized state computation",
+                "status": "ready"
+              },
+              {
+                "id": "n4",
+                "label": "4. Verified Output",
+                "desc": "Resilient cached delivery",
+                "status": "ready"
+              }
+            ],
+            "highlightNode": "n2",
+            "visualStyle": "blueprint_grid"
+          }
+        },
+        {
+          "sceneNumber": 3,
+          "type": "code",
+          "durationSeconds": 42,
+          "title": "Hands-On Code & Implementation",
+          "narration": "Now let's examine the actual code. Notice how we structure the functions cleanly. We validate our inputs upfront, isolate asynchronous dependencies, and use clean error handling. This is the exact pattern high-performance engineering teams use in production environments.",
+          "visual": {
+            "headline": "Production Implementation",
+            "subheadline": "Syntax & Functional Breakdown",
+            "code": "// ⚡ Production Implementation: What is Deep Learning & Neural Networks? Core Principles Explained Simply\nimport { initializeEngine, processPipeline } from '@core/system';\n\nasync function executeWorkflow(payload) {\n  console.log(\"🚀 Initializing stage for:\", \"What is Deep Learning & Neural Networks? Core Principles Explained Simply\");\n  \n  // Validate and sanitize incoming parameters\n  if (!payload || !payload.id) {\n    throw new Error(\"Invalid payload: ID required\");\n  }\n\n  // Execute optimized pipeline\n  const result = await processPipeline({\n    target: \"Deep Learning & Neural Networks\",\n    mode: \"autonomous\",\n    timestamp: Date.now()\n  });\n\n  return { success: true, data: result };\n}",
+            "highlightLines": [
+              4,
+              5,
+              11,
+              12
+            ],
+            "visualStyle": "dark_ide"
+          }
+        },
+        {
+          "sceneNumber": 4,
+          "type": "tips_and_pitfalls",
+          "durationSeconds": 30,
+          "title": "Best Practices & Common Traps",
+          "narration": "Here is what separates beginners from seasoned pros. Beginners often skip boundary condition checks or neglect asynchronous cleanups. To build resilient software, always enforce validation, manage state lifecycles carefully, and profile your performance under load.",
+          "visual": {
+            "headline": "Crucial Pro-Tips & Pitfalls",
+            "subheadline": "Avoid these costly beginner mistakes",
+            "doList": [
+              "Validate all inputs at the boundary",
+              "Use modular, pure functions wherever possible",
+              "Implement structured logging and observability"
+            ],
+            "dontList": [
+              "Do NOT leave unhandled promise rejections",
+              "Do NOT hardcode environment variables",
+              "Do NOT skip edge-case test suites"
+            ],
+            "visualStyle": "matrix_split"
+          }
+        },
+        {
+          "sceneNumber": 5,
+          "type": "recap_and_quiz",
+          "durationSeconds": 26,
+          "title": "Summary & Challenge Mission",
+          "narration": "Fantastic job completing this lesson! You now have a solid mental model of What is Deep Learning & Neural Networks? Core Principles Explained Simply. Now, take a look at the quiz question below. Test your understanding, complete the practice drill, and get ready for the next level on your roadmap!",
+          "visual": {
+            "headline": "Lesson Accomplished! 🎉",
+            "subheadline": "Take the knowledge check quiz below",
+            "trophyText": "Skill Stage Unlocked",
+            "quizPreview": "What is the primary architectural advantage of the pattern taught in What is Deep Learning & Neural Networks? Core Principles Explained Simply?",
+            "visualStyle": "celebration_glow"
+          }
+        }
+      ],
+      "subtitles": [
+        {
+          "id": "sub-1-0",
+          "sceneNumber": 1,
+          "startTime": 0,
+          "endTime": 4,
+          "text": "Welcome to this masterclass lesson on What is Deep Learning"
+        },
+        {
+          "id": "sub-1-1",
+          "sceneNumber": 1,
+          "startTime": 4,
+          "endTime": 8,
+          "text": "& Neural Networks? Core Principles Explained Simply. In this session,"
+        },
+        {
+          "id": "sub-1-2",
+          "sceneNumber": 1,
+          "startTime": 8,
+          "endTime": 12,
+          "text": "we will break down the essential concepts of Deep Learning"
+        },
+        {
+          "id": "sub-1-3",
+          "sceneNumber": 1,
+          "startTime": 12,
+          "endTime": 16,
+          "text": "& Neural Networks step by step. By the end of"
+        },
+        {
+          "id": "sub-1-4",
+          "sceneNumber": 1,
+          "startTime": 16,
+          "endTime": 20,
+          "text": "this video, you will not only understand the theory, but"
+        },
+        {
+          "id": "sub-1-5",
+          "sceneNumber": 1,
+          "startTime": 20,
+          "endTime": 24,
+          "text": "also know exactly how to apply it in real-world scenarios."
+        },
+        {
+          "id": "sub-1-6",
+          "sceneNumber": 1,
+          "startTime": 24,
+          "endTime": 28,
+          "text": "Let's dive right in!"
+        },
+        {
+          "id": "sub-2-0",
+          "sceneNumber": 2,
+          "startTime": 28,
+          "endTime": 33.7,
+          "text": "To truly grasp What is Deep Learning & Neural Networks?"
+        },
+        {
+          "id": "sub-2-1",
+          "sceneNumber": 2,
+          "startTime": 33.7,
+          "endTime": 39.3,
+          "text": "Core Principles Explained Simply, we must understand the core architecture."
+        },
+        {
+          "id": "sub-2-2",
+          "sceneNumber": 2,
+          "startTime": 39.3,
+          "endTime": 45,
+          "text": "Notice how the data flows through each layer: starting from"
+        },
+        {
+          "id": "sub-2-3",
+          "sceneNumber": 2,
+          "startTime": 45,
+          "endTime": 50.7,
+          "text": "the initial trigger, through the transformation pipeline, and finally to"
+        },
+        {
+          "id": "sub-2-4",
+          "sceneNumber": 2,
+          "startTime": 50.7,
+          "endTime": 56.3,
+          "text": "verified delivery. Breaking it down this way ensures scalability and"
+        },
+        {
+          "id": "sub-2-5",
+          "sceneNumber": 2,
+          "startTime": 56.3,
+          "endTime": 62,
+          "text": "eliminates guesswork."
+        },
+        {
+          "id": "sub-3-0",
+          "sceneNumber": 3,
+          "startTime": 62,
+          "endTime": 72.5,
+          "text": "Now let's examine the actual code. Notice how we structure"
+        },
+        {
+          "id": "sub-3-1",
+          "sceneNumber": 3,
+          "startTime": 72.5,
+          "endTime": 83,
+          "text": "the functions cleanly. We validate our inputs upfront, isolate asynchronous"
+        },
+        {
+          "id": "sub-3-2",
+          "sceneNumber": 3,
+          "startTime": 83,
+          "endTime": 93.5,
+          "text": "dependencies, and use clean error handling. This is the exact"
+        },
+        {
+          "id": "sub-3-3",
+          "sceneNumber": 3,
+          "startTime": 93.5,
+          "endTime": 104,
+          "text": "pattern high-performance engineering teams use in production environments."
+        },
+        {
+          "id": "sub-4-0",
+          "sceneNumber": 4,
+          "startTime": 104,
+          "endTime": 111.5,
+          "text": "Here is what separates beginners from seasoned pros. Beginners often"
+        },
+        {
+          "id": "sub-4-1",
+          "sceneNumber": 4,
+          "startTime": 111.5,
+          "endTime": 119,
+          "text": "skip boundary condition checks or neglect asynchronous cleanups. To build"
+        },
+        {
+          "id": "sub-4-2",
+          "sceneNumber": 4,
+          "startTime": 119,
+          "endTime": 126.5,
+          "text": "resilient software, always enforce validation, manage state lifecycles carefully, and"
+        },
+        {
+          "id": "sub-4-3",
+          "sceneNumber": 4,
+          "startTime": 126.5,
+          "endTime": 134,
+          "text": "profile your performance under load."
+        },
+        {
+          "id": "sub-5-0",
+          "sceneNumber": 5,
+          "startTime": 134,
+          "endTime": 139.2,
+          "text": "Fantastic job completing this lesson! You now have a solid"
+        },
+        {
+          "id": "sub-5-1",
+          "sceneNumber": 5,
+          "startTime": 139.2,
+          "endTime": 144.4,
+          "text": "mental model of What is Deep Learning & Neural Networks?"
+        },
+        {
+          "id": "sub-5-2",
+          "sceneNumber": 5,
+          "startTime": 144.4,
+          "endTime": 149.6,
+          "text": "Core Principles Explained Simply. Now, take a look at the"
+        },
+        {
+          "id": "sub-5-3",
+          "sceneNumber": 5,
+          "startTime": 149.6,
+          "endTime": 154.8,
+          "text": "quiz question below. Test your understanding, complete the practice drill,"
+        },
+        {
+          "id": "sub-5-4",
+          "sceneNumber": 5,
+          "startTime": 154.8,
+          "endTime": 160,
+          "text": "and get ready for the next level on your roadmap!"
+        }
+      ],
+      "quiz": {
+        "question": "In What is Deep Learning & Neural Networks? Core Principles Explained Simply, what is the recommended practice for maintaining high system reliability?",
+        "options": [
+          "Validate inputs at boundaries and isolate side-effects cleanly",
+          "Bypass error handling to maximize raw speed",
+          "Hardcode all parameters directly in source code",
+          "Execute all logic synchronously in a single monolithic file"
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "Validating inputs at system boundaries and isolating asynchronous side-effects prevents cascading failures and ensures scalable, maintainable architectures."
+      },
+      "practiceMission": "Implement the pattern taught in What is Deep Learning & Neural Networks? Core Principles Explained Simply. Try setting up a small prototype with proper validation and measure its execution latency.",
+      "courseId": "course-1791601659858",
+      "lessonId": "les-1791601659858-1-1"
+    },
+    "course-1791601883806:les-1791601883806-1-1": {
+      "id": "video-1791601903920",
+      "title": "AI Video: What is Java for oops? Core Principles Explained Simply",
+      "topic": "Java for oops",
+      "lessonTitle": "What is Java for oops? Core Principles Explained Simply",
+      "levelNumber": 1,
+      "durationSeconds": 160,
+      "durationFormatted": "2m 40s",
+      "narratorVoice": "Nova (Warm AI Educator)",
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "type": "hook",
+          "durationSeconds": 28,
+          "title": "Welcome & Core Objective",
+          "narration": "Welcome to this masterclass lesson on What is Java for oops? Core Principles Explained Simply. In this session, we will break down the essential concepts of Java for oops step by step. By the end of this video, you will not only understand the theory, but also know exactly how to apply it in real-world scenarios. Let's dive right in!",
+          "visual": {
+            "headline": "What is Java for oops? Core Principles Explained Simply",
+            "subheadline": "Course: Java for oops • Stage 1",
+            "points": [
+              "Fundamental principles of What is Java for oops? Core Principles Explained Simply",
+              "Practical implementation step-by-step",
+              "Industry pitfalls to avoid and key mental models"
+            ],
+            "badgeText": "Stage 1 Mastery",
+            "visualStyle": "nebula_glow"
+          }
+        },
+        {
+          "sceneNumber": 2,
+          "type": "diagram",
+          "durationSeconds": 34,
+          "title": "Architectural Mental Model & Flow",
+          "narration": "To truly grasp What is Java for oops? Core Principles Explained Simply, we must understand the core architecture. Notice how the data flows through each layer: starting from the initial trigger, through the transformation pipeline, and finally to verified delivery. Breaking it down this way ensures scalability and eliminates guesswork.",
+          "visual": {
+            "headline": "System Architecture & Data Flow",
+            "subheadline": "How information propagates through the system",
+            "diagramNodes": [
+              {
+                "id": "n1",
+                "label": "1. Input & Trigger",
+                "desc": "Raw data / user event initiated",
+                "status": "active"
+              },
+              {
+                "id": "n2",
+                "label": "2. Transformation Layer",
+                "desc": "Validation & business logic",
+                "status": "ready"
+              },
+              {
+                "id": "n3",
+                "label": "3. Execution Engine",
+                "desc": "Optimized state computation",
+                "status": "ready"
+              },
+              {
+                "id": "n4",
+                "label": "4. Verified Output",
+                "desc": "Resilient cached delivery",
+                "status": "ready"
+              }
+            ],
+            "highlightNode": "n2",
+            "visualStyle": "blueprint_grid"
+          }
+        },
+        {
+          "sceneNumber": 3,
+          "type": "code",
+          "durationSeconds": 42,
+          "title": "Hands-On Code & Implementation",
+          "narration": "Now let's examine the actual code. Notice how we structure the functions cleanly. We validate our inputs upfront, isolate asynchronous dependencies, and use clean error handling. This is the exact pattern high-performance engineering teams use in production environments.",
+          "visual": {
+            "headline": "Production Implementation",
+            "subheadline": "Syntax & Functional Breakdown",
+            "code": "// ⚡ Production Implementation: What is Java for oops? Core Principles Explained Simply\nimport { initializeEngine, processPipeline } from '@core/system';\n\nasync function executeWorkflow(payload) {\n  console.log(\"🚀 Initializing stage for:\", \"What is Java for oops? Core Principles Explained Simply\");\n  \n  // Validate and sanitize incoming parameters\n  if (!payload || !payload.id) {\n    throw new Error(\"Invalid payload: ID required\");\n  }\n\n  // Execute optimized pipeline\n  const result = await processPipeline({\n    target: \"Java for oops\",\n    mode: \"autonomous\",\n    timestamp: Date.now()\n  });\n\n  return { success: true, data: result };\n}",
+            "highlightLines": [
+              4,
+              5,
+              11,
+              12
+            ],
+            "visualStyle": "dark_ide"
+          }
+        },
+        {
+          "sceneNumber": 4,
+          "type": "tips_and_pitfalls",
+          "durationSeconds": 30,
+          "title": "Best Practices & Common Traps",
+          "narration": "Here is what separates beginners from seasoned pros. Beginners often skip boundary condition checks or neglect asynchronous cleanups. To build resilient software, always enforce validation, manage state lifecycles carefully, and profile your performance under load.",
+          "visual": {
+            "headline": "Crucial Pro-Tips & Pitfalls",
+            "subheadline": "Avoid these costly beginner mistakes",
+            "doList": [
+              "Validate all inputs at the boundary",
+              "Use modular, pure functions wherever possible",
+              "Implement structured logging and observability"
+            ],
+            "dontList": [
+              "Do NOT leave unhandled promise rejections",
+              "Do NOT hardcode environment variables",
+              "Do NOT skip edge-case test suites"
+            ],
+            "visualStyle": "matrix_split"
+          }
+        },
+        {
+          "sceneNumber": 5,
+          "type": "recap_and_quiz",
+          "durationSeconds": 26,
+          "title": "Summary & Challenge Mission",
+          "narration": "Fantastic job completing this lesson! You now have a solid mental model of What is Java for oops? Core Principles Explained Simply. Now, take a look at the quiz question below. Test your understanding, complete the practice drill, and get ready for the next level on your roadmap!",
+          "visual": {
+            "headline": "Lesson Accomplished! 🎉",
+            "subheadline": "Take the knowledge check quiz below",
+            "trophyText": "Skill Stage Unlocked",
+            "quizPreview": "What is the primary architectural advantage of the pattern taught in What is Java for oops? Core Principles Explained Simply?",
+            "visualStyle": "celebration_glow"
+          }
+        }
+      ],
+      "subtitles": [
+        {
+          "id": "sub-1-0",
+          "sceneNumber": 1,
+          "startTime": 0,
+          "endTime": 4.7,
+          "text": "Welcome to this masterclass lesson on What is Java for"
+        },
+        {
+          "id": "sub-1-1",
+          "sceneNumber": 1,
+          "startTime": 4.7,
+          "endTime": 9.3,
+          "text": "oops? Core Principles Explained Simply. In this session, we will"
+        },
+        {
+          "id": "sub-1-2",
+          "sceneNumber": 1,
+          "startTime": 9.3,
+          "endTime": 14,
+          "text": "break down the essential concepts of Java for oops step"
+        },
+        {
+          "id": "sub-1-3",
+          "sceneNumber": 1,
+          "startTime": 14,
+          "endTime": 18.7,
+          "text": "by step. By the end of this video, you will"
+        },
+        {
+          "id": "sub-1-4",
+          "sceneNumber": 1,
+          "startTime": 18.7,
+          "endTime": 23.3,
+          "text": "not only understand the theory, but also know exactly how"
+        },
+        {
+          "id": "sub-1-5",
+          "sceneNumber": 1,
+          "startTime": 23.3,
+          "endTime": 28,
+          "text": "to apply it in real-world scenarios. Let's dive right in!"
+        },
+        {
+          "id": "sub-2-0",
+          "sceneNumber": 2,
+          "startTime": 28,
+          "endTime": 34.8,
+          "text": "To truly grasp What is Java for oops? Core Principles"
+        },
+        {
+          "id": "sub-2-1",
+          "sceneNumber": 2,
+          "startTime": 34.8,
+          "endTime": 41.6,
+          "text": "Explained Simply, we must understand the core architecture. Notice how"
+        },
+        {
+          "id": "sub-2-2",
+          "sceneNumber": 2,
+          "startTime": 41.6,
+          "endTime": 48.4,
+          "text": "the data flows through each layer: starting from the initial"
+        },
+        {
+          "id": "sub-2-3",
+          "sceneNumber": 2,
+          "startTime": 48.4,
+          "endTime": 55.2,
+          "text": "trigger, through the transformation pipeline, and finally to verified delivery."
+        },
+        {
+          "id": "sub-2-4",
+          "sceneNumber": 2,
+          "startTime": 55.2,
+          "endTime": 62,
+          "text": "Breaking it down this way ensures scalability and eliminates guesswork."
+        },
+        {
+          "id": "sub-3-0",
+          "sceneNumber": 3,
+          "startTime": 62,
+          "endTime": 72.5,
+          "text": "Now let's examine the actual code. Notice how we structure"
+        },
+        {
+          "id": "sub-3-1",
+          "sceneNumber": 3,
+          "startTime": 72.5,
+          "endTime": 83,
+          "text": "the functions cleanly. We validate our inputs upfront, isolate asynchronous"
+        },
+        {
+          "id": "sub-3-2",
+          "sceneNumber": 3,
+          "startTime": 83,
+          "endTime": 93.5,
+          "text": "dependencies, and use clean error handling. This is the exact"
+        },
+        {
+          "id": "sub-3-3",
+          "sceneNumber": 3,
+          "startTime": 93.5,
+          "endTime": 104,
+          "text": "pattern high-performance engineering teams use in production environments."
+        },
+        {
+          "id": "sub-4-0",
+          "sceneNumber": 4,
+          "startTime": 104,
+          "endTime": 111.5,
+          "text": "Here is what separates beginners from seasoned pros. Beginners often"
+        },
+        {
+          "id": "sub-4-1",
+          "sceneNumber": 4,
+          "startTime": 111.5,
+          "endTime": 119,
+          "text": "skip boundary condition checks or neglect asynchronous cleanups. To build"
+        },
+        {
+          "id": "sub-4-2",
+          "sceneNumber": 4,
+          "startTime": 119,
+          "endTime": 126.5,
+          "text": "resilient software, always enforce validation, manage state lifecycles carefully, and"
+        },
+        {
+          "id": "sub-4-3",
+          "sceneNumber": 4,
+          "startTime": 126.5,
+          "endTime": 134,
+          "text": "profile your performance under load."
+        },
+        {
+          "id": "sub-5-0",
+          "sceneNumber": 5,
+          "startTime": 134,
+          "endTime": 139.2,
+          "text": "Fantastic job completing this lesson! You now have a solid"
+        },
+        {
+          "id": "sub-5-1",
+          "sceneNumber": 5,
+          "startTime": 139.2,
+          "endTime": 144.4,
+          "text": "mental model of What is Java for oops? Core Principles"
+        },
+        {
+          "id": "sub-5-2",
+          "sceneNumber": 5,
+          "startTime": 144.4,
+          "endTime": 149.6,
+          "text": "Explained Simply. Now, take a look at the quiz question"
+        },
+        {
+          "id": "sub-5-3",
+          "sceneNumber": 5,
+          "startTime": 149.6,
+          "endTime": 154.8,
+          "text": "below. Test your understanding, complete the practice drill, and get"
+        },
+        {
+          "id": "sub-5-4",
+          "sceneNumber": 5,
+          "startTime": 154.8,
+          "endTime": 160,
+          "text": "ready for the next level on your roadmap!"
+        }
+      ],
+      "quiz": {
+        "question": "In What is Java for oops? Core Principles Explained Simply, what is the recommended practice for maintaining high system reliability?",
+        "options": [
+          "Validate inputs at boundaries and isolate side-effects cleanly",
+          "Bypass error handling to maximize raw speed",
+          "Hardcode all parameters directly in source code",
+          "Execute all logic synchronously in a single monolithic file"
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "Validating inputs at system boundaries and isolating asynchronous side-effects prevents cascading failures and ensures scalable, maintainable architectures."
+      },
+      "practiceMission": "Implement the pattern taught in What is Java for oops? Core Principles Explained Simply. Try setting up a small prototype with proper validation and measure its execution latency.",
+      "courseId": "course-1791601883806",
+      "lessonId": "les-1791601883806-1-1"
+    },
+    "course-1791602019217:les-1791602019217-1-1": {
+      "id": "video-1791602045116",
+      "title": "AI Video: What is Java? Core Principles Explained Simply",
+      "topic": "Java",
+      "lessonTitle": "What is Java? Core Principles Explained Simply",
+      "levelNumber": 1,
+      "durationSeconds": 160,
+      "durationFormatted": "2m 40s",
+      "narratorVoice": "Nova (Warm AI Educator)",
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "type": "hook",
+          "durationSeconds": 28,
+          "title": "Welcome & Core Objective",
+          "narration": "Welcome to this masterclass lesson on What is Java? Core Principles Explained Simply. In this session, we will break down the essential concepts of Java step by step. By the end of this video, you will not only understand the theory, but also know exactly how to apply it in real-world scenarios. Let's dive right in!",
+          "visual": {
+            "headline": "What is Java? Core Principles Explained Simply",
+            "subheadline": "Course: Java • Stage 1",
+            "points": [
+              "Fundamental principles of What is Java? Core Principles Explained Simply",
+              "Practical implementation step-by-step",
+              "Industry pitfalls to avoid and key mental models"
+            ],
+            "badgeText": "Stage 1 Mastery",
+            "visualStyle": "nebula_glow"
+          }
+        },
+        {
+          "sceneNumber": 2,
+          "type": "diagram",
+          "durationSeconds": 34,
+          "title": "Architectural Mental Model & Flow",
+          "narration": "To truly grasp What is Java? Core Principles Explained Simply, we must understand the core architecture. Notice how the data flows through each layer: starting from the initial trigger, through the transformation pipeline, and finally to verified delivery. Breaking it down this way ensures scalability and eliminates guesswork.",
+          "visual": {
+            "headline": "System Architecture & Data Flow",
+            "subheadline": "How information propagates through the system",
+            "diagramNodes": [
+              {
+                "id": "n1",
+                "label": "1. Input & Trigger",
+                "desc": "Raw data / user event initiated",
+                "status": "active"
+              },
+              {
+                "id": "n2",
+                "label": "2. Transformation Layer",
+                "desc": "Validation & business logic",
+                "status": "ready"
+              },
+              {
+                "id": "n3",
+                "label": "3. Execution Engine",
+                "desc": "Optimized state computation",
+                "status": "ready"
+              },
+              {
+                "id": "n4",
+                "label": "4. Verified Output",
+                "desc": "Resilient cached delivery",
+                "status": "ready"
+              }
+            ],
+            "highlightNode": "n2",
+            "visualStyle": "blueprint_grid"
+          }
+        },
+        {
+          "sceneNumber": 3,
+          "type": "code",
+          "durationSeconds": 42,
+          "title": "Hands-On Code & Implementation",
+          "narration": "Now let's examine the actual code. Notice how we structure the functions cleanly. We validate our inputs upfront, isolate asynchronous dependencies, and use clean error handling. This is the exact pattern high-performance engineering teams use in production environments.",
+          "visual": {
+            "headline": "Production Implementation",
+            "subheadline": "Syntax & Functional Breakdown",
+            "code": "// ⚡ Production Implementation: What is Java? Core Principles Explained Simply\nimport { initializeEngine, processPipeline } from '@core/system';\n\nasync function executeWorkflow(payload) {\n  console.log(\"🚀 Initializing stage for:\", \"What is Java? Core Principles Explained Simply\");\n  \n  // Validate and sanitize incoming parameters\n  if (!payload || !payload.id) {\n    throw new Error(\"Invalid payload: ID required\");\n  }\n\n  // Execute optimized pipeline\n  const result = await processPipeline({\n    target: \"Java\",\n    mode: \"autonomous\",\n    timestamp: Date.now()\n  });\n\n  return { success: true, data: result };\n}",
+            "highlightLines": [
+              4,
+              5,
+              11,
+              12
+            ],
+            "visualStyle": "dark_ide"
+          }
+        },
+        {
+          "sceneNumber": 4,
+          "type": "tips_and_pitfalls",
+          "durationSeconds": 30,
+          "title": "Best Practices & Common Traps",
+          "narration": "Here is what separates beginners from seasoned pros. Beginners often skip boundary condition checks or neglect asynchronous cleanups. To build resilient software, always enforce validation, manage state lifecycles carefully, and profile your performance under load.",
+          "visual": {
+            "headline": "Crucial Pro-Tips & Pitfalls",
+            "subheadline": "Avoid these costly beginner mistakes",
+            "doList": [
+              "Validate all inputs at the boundary",
+              "Use modular, pure functions wherever possible",
+              "Implement structured logging and observability"
+            ],
+            "dontList": [
+              "Do NOT leave unhandled promise rejections",
+              "Do NOT hardcode environment variables",
+              "Do NOT skip edge-case test suites"
+            ],
+            "visualStyle": "matrix_split"
+          }
+        },
+        {
+          "sceneNumber": 5,
+          "type": "recap_and_quiz",
+          "durationSeconds": 26,
+          "title": "Summary & Challenge Mission",
+          "narration": "Fantastic job completing this lesson! You now have a solid mental model of What is Java? Core Principles Explained Simply. Now, take a look at the quiz question below. Test your understanding, complete the practice drill, and get ready for the next level on your roadmap!",
+          "visual": {
+            "headline": "Lesson Accomplished! 🎉",
+            "subheadline": "Take the knowledge check quiz below",
+            "trophyText": "Skill Stage Unlocked",
+            "quizPreview": "What is the primary architectural advantage of the pattern taught in What is Java? Core Principles Explained Simply?",
+            "visualStyle": "celebration_glow"
+          }
+        }
+      ],
+      "subtitles": [
+        {
+          "id": "sub-1-0",
+          "sceneNumber": 1,
+          "startTime": 0,
+          "endTime": 4.7,
+          "text": "Welcome to this masterclass lesson on What is Java? Core"
+        },
+        {
+          "id": "sub-1-1",
+          "sceneNumber": 1,
+          "startTime": 4.7,
+          "endTime": 9.3,
+          "text": "Principles Explained Simply. In this session, we will break down"
+        },
+        {
+          "id": "sub-1-2",
+          "sceneNumber": 1,
+          "startTime": 9.3,
+          "endTime": 14,
+          "text": "the essential concepts of Java step by step. By the"
+        },
+        {
+          "id": "sub-1-3",
+          "sceneNumber": 1,
+          "startTime": 14,
+          "endTime": 18.7,
+          "text": "end of this video, you will not only understand the"
+        },
+        {
+          "id": "sub-1-4",
+          "sceneNumber": 1,
+          "startTime": 18.7,
+          "endTime": 23.3,
+          "text": "theory, but also know exactly how to apply it in"
+        },
+        {
+          "id": "sub-1-5",
+          "sceneNumber": 1,
+          "startTime": 23.3,
+          "endTime": 28,
+          "text": "real-world scenarios. Let's dive right in!"
+        },
+        {
+          "id": "sub-2-0",
+          "sceneNumber": 2,
+          "startTime": 28,
+          "endTime": 34.8,
+          "text": "To truly grasp What is Java? Core Principles Explained Simply,"
+        },
+        {
+          "id": "sub-2-1",
+          "sceneNumber": 2,
+          "startTime": 34.8,
+          "endTime": 41.6,
+          "text": "we must understand the core architecture. Notice how the data"
+        },
+        {
+          "id": "sub-2-2",
+          "sceneNumber": 2,
+          "startTime": 41.6,
+          "endTime": 48.4,
+          "text": "flows through each layer: starting from the initial trigger, through"
+        },
+        {
+          "id": "sub-2-3",
+          "sceneNumber": 2,
+          "startTime": 48.4,
+          "endTime": 55.2,
+          "text": "the transformation pipeline, and finally to verified delivery. Breaking it"
+        },
+        {
+          "id": "sub-2-4",
+          "sceneNumber": 2,
+          "startTime": 55.2,
+          "endTime": 62,
+          "text": "down this way ensures scalability and eliminates guesswork."
+        },
+        {
+          "id": "sub-3-0",
+          "sceneNumber": 3,
+          "startTime": 62,
+          "endTime": 72.5,
+          "text": "Now let's examine the actual code. Notice how we structure"
+        },
+        {
+          "id": "sub-3-1",
+          "sceneNumber": 3,
+          "startTime": 72.5,
+          "endTime": 83,
+          "text": "the functions cleanly. We validate our inputs upfront, isolate asynchronous"
+        },
+        {
+          "id": "sub-3-2",
+          "sceneNumber": 3,
+          "startTime": 83,
+          "endTime": 93.5,
+          "text": "dependencies, and use clean error handling. This is the exact"
+        },
+        {
+          "id": "sub-3-3",
+          "sceneNumber": 3,
+          "startTime": 93.5,
+          "endTime": 104,
+          "text": "pattern high-performance engineering teams use in production environments."
+        },
+        {
+          "id": "sub-4-0",
+          "sceneNumber": 4,
+          "startTime": 104,
+          "endTime": 111.5,
+          "text": "Here is what separates beginners from seasoned pros. Beginners often"
+        },
+        {
+          "id": "sub-4-1",
+          "sceneNumber": 4,
+          "startTime": 111.5,
+          "endTime": 119,
+          "text": "skip boundary condition checks or neglect asynchronous cleanups. To build"
+        },
+        {
+          "id": "sub-4-2",
+          "sceneNumber": 4,
+          "startTime": 119,
+          "endTime": 126.5,
+          "text": "resilient software, always enforce validation, manage state lifecycles carefully, and"
+        },
+        {
+          "id": "sub-4-3",
+          "sceneNumber": 4,
+          "startTime": 126.5,
+          "endTime": 134,
+          "text": "profile your performance under load."
+        },
+        {
+          "id": "sub-5-0",
+          "sceneNumber": 5,
+          "startTime": 134,
+          "endTime": 139.2,
+          "text": "Fantastic job completing this lesson! You now have a solid"
+        },
+        {
+          "id": "sub-5-1",
+          "sceneNumber": 5,
+          "startTime": 139.2,
+          "endTime": 144.4,
+          "text": "mental model of What is Java? Core Principles Explained Simply."
+        },
+        {
+          "id": "sub-5-2",
+          "sceneNumber": 5,
+          "startTime": 144.4,
+          "endTime": 149.6,
+          "text": "Now, take a look at the quiz question below. Test"
+        },
+        {
+          "id": "sub-5-3",
+          "sceneNumber": 5,
+          "startTime": 149.6,
+          "endTime": 154.8,
+          "text": "your understanding, complete the practice drill, and get ready for"
+        },
+        {
+          "id": "sub-5-4",
+          "sceneNumber": 5,
+          "startTime": 154.8,
+          "endTime": 160,
+          "text": "the next level on your roadmap!"
+        }
+      ],
+      "quiz": {
+        "question": "In What is Java? Core Principles Explained Simply, what is the recommended practice for maintaining high system reliability?",
+        "options": [
+          "Validate inputs at boundaries and isolate side-effects cleanly",
+          "Bypass error handling to maximize raw speed",
+          "Hardcode all parameters directly in source code",
+          "Execute all logic synchronously in a single monolithic file"
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "Validating inputs at system boundaries and isolating asynchronous side-effects prevents cascading failures and ensures scalable, maintainable architectures."
+      },
+      "practiceMission": "Implement the pattern taught in What is Java? Core Principles Explained Simply. Try setting up a small prototype with proper validation and measure its execution latency.",
+      "courseId": "course-1791602019217",
+      "lessonId": "les-1791602019217-1-1"
+    },
+    "course-1791645064692:les-1791645064692-1-1": {
+      "id": "video-1791645064701",
+      "title": "AI Video: Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model",
+      "topic": "React.js and Modern Web Development",
+      "lessonTitle": "Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model",
+      "levelNumber": 1,
+      "trackCategory": "basic",
+      "durationSeconds": 160,
+      "durationFormatted": "2m 40s",
+      "narratorVoice": "Nova (Warm AI Educator)",
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "type": "hook",
+          "durationSeconds": 28,
+          "title": "Starting Point & Core Concept",
+          "narration": "Welcome to this step-by-step beginner masterclass on Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model! If you are starting from scratch, don't worry. We will break down every single detail from start to finish with simple real-world analogies. By the end of this video, you will have complete confidence in React.js and Modern Web Development. Let's jump right in!",
+          "visual": {
+            "headline": "Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model",
+            "subheadline": "Course: React.js and Modern Web Development • Basic Foundations Track",
+            "points": [
+              "Clear beginner intuition without confusing jargon",
+              "Visual real-world analogy & mental model",
+              "Hands-on guided walkthrough from start to finish"
+            ],
+            "badgeText": "Basic Track (Start to End)",
+            "metaphor": {
+              "title": "Beginner First-Principles Metaphor",
+              "analogy": "Think of Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model like labeled storage bins in an organized workshop. Each piece has a clear slot, so you never lose track of your work!",
+              "icon": "sparkles"
+            },
+            "visualStyle": "warm_clarity"
+          }
+        },
+        {
+          "sceneNumber": 2,
+          "type": "diagram",
+          "durationSeconds": 34,
+          "title": "Visual Intuition & Mental Model",
+          "narration": "Let's visualize the mental model behind Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model. Look at how information moves step by step: from the initial concept, through the syntax rules, and into your terminal execution. When you understand the flow, programming becomes intuitive rather than memorization!",
+          "visual": {
+            "headline": "Visual Step-by-Step Flow",
+            "subheadline": "How the foundational pieces connect together",
+            "diagramNodes": [
+              {
+                "id": "n1",
+                "label": "1. Concept Origin",
+                "desc": "Why this basic building block exists",
+                "status": "active"
+              },
+              {
+                "id": "n2",
+                "label": "2. Core Syntax",
+                "desc": "How to write it clearly without errors",
+                "status": "ready"
+              },
+              {
+                "id": "n3",
+                "label": "3. First Execution",
+                "desc": "Running in your development terminal",
+                "status": "ready"
+              },
+              {
+                "id": "n4",
+                "label": "4. Mini-Drill",
+                "desc": "Solving your first hands-on problem",
+                "status": "ready"
+              }
+            ],
+            "highlightNode": "n2",
+            "visualStyle": "blueprint_grid"
+          }
+        },
+        {
+          "sceneNumber": 3,
+          "type": "code",
+          "durationSeconds": 42,
+          "title": "Hands-on Code & First Execution",
+          "narration": "Now let's see the actual code in action! Notice how clean and readable each line is. We declare our variables, define our logic, and output the result. Follow along step by step, and try running this in your own editor!",
+          "visual": {
+            "headline": "Guided Hands-on Syntax",
+            "subheadline": "Line-by-line beginner explanation",
+            "code": "// 🌱 Foundational Walkthrough: Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model\n// Step 1: Declaring our primary values\nconst skillName = \"React.js and Modern Web Development\";\nlet progressStage = 1;\n\n// Step 2: Running simple beginner logic\nfunction learnBasics(name, stage) {\n  console.log(\"Welcome to \" + name + \"!\");\n  console.log(\"Currently mastering Stage \" + stage + \" fundamentals.\");\n  return { status: \"Ready\", nextLesson: \"Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model\" };\n}\n\n// Step 3: Verifying our first output\nconst result = learnBasics(skillName, progressStage);\nconsole.log(\"Result:\", result);",
+            "highlightLines": [
+              3,
+              4,
+              10,
+              11
+            ],
+            "visualStyle": "dark_ide"
+          }
+        },
+        {
+          "sceneNumber": 4,
+          "type": "tips_and_pitfalls",
+          "durationSeconds": 30,
+          "title": "Beginner Pitfalls to Avoid",
+          "narration": "Here is what beginners often get stuck on! Beginners frequently miss syntax brackets, misspell variable names, or forget to save their file before running. Keep these key tips in mind, and you will save hours of debugging!",
+          "visual": {
+            "headline": "Beginner Traps to Avoid",
+            "subheadline": "Common beginner mistakes and how to fix them",
+            "doList": [
+              "Read error messages carefully—they point directly to the line!",
+              "Use clear, descriptive variable and function names",
+              "Test small chunks of code frequently instead of all at once"
+            ],
+            "dontList": [
+              "Do NOT panic when you see an error terminal message",
+              "Do NOT copy-paste code without understanding what it does",
+              "Do NOT skip typing out the code exercises by hand"
+            ],
+            "visualStyle": "matrix_split"
+          }
+        },
+        {
+          "sceneNumber": 5,
+          "type": "recap_and_quiz",
+          "durationSeconds": 26,
+          "title": "Recap, Achievement & Challenge Mission",
+          "narration": "Outstanding work completing this lesson on Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model! You have taken another major step forward in your React.js and Modern Web Development journey. Now test your knowledge with the challenge quiz below and unlock your achievement badge!",
+          "visual": {
+            "headline": "Skill Milestone Accomplished! 🎉",
+            "subheadline": "You have successfully mastered: Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model",
+            "trophyText": "Foundations Stage Unlocked",
+            "quizPreview": "What is the key takeaway from Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model?",
+            "visualStyle": "celebration_glow"
+          }
+        }
+      ],
+      "subtitles": [
+        {
+          "id": "sub-1-0",
+          "sceneNumber": 1,
+          "startTime": 0,
+          "endTime": 4,
+          "text": "Welcome to this step-by-step beginner masterclass on Absolute Starting Point:"
+        },
+        {
+          "id": "sub-1-1",
+          "sceneNumber": 1,
+          "startTime": 4,
+          "endTime": 8,
+          "text": "What is React.js and Modern Web Development? Core Mental Model!"
+        },
+        {
+          "id": "sub-1-2",
+          "sceneNumber": 1,
+          "startTime": 8,
+          "endTime": 12,
+          "text": "If you are starting from scratch, don't worry. We will"
+        },
+        {
+          "id": "sub-1-3",
+          "sceneNumber": 1,
+          "startTime": 12,
+          "endTime": 16,
+          "text": "break down every single detail from start to finish with"
+        },
+        {
+          "id": "sub-1-4",
+          "sceneNumber": 1,
+          "startTime": 16,
+          "endTime": 20,
+          "text": "simple real-world analogies. By the end of this video, you"
+        },
+        {
+          "id": "sub-1-5",
+          "sceneNumber": 1,
+          "startTime": 20,
+          "endTime": 24,
+          "text": "will have complete confidence in React.js and Modern Web Development."
+        },
+        {
+          "id": "sub-1-6",
+          "sceneNumber": 1,
+          "startTime": 24,
+          "endTime": 28,
+          "text": "Let's jump right in!"
+        },
+        {
+          "id": "sub-2-0",
+          "sceneNumber": 2,
+          "startTime": 28,
+          "endTime": 33.7,
+          "text": "Let's visualize the mental model behind Absolute Starting Point: What"
+        },
+        {
+          "id": "sub-2-1",
+          "sceneNumber": 2,
+          "startTime": 33.7,
+          "endTime": 39.3,
+          "text": "is React.js and Modern Web Development? Core Mental Model. Look"
+        },
+        {
+          "id": "sub-2-2",
+          "sceneNumber": 2,
+          "startTime": 39.3,
+          "endTime": 45,
+          "text": "at how information moves step by step: from the initial"
+        },
+        {
+          "id": "sub-2-3",
+          "sceneNumber": 2,
+          "startTime": 45,
+          "endTime": 50.7,
+          "text": "concept, through the syntax rules, and into your terminal execution."
+        },
+        {
+          "id": "sub-2-4",
+          "sceneNumber": 2,
+          "startTime": 50.7,
+          "endTime": 56.3,
+          "text": "When you understand the flow, programming becomes intuitive rather than"
+        },
+        {
+          "id": "sub-2-5",
+          "sceneNumber": 2,
+          "startTime": 56.3,
+          "endTime": 62,
+          "text": "memorization!"
+        },
+        {
+          "id": "sub-3-0",
+          "sceneNumber": 3,
+          "startTime": 62,
+          "endTime": 72.5,
+          "text": "Now let's see the actual code in action! Notice how"
+        },
+        {
+          "id": "sub-3-1",
+          "sceneNumber": 3,
+          "startTime": 72.5,
+          "endTime": 83,
+          "text": "clean and readable each line is. We declare our variables,"
+        },
+        {
+          "id": "sub-3-2",
+          "sceneNumber": 3,
+          "startTime": 83,
+          "endTime": 93.5,
+          "text": "define our logic, and output the result. Follow along step"
+        },
+        {
+          "id": "sub-3-3",
+          "sceneNumber": 3,
+          "startTime": 93.5,
+          "endTime": 104,
+          "text": "by step, and try running this in your own editor!"
+        },
+        {
+          "id": "sub-4-0",
+          "sceneNumber": 4,
+          "startTime": 104,
+          "endTime": 111.5,
+          "text": "Here is what beginners often get stuck on! Beginners frequently"
+        },
+        {
+          "id": "sub-4-1",
+          "sceneNumber": 4,
+          "startTime": 111.5,
+          "endTime": 119,
+          "text": "miss syntax brackets, misspell variable names, or forget to save"
+        },
+        {
+          "id": "sub-4-2",
+          "sceneNumber": 4,
+          "startTime": 119,
+          "endTime": 126.5,
+          "text": "their file before running. Keep these key tips in mind,"
+        },
+        {
+          "id": "sub-4-3",
+          "sceneNumber": 4,
+          "startTime": 126.5,
+          "endTime": 134,
+          "text": "and you will save hours of debugging!"
+        },
+        {
+          "id": "sub-5-0",
+          "sceneNumber": 5,
+          "startTime": 134,
+          "endTime": 139.2,
+          "text": "Outstanding work completing this lesson on Absolute Starting Point: What"
+        },
+        {
+          "id": "sub-5-1",
+          "sceneNumber": 5,
+          "startTime": 139.2,
+          "endTime": 144.4,
+          "text": "is React.js and Modern Web Development? Core Mental Model! You"
+        },
+        {
+          "id": "sub-5-2",
+          "sceneNumber": 5,
+          "startTime": 144.4,
+          "endTime": 149.6,
+          "text": "have taken another major step forward in your React.js and"
+        },
+        {
+          "id": "sub-5-3",
+          "sceneNumber": 5,
+          "startTime": 149.6,
+          "endTime": 154.8,
+          "text": "Modern Web Development journey. Now test your knowledge with the"
+        },
+        {
+          "id": "sub-5-4",
+          "sceneNumber": 5,
+          "startTime": 154.8,
+          "endTime": 160,
+          "text": "challenge quiz below and unlock your achievement badge!"
+        }
+      ],
+      "quiz": {
+        "question": "In Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model, what is the most important principle for building reliable systems?",
+        "options": [
+          "Understand first principles, validate inputs, and break logic into modular steps",
+          "Write all logic in a single file without testing",
+          "Bypass error handling to increase raw execution speed",
+          "Hardcode configuration parameters directly inside functions"
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "Understanding first principles, validating inputs, and maintaining modularity prevents bugs and ensures clean, scalable code."
+      },
+      "practiceMission": "Try modifying the code from Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model in the practice playground below. Change the input variables and observe how the output responds!",
+      "courseId": "course-1791645064692",
+      "lessonId": "les-1791645064692-1-1"
+    }
+  },
+  "settings": {
+    "geminiApiKey": "",
+    "requireApproval": true,
+    "allowRegistration": true,
+    "defaultRoleOnRegister": "student",
+    "aiVoice": "Nova (Warm AI Educator)",
+    "platformName": "CognitiveForge AI Learning Hub"
+  },
+  "activityLogs": [
+    {
+      "id": "log-1791645385001",
+      "timestamp": "2026-10-10T15:16:25.001Z",
+      "action": "PASSWORD_RESET",
+      "details": "Password was reset via phone verification for Praveen (praveen02@gmail.com)."
+    },
+    {
+      "id": "log-1791645287681",
+      "timestamp": "2026-10-10T15:14:47.681Z",
+      "action": "USER_APPROVED",
+      "details": "Platform Host (You) (host) approved Praveen (praveen02@gmail.com) as student."
+    },
+    {
+      "id": "log-1791645205461",
+      "timestamp": "2026-10-10T15:13:25.461Z",
+      "action": "USER_REGISTERED",
+      "details": "Praveen (praveen02@gmail.com) registered as student with phone +91 9999999999. Status: pending."
+    },
+    {
+      "id": "log-1791645064864",
+      "timestamp": "2026-10-10T15:11:04.864Z",
+      "action": "USER_APPROVED",
+      "details": "Platform Host (You) (host) approved Candidate Admin (candidate.admin@example.com) as student."
+    },
+    {
+      "id": "log-1791645064853",
+      "timestamp": "2026-10-10T15:11:04.853Z",
+      "action": "USER_REGISTERED",
+      "details": "Candidate Admin (candidate.admin@example.com) registered as student with phone +1 555-111-2222. Status: pending."
+    },
+    {
+      "id": "log-1791645064701",
+      "timestamp": "2026-10-10T15:11:04.701Z",
+      "action": "VIDEO_GENERATED",
+      "details": "AI Video generated for lesson: AI Video: Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model"
+    },
+    {
+      "id": "log-1791645064470",
+      "timestamp": "2026-10-10T15:11:04.470Z",
+      "action": "PASSWORD_RESET",
+      "details": "Password was reset via phone verification for Test Student (teststudent_2@example.com)."
+    },
+    {
+      "id": "log-1791645064345",
+      "timestamp": "2026-10-10T15:11:04.345Z",
+      "action": "USER_REGISTERED",
+      "details": "Test Student (teststudent_2@example.com) registered as student with phone +1 555-987-6543. Status: pending."
+    },
+    {
+      "id": "log-1791645024181",
+      "timestamp": "2026-10-10T15:10:24.181Z",
+      "action": "PASSWORD_RESET",
+      "details": "Password was reset via phone verification for Test Student (teststudent@example.com)."
+    },
+    {
+      "id": "log-1791645024062",
+      "timestamp": "2026-10-10T15:10:24.062Z",
+      "action": "USER_REGISTERED",
+      "details": "Test Student (teststudent@example.com) registered as student with phone +1 555-987-6543. Status: pending."
+    },
+    {
+      "id": "log-1791605495121",
+      "timestamp": "2026-10-10T04:11:35.121Z",
+      "action": "USER_APPROVED",
+      "details": "Platform Host (You) (host) approved Praveen (praveen01@gmail.com) as student."
+    },
+    {
+      "id": "log-1791605444320",
+      "timestamp": "2026-10-10T04:10:44.320Z",
+      "action": "USER_REGISTERED",
+      "details": "Praveen (praveen01@gmail.com) registered as admin with phone +91 9342046130. Status: pending."
+    },
+    {
+      "id": "log-1791603529429",
+      "timestamp": "2026-10-10T03:38:49.429Z",
+      "action": "USER_APPROVED",
+      "details": "Platform Host (You) (host) approved Dr. Marcus Vance (marcus.vance@learningidea.com) as admin."
+    },
+    {
+      "id": "log-1791603529303",
+      "timestamp": "2026-10-10T03:38:49.303Z",
+      "action": "USER_APPROVED",
+      "details": "Lead Instructor Elena (admin) approved John Doe (student.test.1791603528631@gmail.com) as student."
+    },
+    {
+      "id": "log-1791603529082",
+      "timestamp": "2026-10-10T03:38:49.082Z",
+      "action": "PASSWORD_RESET",
+      "details": "Password was reset via phone verification for John Doe (student.test.1791603528631@gmail.com)."
+    },
+    {
+      "id": "log-1791603528838",
+      "timestamp": "2026-10-10T03:38:48.839Z",
+      "action": "USER_REGISTERED",
+      "details": "John Doe (student.test.1791603528631@gmail.com) registered as student with phone +1 555-777-8899. Status: pending."
+    },
+    {
+      "id": "log-1791603467095",
+      "timestamp": "2026-10-10T03:37:47.095Z",
+      "action": "USER_APPROVED",
+      "details": "Platform Host (You) (host) approved Dr. Marcus Vance (marcus.vance@learningidea.com) as admin."
+    },
+    {
+      "id": "log-1791603466737",
+      "timestamp": "2026-10-10T03:37:46.737Z",
+      "action": "PASSWORD_RESET",
+      "details": "Password was reset via phone verification for John Doe (student.test.1791603466267@gmail.com)."
+    },
+    {
+      "id": "log-1791603466485",
+      "timestamp": "2026-10-10T03:37:46.485Z",
+      "action": "USER_REGISTERED",
+      "details": "John Doe (student.test.1791603466267@gmail.com) registered as student with phone +1 555-777-8899. Status: pending."
+    },
+    {
+      "id": "log-1791602691542",
+      "timestamp": "2026-10-10T03:24:51.542Z",
+      "action": "USER_APPROVED",
+      "details": "Platform Host (You) approved Praveen (praveen@gmail.com) as student."
+    },
+    {
+      "id": "log-1791602668402",
+      "timestamp": "2026-10-10T03:24:28.402Z",
+      "action": "USER_REGISTERED",
+      "details": "Praveen (praveen@gmail.com) registered as student. Status: pending."
+    },
+    {
+      "id": "log-1791602539480",
+      "timestamp": "2026-10-10T03:22:19.480Z",
+      "action": "USER_APPROVED",
+      "details": "Platform Host (You) approved Praveen (praveen@learningidea.com) as student."
+    },
+    {
+      "id": "log-1791602500463",
+      "timestamp": "2026-10-10T03:21:40.463Z",
+      "action": "USER_REGISTERED",
+      "details": "Praveen (praveen@learningidea.com) registered as student. Status: pending."
+    },
+    {
+      "id": "log-1791602045116",
+      "timestamp": "2026-10-10T03:14:05.116Z",
+      "action": "VIDEO_GENERATED",
+      "details": "AI Video generated for lesson: AI Video: What is Java? Core Principles Explained Simply"
+    },
+    {
+      "id": "log-1791601903921",
+      "timestamp": "2026-10-10T03:11:43.921Z",
+      "action": "VIDEO_GENERATED",
+      "details": "AI Video generated for lesson: AI Video: What is Java for oops? Core Principles Explained Simply"
+    },
+    {
+      "id": "log-1791601851103",
+      "timestamp": "2026-10-10T03:10:51.103Z",
+      "action": "USER_REJECTED",
+      "details": "Platform Host (You) rejected Sarah Jenkins (sarah.jenkins@learningidea.com). Reason: Host declined registration access."
+    },
+    {
+      "id": "log-1791601849239",
+      "timestamp": "2026-10-10T03:10:49.239Z",
+      "action": "USER_REJECTED",
+      "details": "Platform Host (You) rejected Alex Chen (alex.student@learningidea.com). Reason: Host declined registration access."
+    },
+    {
+      "id": "log-1791601847430",
+      "timestamp": "2026-10-10T03:10:47.430Z",
+      "action": "USER_REJECTED",
+      "details": "Platform Host (You) rejected Lead Instructor Elena (elena.instructor@learningidea.com). Reason: Host declined registration access."
+    },
+    {
+      "id": "log-1791601844951",
+      "timestamp": "2026-10-10T03:10:44.951Z",
+      "action": "ACCESS_REVOKED",
+      "details": "Platform Host (You) reset Lead Instructor Elena status back to pending."
+    },
+    {
+      "id": "log-1791601843698",
+      "timestamp": "2026-10-10T03:10:43.698Z",
+      "action": "ACCESS_REVOKED",
+      "details": "Platform Host (You) reset Alex Chen status back to pending."
+    },
+    {
+      "id": "log-1791601841435",
+      "timestamp": "2026-10-10T03:10:41.435Z",
+      "action": "ACCESS_REVOKED",
+      "details": "Platform Host (You) reset Sarah Jenkins status back to pending."
+    },
+    {
+      "id": "log-1791601833232",
+      "timestamp": "2026-10-10T03:10:33.232Z",
+      "action": "USER_REJECTED",
+      "details": "Platform Host (You) rejected Dr. Marcus Vance (marcus.vance@learningidea.com). Reason: Host declined registration access."
+    },
+    {
+      "id": "log-1791601831571",
+      "timestamp": "2026-10-10T03:10:31.571Z",
+      "action": "ROLE_CHANGED",
+      "details": "Platform Host (You) modified role for Dr. Marcus Vance to student."
+    },
+    {
+      "id": "log-1791601827630",
+      "timestamp": "2026-10-10T03:10:27.630Z",
+      "action": "ROLE_CHANGED",
+      "details": "Platform Host (You) modified role for Lead Instructor Elena to student."
+    },
+    {
+      "id": "log-1791601792987",
+      "timestamp": "2026-10-10T03:09:52.987Z",
+      "action": "USER_REJECTED",
+      "details": "Platform Host (You) rejected Dr. Marcus Vance (marcus.vance@learningidea.com). Reason: Host declined registration access."
+    },
+    {
+      "id": "log-1791601659874",
+      "timestamp": "2026-10-10T03:07:39.874Z",
+      "action": "BATCH_ENROLL",
+      "details": "Platform Host (You) enrolled 1 selected students into 1 courses."
+    },
+    {
+      "id": "log-1791601659867",
+      "timestamp": "2026-10-10T03:07:39.867Z",
+      "action": "VIDEO_GENERATED",
+      "details": "AI Video generated for lesson: AI Video: What is Deep Learning & Neural Networks? Core Principles Explained Simply"
+    },
+    {
+      "id": "log-1791601659852",
+      "timestamp": "2026-10-10T03:07:39.852Z",
+      "action": "USER_APPROVED",
+      "details": "Platform Host (You) approved Sarah Jenkins (sarah.jenkins@learningidea.com) as student."
+    },
+    {
+      "id": "log-1",
+      "timestamp": "2026-10-10T00:58:29.634Z",
+      "action": "USER_REGISTERED",
+      "details": "Sarah Jenkins registered and is pending Host approval."
+    },
+    {
+      "id": "log-2",
+      "timestamp": "2026-10-09T22:58:29.634Z",
+      "action": "ADMIN_REQUEST",
+      "details": "Dr. Marcus Vance requested Admin instructor role (Pending Host approval)."
+    }
+  ]
+}
