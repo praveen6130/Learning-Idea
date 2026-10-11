@@ -155,7 +155,7 @@
       "name": "Test Student",
       "email": "teststudent_2@example.com",
       "phoneNumber": "+1 555-987-6543",
-      "passwordHash": "$2b$10$Rs17nFtMkh58zy7JvcYa..zDvavk2WrbLroTyhcgJqL1thN/NEns6",
+      "passwordHash": "$2b$10$WQm2J1ENrLRTPnmHBNfUeuNk1JYPsJVA4vpPQ/VS7hUA8annWyqiq",
       "role": "student",
       "status": "pending",
       "bio": "Learner interested in AI and skill development.",
@@ -192,6 +192,395 @@
     }
   ],
   "courses": [
+    {
+      "id": "course-1791688414038",
+      "title": "React.js and Modern Web Development (Basic to Advanced Masterclass)",
+      "topic": "React.js and Modern Web Development",
+      "targetGoal": "Mastery from Basic to Advanced",
+      "level": "Comprehensive (Basic to Advanced)",
+      "duration": "24 Hours • 5 Mastery Levels",
+      "createdAt": "2026-10-11T03:13:34.038Z",
+      "description": "A master-level structured curriculum designed to guide any learner from basic fundamentals to expert-level mastery of React.js and Modern Web Development using AI-generated visual videos, sub-topic drills, and real-world projects.",
+      "levels": [
+        {
+          "levelNumber": 1,
+          "levelTitle": "Stage 1: Basic Foundations (From Starting to Ending of Basics)",
+          "description": "Complete zero-to-hero basics of React.js and Modern Web Development. Covering every foundational topic from initial setup, mental models, and terminology to writing your first real project.",
+          "badge": "Basic Track (Start to End)",
+          "trackCategory": "basic",
+          "modules": [
+            {
+              "id": "mod-1791688414038-1",
+              "title": "Starting Point: What is React.js and Modern Web Development & Environment Setup",
+              "estimatedTime": "2.5 Hours",
+              "subTopicsSummary": [
+                "1.1 Core Definition",
+                "1.2 First Principles",
+                "1.3 Tooling Installation",
+                "1.4 First Run"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791688414038-1-1",
+                  "title": "Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model",
+                  "duration": "12 min",
+                  "summary": "Understand what React.js and Modern Web Development is, why it matters, and the core intuition behind how it works without confusing jargon.",
+                  "visualType": "concept_blueprint",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "First Principles",
+                    "Visual Mental Model",
+                    "Core Intuition",
+                    "Foundational Glossary"
+                  ],
+                  "subTopics": [
+                    "Origin and why it was created",
+                    "Real-world beginner analogy & mental model",
+                    "Core terminology every beginner must know",
+                    "What you can build once you finish this basic stage"
+                  ]
+                },
+                {
+                  "id": "les-1791688414038-1-2",
+                  "title": "Workspace & Tooling: Setting Up React.js and Modern Web Development from Scratch",
+                  "duration": "15 min",
+                  "summary": "Step-by-step setup walkthrough to get your development environment ready, write your first script, and run it.",
+                  "visualType": "code_walkthrough",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "Workspace Setup",
+                    "CLI & Terminal",
+                    "First Execution",
+                    "Troubleshooting"
+                  ],
+                  "subTopics": [
+                    "Prerequisites and installation checklist",
+                    "Configuring your editor and extensions",
+                    "Running your very first Hello World execution",
+                    "Verifying installation and fixing common setup errors"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mod-1791688414038-2",
+              "title": "Building Blocks: Variables, Data Types & Expressions",
+              "estimatedTime": "3 Hours",
+              "subTopicsSummary": [
+                "2.1 Data Storage",
+                "2.2 Type Systems",
+                "2.3 Operations & Math",
+                "2.4 String Mechanics"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791688414038-2-1",
+                  "title": "Memory, Variables & Primitive Data Types in React.js and Modern Web Development",
+                  "duration": "16 min",
+                  "summary": "Learn how variables hold values in memory, different data representations, and how to manipulate values safely.",
+                  "visualType": "code_walkthrough",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "Variables",
+                    "Primitive Types",
+                    "Memory Storage",
+                    "Immutability"
+                  ],
+                  "subTopics": [
+                    "Declaring variables and naming conventions",
+                    "Numbers, text strings, booleans, and null values",
+                    "The storage container analogy in memory",
+                    "Common beginner traps when assigning data"
+                  ]
+                },
+                {
+                  "id": "les-1791688414038-2-2",
+                  "title": "Logic & Decision Making: Conditionals and Branching",
+                  "duration": "18 min",
+                  "summary": "Control how your program behaves based on rules, if-else statements, and boolean truth tables.",
+                  "visualType": "algorithm_flowchart",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "If-Else Branching",
+                    "Boolean Algebra",
+                    "Comparison Operators",
+                    "Truthiness"
+                  ],
+                  "subTopics": [
+                    "Comparison operators (equals, greater, lesser)",
+                    "Combining conditions with AND / OR logic",
+                    "Writing clean if, else-if, and else decision trees",
+                    "Avoiding nested conditional spaghetti code"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mod-1791688414038-3",
+              "title": "Ending the Basics: Loops, Functions & First Mini-Project",
+              "estimatedTime": "3.5 Hours",
+              "subTopicsSummary": [
+                "3.1 Loops & Iteration",
+                "3.2 Modular Functions",
+                "3.3 Scope Rules",
+                "3.4 Basic Capstone"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791688414038-3-1",
+                  "title": "Repetition & Automation: Loops, Iteration & Collections",
+                  "duration": "18 min",
+                  "summary": "Harness computational power by repeating tasks automatically without writing duplicate code.",
+                  "visualType": "algorithm_flowchart",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "For Loops",
+                    "While Loops",
+                    "Array Iteration",
+                    "Break & Continue"
+                  ],
+                  "subTopics": [
+                    "The mechanics of counting and repeating",
+                    "Iterating through lists and collections",
+                    "Preventing dangerous infinite loops",
+                    "Practical exercises in repetitive data transformation"
+                  ]
+                },
+                {
+                  "id": "les-1791688414038-3-2",
+                  "title": "Ending the Basics Capstone: Modular Functions & First Real Project",
+                  "duration": "22 min",
+                  "summary": "Bring all basic knowledge together to build your first functioning, complete application from start to finish.",
+                  "visualType": "code_walkthrough",
+                  "trackCategory": "basic",
+                  "keyConcepts": [
+                    "Function Anatomy",
+                    "Parameter Passing",
+                    "Return Values",
+                    "Basic Capstone"
+                  ],
+                  "subTopics": [
+                    "Packaging logic into clean, reusable functions",
+                    "Understanding local vs global variable scope",
+                    "Step-by-step assembly of the Basic mini-project",
+                    "Congratulations & graduation from the Basic Track"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 2,
+          "levelTitle": "Stage 2: Main Body - Core Architecture & Implementation",
+          "description": "Transitioning into the main body of React.js and Modern Web Development. Master core implementation patterns, state lifecycles, and component architecture.",
+          "badge": "Main Body Track (Core Implementation)",
+          "trackCategory": "main_body",
+          "modules": [
+            {
+              "id": "mod-1791688414038-4",
+              "title": "Main Body Mechanisms & Architectural Patterns",
+              "estimatedTime": "4 Hours",
+              "subTopicsSummary": [
+                "4.1 Data Lifecycles",
+                "4.2 Modularity",
+                "4.3 Error Resilience",
+                "4.4 State Sync"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791688414038-4-1",
+                  "title": "Core Architectural Patterns & Structural Conventions",
+                  "duration": "20 min",
+                  "summary": "Master the main structural patterns used by professional engineers to build scalable codebases.",
+                  "visualType": "architecture_diagram",
+                  "trackCategory": "main_body",
+                  "keyConcepts": [
+                    "Separation of Concerns",
+                    "Clean Architecture",
+                    "Encapsulation",
+                    "Design Patterns"
+                  ],
+                  "subTopics": [
+                    "Monolithic vs modular code organization",
+                    "Encapsulating logic into isolated services",
+                    "Dependency management and clean imports",
+                    "Design patterns: Factory, Singleton, and Observer"
+                  ]
+                },
+                {
+                  "id": "les-1791688414038-4-2",
+                  "title": "Asynchronous Pipelines & External Service Integrations",
+                  "duration": "22 min",
+                  "summary": "Handle asynchronous data fetching, web APIs, event listeners, and background processing.",
+                  "visualType": "code_walkthrough",
+                  "trackCategory": "main_body",
+                  "keyConcepts": [
+                    "Async Workflows",
+                    "Promise Lifecycles",
+                    "API Consumption",
+                    "Error Boundaries"
+                  ],
+                  "subTopics": [
+                    "Understanding the asynchronous event loop",
+                    "Making robust API requests with timeout fallbacks",
+                    "Graceful error handling and retry mechanisms",
+                    "Real-time streaming and websocket basics"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 3,
+          "levelTitle": "Stage 3: Main Body - Full System Integration & State Management",
+          "description": "The heart of React.js and Modern Web Development. Connect frontend interfaces, backend datastores, and complex synchronized state pipelines.",
+          "badge": "Main Body Track (Full Integration)",
+          "trackCategory": "main_body",
+          "modules": [
+            {
+              "id": "mod-1791688414038-5",
+              "title": "Advanced State Lifecycles & Relational Data Engineering",
+              "estimatedTime": "4.5 Hours",
+              "subTopicsSummary": [
+                "5.1 State Trees",
+                "5.2 Persistence",
+                "5.3 Caching Layers",
+                "5.4 Security Guards"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791688414038-5-1",
+                  "title": "Global State Management & Unidirectional Data Flow",
+                  "duration": "24 min",
+                  "summary": "Build predictable, debuggable state architectures that eliminate race conditions across your system.",
+                  "visualType": "algorithm_flowchart",
+                  "trackCategory": "main_body",
+                  "keyConcepts": [
+                    "Unidirectional Flow",
+                    "Immutability",
+                    "State Machines",
+                    "Action Pipelines"
+                  ],
+                  "subTopics": [
+                    "The dangers of two-way state drift",
+                    "Designing predictable state reducers and stores",
+                    "Optimistic UI updates with rollback protection",
+                    "Profiling state re-renders and memory footprints"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 4,
+          "levelTitle": "Stage 4: Master Level - High Scale, Internals & Zero-Trust Security",
+          "description": "Enter the elite Master tier. Dive under the hood into compiler and runtime internals, micro-optimizations, and enterprise security.",
+          "badge": "Master Track (Deep Internals)",
+          "trackCategory": "master",
+          "modules": [
+            {
+              "id": "mod-1791688414038-6",
+              "title": "Engine Internals, Memory Profiling & High Concurrency",
+              "estimatedTime": "5 Hours",
+              "subTopicsSummary": [
+                "6.1 Runtime Engine",
+                "6.2 Garbage Collection",
+                "6.3 Concurrency",
+                "6.4 Zero-Trust"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791688414038-6-1",
+                  "title": "Under the Hood: Engine Internals & Micro-Benchmark Optimization",
+                  "duration": "26 min",
+                  "summary": "Uncover the low-level virtual machine, memory allocation, and profiling techniques to achieve 10x throughput.",
+                  "visualType": "architecture_diagram",
+                  "trackCategory": "master",
+                  "keyConcepts": [
+                    "Engine Internals",
+                    "Garbage Collection Tuning",
+                    "Flame Graphs",
+                    "Throughput Optimization"
+                  ],
+                  "subTopics": [
+                    "How the underlying runtime compiles and executes your code",
+                    "Diagnosing memory leaks with heap snapshots and flame graphs",
+                    "Lock-free algorithms and parallel worker threads",
+                    "Benchmarking latency at the 99th percentile (p99)"
+                  ]
+                },
+                {
+                  "id": "les-1791688414038-6-2",
+                  "title": "Zero-Trust Security, Vulnerability Defense & Cryptographic Hardening",
+                  "duration": "25 min",
+                  "summary": "Protect production systems against injection exploits, token hijacking, and unauthorized privilege escalation.",
+                  "visualType": "security_matrix",
+                  "trackCategory": "master",
+                  "keyConcepts": [
+                    "Zero Trust",
+                    "Cryptographic Signatures",
+                    "Input Sanitization",
+                    "Pen-Testing"
+                  ],
+                  "subTopics": [
+                    "Threat modeling and common vulnerability vectors (OWASP)",
+                    "Cryptographic token generation and tamper-proof signatures",
+                    "Rate limiting, DDOS mitigation, and IP filtering",
+                    "Automated security scanning in CI/CD pipelines"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "levelNumber": 5,
+          "levelTitle": "Stage 5: Master Level - Production Deployment & Grand Capstone",
+          "description": "The ultimate capstone. Deploy a portfolio-grade, enterprise-scale production project with global edge caching, CI/CD, and live telemetry.",
+          "badge": "Master Track (Production Capstone)",
+          "trackCategory": "master",
+          "modules": [
+            {
+              "id": "mod-1791688414038-7",
+              "title": "Enterprise Production Capstone & Global Deployment",
+              "estimatedTime": "5.5 Hours",
+              "subTopicsSummary": [
+                "7.1 Docker Containers",
+                "7.2 CI/CD Automation",
+                "7.3 Live Observability",
+                "7.4 Grand Showcase"
+              ],
+              "lessons": [
+                {
+                  "id": "les-1791688414038-7-1",
+                  "title": "Architecting the Flagship Master Capstone in React.js and Modern Web Development",
+                  "duration": "28 min",
+                  "summary": "Architect and construct an autonomous, real-world flagship project demonstrating complete mastery from basic to expert.",
+                  "visualType": "architecture_diagram",
+                  "trackCategory": "master",
+                  "keyConcepts": [
+                    "System Design Blueprint",
+                    "Microservices",
+                    "Resilient DB Clustering",
+                    "Master Capstone"
+                  ],
+                  "subTopics": [
+                    "Writing a production System Architecture Document",
+                    "Multi-tier service decoupling and containerization",
+                    "Automated testing suites: Unit, Integration & E2E",
+                    "Deploying to scalable cloud infrastructure with zero downtime"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "createdBy": "user-host-1"
+    },
     {
       "id": "course-1791645310558",
       "title": "Python (Basic to Advanced Masterclass)",
@@ -3763,6 +4152,334 @@
       "practiceMission": "Try modifying the code from Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model in the practice playground below. Change the input variables and observe how the output responds!",
       "courseId": "course-1791645064692",
       "lessonId": "les-1791645064692-1-1"
+    },
+    "course-1791688414038:les-1791688414038-1-1": {
+      "id": "video-1791688414048",
+      "title": "AI Video: Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model",
+      "topic": "React.js and Modern Web Development",
+      "lessonTitle": "Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model",
+      "levelNumber": 1,
+      "trackCategory": "basic",
+      "durationSeconds": 160,
+      "durationFormatted": "2m 40s",
+      "narratorVoice": "Nova (Warm AI Educator)",
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "type": "hook",
+          "durationSeconds": 28,
+          "title": "Starting Point & Core Concept",
+          "narration": "Welcome to this step-by-step beginner masterclass on Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model! If you are starting from scratch, don't worry. We will break down every single detail from start to finish with simple real-world analogies. By the end of this video, you will have complete confidence in React.js and Modern Web Development. Let's jump right in!",
+          "visual": {
+            "headline": "Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model",
+            "subheadline": "Course: React.js and Modern Web Development • Basic Foundations Track",
+            "points": [
+              "Clear beginner intuition without confusing jargon",
+              "Visual real-world analogy & mental model",
+              "Hands-on guided walkthrough from start to finish"
+            ],
+            "badgeText": "Basic Track (Start to End)",
+            "metaphor": {
+              "title": "Beginner First-Principles Metaphor",
+              "analogy": "Think of Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model like labeled storage bins in an organized workshop. Each piece has a clear slot, so you never lose track of your work!",
+              "icon": "sparkles"
+            },
+            "visualStyle": "warm_clarity"
+          }
+        },
+        {
+          "sceneNumber": 2,
+          "type": "diagram",
+          "durationSeconds": 34,
+          "title": "Visual Intuition & Mental Model",
+          "narration": "Let's visualize the mental model behind Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model. Look at how information moves step by step: from the initial concept, through the syntax rules, and into your terminal execution. When you understand the flow, programming becomes intuitive rather than memorization!",
+          "visual": {
+            "headline": "Visual Step-by-Step Flow",
+            "subheadline": "How the foundational pieces connect together",
+            "diagramNodes": [
+              {
+                "id": "n1",
+                "label": "1. Concept Origin",
+                "desc": "Why this basic building block exists",
+                "status": "active"
+              },
+              {
+                "id": "n2",
+                "label": "2. Core Syntax",
+                "desc": "How to write it clearly without errors",
+                "status": "ready"
+              },
+              {
+                "id": "n3",
+                "label": "3. First Execution",
+                "desc": "Running in your development terminal",
+                "status": "ready"
+              },
+              {
+                "id": "n4",
+                "label": "4. Mini-Drill",
+                "desc": "Solving your first hands-on problem",
+                "status": "ready"
+              }
+            ],
+            "highlightNode": "n2",
+            "visualStyle": "blueprint_grid"
+          }
+        },
+        {
+          "sceneNumber": 3,
+          "type": "code",
+          "durationSeconds": 42,
+          "title": "Hands-on Code & First Execution",
+          "narration": "Now let's see the actual code in action! Notice how clean and readable each line is. We declare our variables, define our logic, and output the result. Follow along step by step, and try running this in your own editor!",
+          "visual": {
+            "headline": "Guided Hands-on Syntax",
+            "subheadline": "Line-by-line beginner explanation",
+            "code": "// 🌱 Foundational Walkthrough: Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model\n// Step 1: Declaring our primary values\nconst skillName = \"React.js and Modern Web Development\";\nlet progressStage = 1;\n\n// Step 2: Running simple beginner logic\nfunction learnBasics(name, stage) {\n  console.log(\"Welcome to \" + name + \"!\");\n  console.log(\"Currently mastering Stage \" + stage + \" fundamentals.\");\n  return { status: \"Ready\", nextLesson: \"Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model\" };\n}\n\n// Step 3: Verifying our first output\nconst result = learnBasics(skillName, progressStage);\nconsole.log(\"Result:\", result);",
+            "highlightLines": [
+              3,
+              4,
+              10,
+              11
+            ],
+            "visualStyle": "dark_ide"
+          }
+        },
+        {
+          "sceneNumber": 4,
+          "type": "tips_and_pitfalls",
+          "durationSeconds": 30,
+          "title": "Beginner Pitfalls to Avoid",
+          "narration": "Here is what beginners often get stuck on! Beginners frequently miss syntax brackets, misspell variable names, or forget to save their file before running. Keep these key tips in mind, and you will save hours of debugging!",
+          "visual": {
+            "headline": "Beginner Traps to Avoid",
+            "subheadline": "Common beginner mistakes and how to fix them",
+            "doList": [
+              "Read error messages carefully—they point directly to the line!",
+              "Use clear, descriptive variable and function names",
+              "Test small chunks of code frequently instead of all at once"
+            ],
+            "dontList": [
+              "Do NOT panic when you see an error terminal message",
+              "Do NOT copy-paste code without understanding what it does",
+              "Do NOT skip typing out the code exercises by hand"
+            ],
+            "visualStyle": "matrix_split"
+          }
+        },
+        {
+          "sceneNumber": 5,
+          "type": "recap_and_quiz",
+          "durationSeconds": 26,
+          "title": "Recap, Achievement & Challenge Mission",
+          "narration": "Outstanding work completing this lesson on Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model! You have taken another major step forward in your React.js and Modern Web Development journey. Now test your knowledge with the challenge quiz below and unlock your achievement badge!",
+          "visual": {
+            "headline": "Skill Milestone Accomplished! 🎉",
+            "subheadline": "You have successfully mastered: Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model",
+            "trophyText": "Foundations Stage Unlocked",
+            "quizPreview": "What is the key takeaway from Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model?",
+            "visualStyle": "celebration_glow"
+          }
+        }
+      ],
+      "subtitles": [
+        {
+          "id": "sub-1-0",
+          "sceneNumber": 1,
+          "startTime": 0,
+          "endTime": 4,
+          "text": "Welcome to this step-by-step beginner masterclass on Absolute Starting Point:"
+        },
+        {
+          "id": "sub-1-1",
+          "sceneNumber": 1,
+          "startTime": 4,
+          "endTime": 8,
+          "text": "What is React.js and Modern Web Development? Core Mental Model!"
+        },
+        {
+          "id": "sub-1-2",
+          "sceneNumber": 1,
+          "startTime": 8,
+          "endTime": 12,
+          "text": "If you are starting from scratch, don't worry. We will"
+        },
+        {
+          "id": "sub-1-3",
+          "sceneNumber": 1,
+          "startTime": 12,
+          "endTime": 16,
+          "text": "break down every single detail from start to finish with"
+        },
+        {
+          "id": "sub-1-4",
+          "sceneNumber": 1,
+          "startTime": 16,
+          "endTime": 20,
+          "text": "simple real-world analogies. By the end of this video, you"
+        },
+        {
+          "id": "sub-1-5",
+          "sceneNumber": 1,
+          "startTime": 20,
+          "endTime": 24,
+          "text": "will have complete confidence in React.js and Modern Web Development."
+        },
+        {
+          "id": "sub-1-6",
+          "sceneNumber": 1,
+          "startTime": 24,
+          "endTime": 28,
+          "text": "Let's jump right in!"
+        },
+        {
+          "id": "sub-2-0",
+          "sceneNumber": 2,
+          "startTime": 28,
+          "endTime": 33.7,
+          "text": "Let's visualize the mental model behind Absolute Starting Point: What"
+        },
+        {
+          "id": "sub-2-1",
+          "sceneNumber": 2,
+          "startTime": 33.7,
+          "endTime": 39.3,
+          "text": "is React.js and Modern Web Development? Core Mental Model. Look"
+        },
+        {
+          "id": "sub-2-2",
+          "sceneNumber": 2,
+          "startTime": 39.3,
+          "endTime": 45,
+          "text": "at how information moves step by step: from the initial"
+        },
+        {
+          "id": "sub-2-3",
+          "sceneNumber": 2,
+          "startTime": 45,
+          "endTime": 50.7,
+          "text": "concept, through the syntax rules, and into your terminal execution."
+        },
+        {
+          "id": "sub-2-4",
+          "sceneNumber": 2,
+          "startTime": 50.7,
+          "endTime": 56.3,
+          "text": "When you understand the flow, programming becomes intuitive rather than"
+        },
+        {
+          "id": "sub-2-5",
+          "sceneNumber": 2,
+          "startTime": 56.3,
+          "endTime": 62,
+          "text": "memorization!"
+        },
+        {
+          "id": "sub-3-0",
+          "sceneNumber": 3,
+          "startTime": 62,
+          "endTime": 72.5,
+          "text": "Now let's see the actual code in action! Notice how"
+        },
+        {
+          "id": "sub-3-1",
+          "sceneNumber": 3,
+          "startTime": 72.5,
+          "endTime": 83,
+          "text": "clean and readable each line is. We declare our variables,"
+        },
+        {
+          "id": "sub-3-2",
+          "sceneNumber": 3,
+          "startTime": 83,
+          "endTime": 93.5,
+          "text": "define our logic, and output the result. Follow along step"
+        },
+        {
+          "id": "sub-3-3",
+          "sceneNumber": 3,
+          "startTime": 93.5,
+          "endTime": 104,
+          "text": "by step, and try running this in your own editor!"
+        },
+        {
+          "id": "sub-4-0",
+          "sceneNumber": 4,
+          "startTime": 104,
+          "endTime": 111.5,
+          "text": "Here is what beginners often get stuck on! Beginners frequently"
+        },
+        {
+          "id": "sub-4-1",
+          "sceneNumber": 4,
+          "startTime": 111.5,
+          "endTime": 119,
+          "text": "miss syntax brackets, misspell variable names, or forget to save"
+        },
+        {
+          "id": "sub-4-2",
+          "sceneNumber": 4,
+          "startTime": 119,
+          "endTime": 126.5,
+          "text": "their file before running. Keep these key tips in mind,"
+        },
+        {
+          "id": "sub-4-3",
+          "sceneNumber": 4,
+          "startTime": 126.5,
+          "endTime": 134,
+          "text": "and you will save hours of debugging!"
+        },
+        {
+          "id": "sub-5-0",
+          "sceneNumber": 5,
+          "startTime": 134,
+          "endTime": 139.2,
+          "text": "Outstanding work completing this lesson on Absolute Starting Point: What"
+        },
+        {
+          "id": "sub-5-1",
+          "sceneNumber": 5,
+          "startTime": 139.2,
+          "endTime": 144.4,
+          "text": "is React.js and Modern Web Development? Core Mental Model! You"
+        },
+        {
+          "id": "sub-5-2",
+          "sceneNumber": 5,
+          "startTime": 144.4,
+          "endTime": 149.6,
+          "text": "have taken another major step forward in your React.js and"
+        },
+        {
+          "id": "sub-5-3",
+          "sceneNumber": 5,
+          "startTime": 149.6,
+          "endTime": 154.8,
+          "text": "Modern Web Development journey. Now test your knowledge with the"
+        },
+        {
+          "id": "sub-5-4",
+          "sceneNumber": 5,
+          "startTime": 154.8,
+          "endTime": 160,
+          "text": "challenge quiz below and unlock your achievement badge!"
+        }
+      ],
+      "quiz": {
+        "question": "In Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model, what is the most important principle for building reliable systems?",
+        "options": [
+          "Understand first principles, validate inputs, and break logic into modular steps",
+          "Write all logic in a single file without testing",
+          "Bypass error handling to increase raw execution speed",
+          "Hardcode configuration parameters directly inside functions"
+        ],
+        "correctAnswerIndex": 0,
+        "explanation": "Understanding first principles, validating inputs, and maintaining modularity prevents bugs and ensures clean, scalable code."
+      },
+      "practiceMission": "Try modifying the code from Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model in the practice playground below. Change the input variables and observe how the output responds!",
+      "courseId": "course-1791688414038",
+      "lessonId": "les-1791688414038-1-1"
     }
   },
   "settings": {
@@ -3774,6 +4491,18 @@
     "platformName": "CognitiveForge AI Learning Hub"
   },
   "activityLogs": [
+    {
+      "id": "log-1791688414048",
+      "timestamp": "2026-10-11T03:13:34.048Z",
+      "action": "VIDEO_GENERATED",
+      "details": "AI Video generated for lesson: AI Video: Absolute Starting Point: What is React.js and Modern Web Development? Core Mental Model"
+    },
+    {
+      "id": "log-1791688413804",
+      "timestamp": "2026-10-11T03:13:33.804Z",
+      "action": "PASSWORD_RESET",
+      "details": "Password was reset via phone verification for Test Student (teststudent_2@example.com)."
+    },
     {
       "id": "log-1791645385001",
       "timestamp": "2026-10-10T15:16:25.001Z",

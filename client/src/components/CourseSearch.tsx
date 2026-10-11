@@ -6,11 +6,10 @@ import {
   GraduationCap, 
   ArrowRight, 
   Layers, 
-  Compass, 
-  Zap, 
   Flame,
-  CheckCircle,
-  PlayCircle
+  CheckCircle2,
+  Clock,
+  BookOpen
 } from 'lucide-react';
 
 interface CourseSearchProps {
@@ -54,125 +53,123 @@ export const CourseSearch: React.FC<CourseSearchProps> = ({
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      {/* Hero section */}
-      <div className="text-center max-w-3xl mx-auto mb-10 pt-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-4">
-          <Sparkles className="w-3.5 h-3.5 animate-spin" />
-          <span>Autonomous AI Curriculum & Video Synthesis</span>
-        </div>
-
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-4">
-          Master Any Skill From{' '}
-          <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
-            Basic to Advanced
-          </span>
-        </h1>
-
-        <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-          Search any course, technology, or domain. The AI creates a comprehensive multi-tier roadmap and synthesizes personalized AI video lessons with interactive code and real-time narration.
-        </p>
-      </div>
-
-      {/* Main Search & Generator Card */}
-      <div className="bg-gray-900/90 border border-gray-800 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl relative overflow-hidden mb-12">
-        <div className="absolute -top-32 -right-32 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
-
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="relative">
-            <Search className="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" />
-            <input
-              type="text"
-              value={searchTopic}
-              onChange={(e) => setSearchTopic(e.target.value)}
-              placeholder="Search any skill (e.g. Python for Data Science, React 19, Quantum Computing, Public Speaking)..."
-              disabled={isGenerating}
-              className="w-full bg-gray-950/80 border border-gray-700/80 rounded-2xl pl-12 pr-4 py-4 text-sm sm:text-base text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors shadow-inner"
-            />
+    <div className="space-y-12">
+      {/* Search Header Banner & Generator */}
+      <div className="double-bezel-card">
+        <div className="double-bezel-inner p-6 sm:p-10 space-y-6">
+          <div className="max-w-2xl text-left space-y-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold">
+              <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+              <span>Autonomous Curriculum Engine</span>
+            </div>
+            <h1 className="text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+              Search any skill to build your curriculum
+            </h1>
+            <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+              Type any technology, framework, or theoretical discipline. Our engine creates a 5-stage roadmap with tailored AI video lessons.
+            </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2 w-full sm:w-auto">
-              <span className="text-xs text-gray-400 shrink-0 font-medium">Learning Goal:</span>
-              <select
-                value={selectedGoal}
-                onChange={(e) => setSelectedGoal(e.target.value)}
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="relative">
+              <Search className="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" />
+              <input
+                type="text"
+                value={searchTopic}
+                onChange={(e) => setSearchTopic(e.target.value)}
+                placeholder="Search any skill (e.g. React 19, Python Data Systems, Quantum Algorithms)..."
                 disabled={isGenerating}
-                className="bg-gray-950 border border-gray-800 rounded-xl px-3 py-2 text-xs text-gray-200 focus:outline-none focus:border-indigo-500 w-full sm:w-auto"
-              >
-                <option value="Comprehensive Mastery (Basic to Advanced)">
-                  Comprehensive Mastery (Basic to Advanced)
-                </option>
-                <option value="Career Transition & Portfolio Projects">
-                  Career Transition & Portfolio Projects
-                </option>
-                <option value="Quick Crash Course & Hands-on Drills">
-                  Quick Crash Course & Hands-on Drills
-                </option>
-                <option value="Advanced Architectural Deep-Dive">
-                  Advanced Architectural Deep-Dive
-                </option>
-              </select>
+                className="w-full bg-[#07090e] border border-white/10 rounded-2xl pl-12 pr-4 py-4 text-sm sm:text-base text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500/80 focus:ring-1 focus:ring-indigo-500/50 transition-all shadow-inner"
+              />
             </div>
 
-            <button
-              type="submit"
-              disabled={isGenerating || !searchTopic.trim()}
-              className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 disabled:opacity-50 disabled:cursor-not-allowed text-white text-sm font-bold shadow-xl shadow-indigo-600/30 flex items-center justify-center gap-2.5 transition-all hover:scale-102"
-            >
-              {isGenerating ? (
-                <>
-                  <Sparkles className="w-4 h-4 animate-spin text-amber-300" />
-                  <span>Synthesizing AI Roadmap...</span>
-                </>
-              ) : (
-                <>
-                  <Sparkles className="w-4 h-4 text-amber-300" />
-                  <span>Generate Basic to Advanced Roadmap</span>
-                  <ArrowRight className="w-4 h-4" />
-                </>
-              )}
-            </button>
-          </div>
-        </form>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+              <div className="flex items-center gap-2.5 w-full sm:w-auto">
+                <span className="text-xs text-gray-400 shrink-0 font-medium">Learning Track Goal:</span>
+                <select
+                  value={selectedGoal}
+                  onChange={(e) => setSelectedGoal(e.target.value)}
+                  disabled={isGenerating}
+                  className="bg-[#07090e] border border-white/10 rounded-xl px-3.5 py-2 text-xs text-gray-200 focus:outline-none focus:border-indigo-500 w-full sm:w-auto cursor-pointer"
+                >
+                  <option value="Comprehensive Mastery (Basic to Advanced)">
+                    Comprehensive Mastery (Basic to Advanced)
+                  </option>
+                  <option value="Career Transition & Portfolio Projects">
+                    Career Transition & Portfolio Projects
+                  </option>
+                  <option value="Quick Crash Course & Hands-on Drills">
+                    Quick Crash Course & Hands-on Drills
+                  </option>
+                  <option value="Advanced Architectural Deep-Dive">
+                    Advanced Architectural Deep-Dive
+                  </option>
+                </select>
+              </div>
 
-        {/* Quick Suggestion Pills */}
-        <div className="mt-6 pt-5 border-t border-gray-800/80">
-          <div className="text-xs font-semibold text-gray-400 mb-3 flex items-center gap-1.5">
-            <Flame className="w-3.5 h-3.5 text-amber-400" />
-            <span>Popular Masterclass Topics:</span>
-          </div>
-
-          <div className="flex flex-wrap gap-2">
-            {quickPills.map((pill) => (
               <button
-                key={pill}
-                type="button"
-                onClick={() => handlePillClick(pill)}
-                disabled={isGenerating}
-                className="px-3 py-1.5 rounded-xl bg-gray-800/80 hover:bg-gray-700/80 text-gray-300 text-xs font-medium border border-gray-700/60 hover:border-gray-500 transition-colors flex items-center gap-1.5"
+                type="submit"
+                disabled={isGenerating || !searchTopic.trim()}
+                className="px-7 py-3 rounded-full bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed text-white text-xs sm:text-sm font-bold shadow-lg shadow-indigo-600/25 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
-                <span>{pill}</span>
+                {isGenerating ? (
+                  <>
+                    <Sparkles className="w-4 h-4 animate-spin text-amber-300" />
+                    <span>Synthesizing Curriculum...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Generate AI Roadmap</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </>
+                )}
               </button>
-            ))}
+            </div>
+          </form>
+
+          {/* Popular Masterclass Pill Chips */}
+          <div className="pt-4 border-t border-white/[0.06]">
+            <div className="text-[11px] font-semibold text-gray-400 mb-2.5 flex items-center gap-1.5">
+              <Flame className="w-3.5 h-3.5 text-amber-400" />
+              <span>Recommended Topics:</span>
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              {quickPills.map((pill) => (
+                <button
+                  key={pill}
+                  type="button"
+                  onClick={() => handlePillClick(pill)}
+                  disabled={isGenerating}
+                  className="px-3 py-1.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] text-gray-300 text-xs font-medium border border-white/[0.06] hover:border-white/20 transition-all flex items-center gap-1.5"
+                >
+                  <span>{pill}</span>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Available & Enrolled Courses Library */}
-      <div>
-        <div className="flex items-center justify-between mb-5">
-          <div className="flex items-center gap-2">
-            <Layers className="w-5 h-5 text-indigo-400" />
-            <h2 className="text-xl font-bold text-white">Course Library & Active Roadmaps</h2>
+      {/* Available Roadmaps Library */}
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+              <Layers className="w-4 h-4" />
+            </div>
+            <div>
+              <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight">Active Curricula & Roadmaps</h2>
+              <p className="text-[11px] text-gray-400">Select any generated course to access lessons and AI video masterclasses</p>
+            </div>
           </div>
-          <span className="text-xs text-gray-400">
-            {courses.length} Roadmap{courses.length === 1 ? '' : 's'} available
+          <span className="text-xs text-gray-400 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
+            {courses.length} Course{courses.length === 1 ? '' : 's'}
           </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* Course Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((course) => {
             const totalLessons = course.levels?.reduce(
               (acc, lvl) => acc + lvl.modules.reduce((mAcc, m) => mAcc + m.lessons.length, 0),
@@ -183,36 +180,39 @@ export const CourseSearch: React.FC<CourseSearchProps> = ({
               <div
                 key={course.id}
                 onClick={() => onCourseSelect(course)}
-                className="group p-5 rounded-3xl bg-gray-900/80 border border-gray-800 hover:border-indigo-500/50 hover:bg-gray-850 transition-all cursor-pointer shadow-lg flex flex-col justify-between"
+                className="group double-bezel-card cursor-pointer hover:scale-[1.01]"
               >
-                <div>
-                  <div className="flex items-start justify-between gap-3 mb-3">
-                    <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
-                      5-STAGE ROADMAP
-                    </span>
-                    <span className="text-[11px] text-gray-400 flex items-center gap-1">
-                      <GraduationCap className="w-3.5 h-3.5 text-purple-400" />
-                      {course.duration || 'Comprehensive'}
-                    </span>
+                <div className="double-bezel-inner p-6 flex flex-col justify-between h-full space-y-5">
+                  <div className="space-y-3">
+                    <div className="flex items-start justify-between gap-3">
+                      <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
+                        5 STAGES
+                      </span>
+                      <span className="text-[11px] text-gray-400 flex items-center gap-1 font-mono">
+                        <Clock className="w-3 h-3 text-gray-500" />
+                        {course.duration || 'Comprehensive'}
+                      </span>
+                    </div>
+
+                    <h3 className="font-bold text-base text-white group-hover:text-indigo-200 transition-colors line-clamp-2">
+                      {course.title}
+                    </h3>
+
+                    <p className="text-xs text-gray-400 line-clamp-2 leading-relaxed">
+                      {course.description}
+                    </p>
                   </div>
 
-                  <h3 className="font-extrabold text-base text-white group-hover:text-blue-300 transition-colors mb-2 line-clamp-2">
-                    {course.title}
-                  </h3>
+                  <div className="pt-3 border-t border-white/[0.06] flex items-center justify-between">
+                    <div className="flex items-center gap-1.5 text-xs text-gray-400">
+                      <BookOpen className="w-3.5 h-3.5 text-indigo-400" />
+                      <span>{totalLessons} Lessons with AI Video</span>
+                    </div>
 
-                  <p className="text-xs text-gray-400 line-clamp-2 mb-4 leading-relaxed">
-                    {course.description}
-                  </p>
-                </div>
-
-                <div className="pt-3 border-t border-gray-800/80 flex items-center justify-between">
-                  <div className="text-[11px] text-gray-400">
-                    <span className="font-semibold text-gray-200">{totalLessons}</span> Lessons with AI Video
-                  </div>
-
-                  <div className="flex items-center gap-1.5 text-xs font-semibold text-blue-400 group-hover:text-blue-300">
-                    <span>Open Roadmap</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    <div className="flex items-center gap-1 text-xs font-semibold text-indigo-400 group-hover:text-indigo-300">
+                      <span>View</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </div>
                 </div>
               </div>

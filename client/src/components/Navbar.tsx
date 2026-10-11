@@ -11,7 +11,10 @@ import {
   ChevronDown,
   LayoutDashboard,
   LogIn,
-  UserPlus
+  UserPlus,
+  Menu,
+  X,
+  Crown
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -29,42 +32,48 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const { user, isApproved, isAdmin, isHost, logout, switchPersona } = useAuth();
   const [showPersonaMenu, setShowPersonaMenu] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-gray-950/80 border-b border-gray-800/80 px-4 lg:px-8 py-3">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <header className="sticky top-2 z-50 px-3 sm:px-6">
+      <div className="max-w-7xl mx-auto rounded-2xl glass-pill px-4 sm:px-6 py-2.5 flex items-center justify-between border border-white/[0.08] shadow-2xl backdrop-blur-xl">
         {/* Brand Logo */}
         <div 
-          onClick={() => setCurrentTab('courses')}
-          className="flex items-center gap-3 cursor-pointer group"
+          onClick={() => {
+            setCurrentTab('courses');
+            setMobileMenuOpen(false);
+          }}
+          className="flex items-center gap-3 cursor-pointer group select-none"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform">
-            <Sparkles className="w-5 h-5 text-white animate-pulse" />
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-b from-indigo-500 to-indigo-700 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform border border-white/20">
+            <Sparkles className="w-4 h-4 text-white" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-extrabold text-xl tracking-tight bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
+              <span className="font-extrabold text-base tracking-tight text-white group-hover:text-indigo-200 transition-colors">
                 CognitiveForge
               </span>
-              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30">
-                AI ACADEMY
+              <span className="text-[9px] font-bold tracking-wider px-1.5 py-0.5 rounded bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
+                PRO
               </span>
             </div>
-            <p className="text-xs text-gray-400 hidden sm:block">Autonomous AI Roadmaps & Interactive Video Masterclasses</p>
+            <p className="text-[10px] text-gray-400 hidden md:block tracking-normal">
+              Autonomous AI Masterclass Platform
+            </p>
           </div>
         </div>
 
-        {/* Center Navigation Links (Admin Panel ONLY visible to Admin or Host!) */}
-        <nav className="flex items-center gap-2">
+        {/* Center Navigation Links (Admin Panel ONLY visible to Admin or Host) */}
+        <nav className="hidden md:flex items-center gap-1.5 bg-gray-950/60 p-1 rounded-xl border border-white/[0.05]">
           <button
             onClick={() => setCurrentTab('courses')}
-            className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all flex items-center gap-2 ${
+            className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 ${
               currentTab === 'courses'
-                ? 'bg-blue-600/20 text-blue-400 border border-blue-500/30 shadow-sm'
-                : 'text-gray-400 hover:text-gray-200 hover:bg-gray-900'
+                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
+                : 'text-gray-400 hover:text-white hover:bg-white/[0.04]'
             }`}
           >
-            <GraduationCap className="w-4 h-4" />
+            <GraduationCap className="w-3.5 h-3.5" />
             <span>Courses & Roadmaps</span>
           </button>
 
@@ -72,16 +81,16 @@ export const Navbar: React.FC<NavbarProps> = ({
           {isAdmin && (
             <button
               onClick={() => setCurrentTab('admin')}
-              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all flex items-center gap-2 ${
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 ${
                 currentTab === 'admin'
-                  ? 'bg-purple-600/20 text-purple-300 border border-purple-500/30 shadow-sm'
-                  : 'text-gray-400 hover:text-gray-200 hover:bg-gray-900'
+                  ? 'bg-purple-600 text-white shadow-md shadow-purple-600/30'
+                  : 'text-gray-400 hover:text-white hover:bg-white/[0.04]'
               }`}
             >
-              <LayoutDashboard className="w-4 h-4" />
+              <LayoutDashboard className="w-3.5 h-3.5" />
               <span>Admin Panel</span>
               {isHost && (
-                <span className="text-[10px] bg-purple-500/30 text-purple-200 px-1 rounded font-bold">
+                <span className="text-[9px] bg-purple-900/60 text-purple-200 px-1 rounded font-bold border border-purple-400/30">
                   HOST
                 </span>
               )}
@@ -89,31 +98,31 @@ export const Navbar: React.FC<NavbarProps> = ({
           )}
         </nav>
 
-        {/* Right Area: User Status & Actions */}
-        <div className="flex items-center gap-3">
-          {/* Quick Persona Switcher: ONLY VISIBLE TO HOST, NEVER VISIBLE TO STUDENTS! */}
+        {/* Right Area: User Status, Host Tool & Profile Actions */}
+        <div className="flex items-center gap-2.5">
+          {/* Quick Persona Switcher: ONLY VISIBLE TO HOST, NEVER VISIBLE TO STUDENTS */}
           {isHost && (
             <div className="relative">
               <button
                 onClick={() => setShowPersonaMenu(!showPersonaMenu)}
-                className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-gray-900 hover:bg-gray-800 border border-purple-700/60 text-xs font-medium text-purple-300 transition-colors"
+                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-purple-950/40 hover:bg-purple-900/40 border border-purple-500/40 text-xs font-medium text-purple-200 transition-colors"
                 title="Host Demo Tool: Test Student and Admin view"
               >
-                <Users className="w-3.5 h-3.5 text-purple-400" />
-                <span className="hidden md:inline">Host Switcher:</span>
-                <span className="font-semibold text-white truncate max-w-[110px]">
+                <Crown className="w-3.5 h-3.5 text-amber-400" />
+                <span className="hidden lg:inline text-[11px] text-gray-300">Test Persona:</span>
+                <span className="font-semibold text-white truncate max-w-[90px]">
                   {user ? user.name.split(' ')[0] : 'Host'}
                 </span>
-                <ChevronDown className="w-3.5 h-3.5 text-gray-400" />
+                <ChevronDown className="w-3 h-3 text-purple-300" />
               </button>
 
               {showPersonaMenu && (
                 <div 
-                  className="absolute right-0 mt-2 w-72 rounded-xl bg-gray-900 border border-gray-700/80 shadow-2xl p-2 z-50 text-xs text-gray-200"
+                  className="absolute right-0 mt-2 w-72 rounded-2xl bg-[#0d121c] border border-white/10 shadow-2xl p-2 z-50 text-xs text-gray-200 backdrop-blur-2xl animate-in fade-in zoom-in-95 duration-150"
                   onMouseLeave={() => setShowPersonaMenu(false)}
                 >
-                  <div className="px-2 py-1.5 border-b border-gray-800 text-[11px] font-semibold text-gray-400 uppercase tracking-wider">
-                    Host Persona Switcher (For Testing)
+                  <div className="px-2.5 py-1.5 border-b border-white/[0.06] text-[10px] font-bold text-gray-400 uppercase tracking-wider">
+                    Host Persona Switcher (Live Preview)
                   </div>
 
                   <button
@@ -121,18 +130,18 @@ export const Navbar: React.FC<NavbarProps> = ({
                       switchPersona('host');
                       setShowPersonaMenu(false);
                     }}
-                    className="w-full text-left px-2.5 py-2 rounded-lg hover:bg-gray-800/80 flex items-center justify-between group mt-1"
+                    className="w-full text-left px-2.5 py-2 rounded-xl hover:bg-white/[0.06] flex items-center justify-between group mt-1 transition-colors"
                   >
                     <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-md bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold">
+                      <div className="w-6 h-6 rounded-lg bg-purple-500/20 text-purple-300 flex items-center justify-center font-bold text-xs">
                         👑
                       </div>
                       <div>
-                        <div className="font-semibold text-purple-300">Platform Host (You)</div>
-                        <div className="text-[11px] text-gray-400">host@learningidea.com</div>
+                        <div className="font-semibold text-white">Platform Host (You)</div>
+                        <div className="text-[10px] text-gray-400">host@learningidea.com</div>
                       </div>
                     </div>
-                    <span className="text-[10px] bg-purple-900/40 text-purple-300 px-1.5 py-0.5 rounded border border-purple-600/30">
+                    <span className="text-[9px] bg-purple-500/20 text-purple-300 px-1.5 py-0.5 rounded border border-purple-500/30 font-bold">
                       Host
                     </span>
                   </button>
@@ -142,18 +151,18 @@ export const Navbar: React.FC<NavbarProps> = ({
                       switchPersona('student-approved');
                       setShowPersonaMenu(false);
                     }}
-                    className="w-full text-left px-2.5 py-2 rounded-lg hover:bg-gray-800/80 flex items-center justify-between group mt-1"
+                    className="w-full text-left px-2.5 py-2 rounded-xl hover:bg-white/[0.06] flex items-center justify-between group mt-1 transition-colors"
                   >
                     <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-md bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                      <div className="w-6 h-6 rounded-lg bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-bold text-xs">
                         🎓
                       </div>
                       <div>
-                        <div className="font-semibold text-emerald-300">Alex Chen (Student)</div>
-                        <div className="text-[11px] text-gray-400">Approved Student View</div>
+                        <div className="font-semibold text-white">Alex Chen (Student)</div>
+                        <div className="text-[10px] text-gray-400">Approved Student View</div>
                       </div>
                     </div>
-                    <span className="text-[10px] bg-emerald-900/40 text-emerald-300 px-1.5 py-0.5 rounded border border-emerald-600/30">
+                    <span className="text-[9px] bg-emerald-500/20 text-emerald-300 px-1.5 py-0.5 rounded border border-emerald-500/30 font-bold">
                       Student
                     </span>
                   </button>
@@ -163,18 +172,18 @@ export const Navbar: React.FC<NavbarProps> = ({
                       switchPersona('student-pending');
                       setShowPersonaMenu(false);
                     }}
-                    className="w-full text-left px-2.5 py-2 rounded-lg hover:bg-gray-800/80 flex items-center justify-between group mt-1"
+                    className="w-full text-left px-2.5 py-2 rounded-xl hover:bg-white/[0.06] flex items-center justify-between group mt-1 transition-colors"
                   >
                     <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+                      <div className="w-6 h-6 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center font-bold text-xs">
                         ⏳
                       </div>
                       <div>
-                        <div className="font-semibold text-amber-300">Sarah Jenkins (Student)</div>
-                        <div className="text-[11px] text-gray-400">Pending Approval View</div>
+                        <div className="font-semibold text-white">Sarah Jenkins (Student)</div>
+                        <div className="text-[10px] text-gray-400">Pending Approval View</div>
                       </div>
                     </div>
-                    <span className="text-[10px] bg-amber-900/40 text-amber-300 px-1.5 py-0.5 rounded border border-amber-600/30">
+                    <span className="text-[9px] bg-amber-500/20 text-amber-300 px-1.5 py-0.5 rounded border border-amber-500/30 font-bold">
                       Pending
                     </span>
                   </button>
@@ -185,17 +194,17 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* User Status / Profile Pill */}
           {user ? (
-            <div className="flex items-center gap-2">
-              <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gray-900 border border-gray-800 text-xs">
+            <div className="flex items-center gap-1.5">
+              <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs">
                 {isApproved ? (
-                  <span className="flex items-center gap-1 text-emerald-400">
-                    <ShieldCheck className="w-3.5 h-3.5" />
-                    <span className="capitalize">{user.name} ({user.role})</span>
+                  <span className="flex items-center gap-1 text-emerald-300 font-medium text-[11px]">
+                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                    <span className="capitalize">{user.name}</span>
                   </span>
                 ) : (
-                  <span className="flex items-center gap-1 text-amber-400">
-                    <Clock className="w-3.5 h-3.5" />
-                    <span>{user.name} (Pending Approval)</span>
+                  <span className="flex items-center gap-1 text-amber-300 font-medium text-[11px]">
+                    <Clock className="w-3.5 h-3.5 text-amber-400" />
+                    <span>Pending Verification</span>
                   </span>
                 )}
               </div>
@@ -203,8 +212,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               {/* Settings button */}
               <button
                 onClick={onOpenSettings}
-                className="p-2 rounded-lg text-gray-400 hover:text-gray-200 hover:bg-gray-800 transition-colors"
-                title="Settings & Audio"
+                className="p-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/[0.06] transition-colors"
+                title="Settings & Audio Voices"
               >
                 <SettingsIcon className="w-4 h-4" />
               </button>
@@ -212,7 +221,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               {/* Logout button */}
               <button
                 onClick={logout}
-                className="p-2 rounded-lg text-gray-400 hover:text-red-400 hover:bg-gray-800 transition-colors"
+                className="p-2 rounded-xl text-gray-400 hover:text-rose-300 hover:bg-rose-500/10 transition-colors"
                 title="Log out"
               >
                 <LogOut className="w-4 h-4" />
@@ -222,23 +231,74 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="flex items-center gap-2">
               <button
                 onClick={() => onOpenAuth('login')}
-                className="px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-200 text-xs font-semibold border border-gray-700 flex items-center gap-1.5 transition-colors"
+                className="px-3.5 py-1.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-gray-200 text-xs font-semibold border border-white/[0.08] flex items-center gap-1.5 transition-all"
               >
-                <LogIn className="w-3.5 h-3.5 text-blue-400" />
+                <LogIn className="w-3.5 h-3.5 text-indigo-400" />
                 <span>Sign In</span>
               </button>
 
               <button
                 onClick={() => onOpenAuth('register')}
-                className="px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-md shadow-blue-500/20 flex items-center gap-1.5 transition-colors"
+                className="px-3.5 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-md shadow-indigo-600/30 flex items-center gap-1.5 transition-all"
               >
                 <UserPlus className="w-3.5 h-3.5" />
-                <span>Request Access</span>
+                <span className="hidden sm:inline">Request Access</span>
+                <span className="sm:hidden">Join</span>
+              </button>
+            </div>
+          )}
+
+          {/* Mobile Hamburger Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/[0.06] transition-colors"
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Drawer Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden mt-2 p-3 rounded-2xl bg-[#0c1017]/95 border border-white/10 shadow-2xl backdrop-blur-2xl space-y-2 animate-in fade-in slide-in-from-top-2 duration-150">
+          <button
+            onClick={() => {
+              setCurrentTab('courses');
+              setMobileMenuOpen(false);
+            }}
+            className={`w-full py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center gap-2 ${
+              currentTab === 'courses' ? 'bg-indigo-600 text-white' : 'text-gray-300 hover:bg-white/[0.04]'
+            }`}
+          >
+            <GraduationCap className="w-4 h-4" />
+            <span>Courses & Roadmaps</span>
+          </button>
+
+          {isAdmin && (
+            <button
+              onClick={() => {
+                setCurrentTab('admin');
+                setMobileMenuOpen(false);
+              }}
+              className={`w-full py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center gap-2 ${
+                currentTab === 'admin' ? 'bg-purple-600 text-white' : 'text-gray-300 hover:bg-white/[0.04]'
+              }`}
+            >
+              <LayoutDashboard className="w-4 h-4" />
+              <span>Admin Management Panel</span>
+            </button>
+          )}
+
+          {user && (
+            <div className="pt-2 border-t border-white/[0.06] flex items-center justify-between px-2 text-xs text-gray-400">
+              <span className="capitalize">{user.name} ({user.role})</span>
+              <button onClick={logout} className="text-rose-400 font-semibold">
+                Sign Out
               </button>
             </div>
           )}
         </div>
-      </div>
+      )}
     </header>
   );
 };

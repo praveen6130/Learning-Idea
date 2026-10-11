@@ -22,7 +22,12 @@ import {
   UserPlus,
   Cpu,
   Video,
-  Award
+  Award,
+  Terminal,
+  Compass,
+  CheckCircle2,
+  Mic,
+  Code2
 } from 'lucide-react';
 
 export const AppContent: React.FC = () => {
@@ -150,7 +155,7 @@ export const AppContent: React.FC = () => {
         quizScore: score,
       });
       setUserProgress(res.progress);
-      showNotification('success', score === 100 ? 'Quiz passed with 100% score! 🎉' : 'Quiz recorded.');
+      showNotification('success', score === 100 ? 'Quiz passed with 100% score!' : 'Quiz recorded successfully.');
     } catch (err) {
       console.error('Quiz save error:', err);
     }
@@ -158,17 +163,22 @@ export const AppContent: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-950 flex items-center justify-center text-white">
-        <div className="flex flex-col items-center gap-3">
-          <Sparkles className="w-8 h-8 text-indigo-400 animate-spin" />
-          <span className="text-sm font-semibold text-gray-300">Loading CognitiveForge AI...</span>
+      <div className="min-h-[100dvh] bg-[#07090e] flex items-center justify-center text-white">
+        <div className="flex flex-col items-center gap-4 p-8 rounded-3xl glass-card">
+          <div className="w-12 h-12 rounded-2xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center">
+            <Sparkles className="w-6 h-6 text-indigo-400 animate-spin" />
+          </div>
+          <div className="text-center">
+            <div className="text-sm font-bold text-white tracking-tight">CognitiveForge AI</div>
+            <div className="text-xs text-gray-400 mt-1">Initializing secure learning environment...</div>
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 flex flex-col selection:bg-indigo-500 selection:text-white">
+    <div className="min-h-[100dvh] bg-[#07090e] text-[#f1f5f9] flex flex-col bg-grid-subtle">
       {/* Top Navbar */}
       <Navbar
         currentTab={currentTab}
@@ -177,99 +187,316 @@ export const AppContent: React.FC = () => {
         onOpenAuth={(mode) => handleOpenAuth(mode || 'login')}
       />
 
-      {/* Floating Notification */}
+      {/* Floating Notification Toast */}
       {notification && (
         <div className="fixed bottom-6 right-6 z-50 animate-in fade-in slide-in-from-bottom-5 duration-300">
-          <div className="px-4 py-3 rounded-2xl bg-gray-900 border border-indigo-500/40 text-xs text-white shadow-2xl flex items-center gap-2.5">
-            <Sparkles className="w-4 h-4 text-amber-300" />
-            <span>{notification.text}</span>
+          <div className="px-4 py-3 rounded-2xl bg-[#0c1017]/95 border border-white/10 text-xs text-white shadow-2xl flex items-center gap-3 backdrop-blur-xl">
+            <div className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+            <span className="font-medium">{notification.text}</span>
           </div>
         </div>
       )}
 
-      {/* Main Container */}
+      {/* Main Content Viewport */}
       <main className="flex-1">
-        {/* SCENARIO 1: USER IS NOT LOGGED IN */}
+        {/* =========================================================================
+            SCENARIO 1: GUEST USER (PREMIUM COMMERCIAL LANDING EXPERIENCE)
+        ========================================================================== */}
         {!user ? (
-          <div className="max-w-6xl mx-auto px-4 py-16 text-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-6">
-              <Sparkles className="w-4 h-4 text-amber-300 animate-pulse" />
-              <span>Next-Gen Autonomous AI Learning</span>
-            </div>
-
-            <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight max-w-4xl mx-auto mb-6">
-              Learn Any Skill From{' '}
-              <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
-                Basic to Advanced
-              </span>{' '}
-              With AI-Generated Videos
-            </h1>
-
-            <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-              Search any course, topic, or engineering domain. Our AI generates an end-to-end 5-level curriculum and synthesizes interactive video masterclasses with synced narration, live code execution, and architectural diagrams.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-              <button
-                onClick={() => handleOpenAuth('login')}
-                className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold text-sm shadow-xl shadow-indigo-600/30 flex items-center justify-center gap-2 transition-all hover:scale-102"
-              >
-                <LogIn className="w-4 h-4" />
-                <span>Sign In to Your Account</span>
-              </button>
-
-              <button
-                onClick={() => handleOpenAuth('register')}
-                className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gray-900 hover:bg-gray-800 text-gray-200 border border-gray-700 font-bold text-sm flex items-center justify-center gap-2 transition-all hover:scale-102"
-              >
-                <UserPlus className="w-4 h-4 text-emerald-400" />
-                <span>Request Access (Register)</span>
-              </button>
-            </div>
-
-            {/* Feature preview cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-              <div className="p-6 rounded-3xl bg-gray-900/80 border border-gray-800">
-                <div className="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center mb-4">
-                  <Layers className="w-5 h-5" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-20">
+            {/* Asymmetrical Hero Section */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
+              {/* Left Column: Authoritative Typography & Action CTAs */}
+              <div className="lg:col-span-7 space-y-6 text-left">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold">
+                  <span className="w-2 h-2 rounded-full bg-indigo-400" />
+                  <span>Autonomous AI Masterclass Platform</span>
                 </div>
-                <h3 className="font-extrabold text-white text-base mb-2">5-Stage AI Roadmaps</h3>
-                <p className="text-xs text-gray-400 leading-relaxed">
-                  Progression from Stage 1: Basic Foundations all the way to Stage 5: Production Capstone.
+
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
+                  Learn any technical skill from{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-indigo-100 to-sky-300">
+                    basic to advanced
+                  </span>{' '}
+                  with AI video lessons.
+                </h1>
+
+                <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-[55ch]">
+                  Search any technical domain. Our engine generates multi-tier roadmaps and interactive video lessons with synchronized voice narration.
+                </p>
+
+                {/* Primary Action Buttons with Button-in-Button Trailing Icons */}
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                  <button
+                    onClick={() => handleOpenAuth('register')}
+                    className="group px-6 py-3.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm shadow-xl shadow-indigo-600/25 flex items-center justify-between sm:justify-center gap-4 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                  >
+                    <span>Request Student Access</span>
+                    <div className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </div>
+                  </button>
+
+                  <button
+                    onClick={() => handleOpenAuth('login')}
+                    className="px-6 py-3.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] text-gray-200 border border-white/[0.08] font-bold text-sm flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                  >
+                    <LogIn className="w-4 h-4 text-indigo-400" />
+                    <span>Sign In to Workspace</span>
+                  </button>
+                </div>
+
+                {/* Micro trust indicators */}
+                <div className="flex flex-wrap items-center gap-6 pt-4 text-xs text-gray-400 border-t border-white/[0.06]">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <span>Host Gated Protection</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <span>100% Autonomous Fallback</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <span>Phone Password Recovery</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Live Interactive Architecture Preview Showcase (Double-Bezel) */}
+              <div className="lg:col-span-5">
+                <div className="double-bezel-card">
+                  <div className="double-bezel-inner p-6 space-y-4">
+                    {/* Header bar */}
+                    <div className="flex items-center justify-between pb-3 border-b border-white/[0.06]">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+                        <span className="text-[11px] font-mono text-gray-400 ml-2">synthesizer_live.tsx</span>
+                      </div>
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                        ONLINE
+                      </span>
+                    </div>
+
+                    {/* Lesson Mock Screen */}
+                    <div className="rounded-xl bg-[#07090e] p-4 border border-white/[0.06] space-y-3">
+                      <div className="flex items-center justify-between text-xs">
+                        <span className="font-bold text-white">Stage 1: Basic Foundations</span>
+                        <span className="text-[10px] text-indigo-400 font-mono">02:30 Synced</span>
+                      </div>
+
+                      {/* Interactive Diagram Mini-Node Map */}
+                      <div className="grid grid-cols-3 gap-2 text-center text-[10px]">
+                        <div className="p-2 rounded-lg bg-indigo-950/40 border border-indigo-500/30 text-indigo-200">
+                          <Compass className="w-3.5 h-3.5 mx-auto mb-1 text-indigo-400" />
+                          <span>Core Mental Model</span>
+                        </div>
+                        <div className="p-2 rounded-lg bg-white/[0.03] border border-white/[0.06] text-gray-300">
+                          <Code2 className="w-3.5 h-3.5 mx-auto mb-1 text-sky-400" />
+                          <span>Syntax Sandbox</span>
+                        </div>
+                        <div className="p-2 rounded-lg bg-white/[0.03] border border-white/[0.06] text-gray-300">
+                          <Award className="w-3.5 h-3.5 mx-auto mb-1 text-amber-400" />
+                          <span>Milestone Quiz</span>
+                        </div>
+                      </div>
+
+                      {/* Audio waveform simulator */}
+                      <div className="p-2.5 rounded-lg bg-white/[0.02] border border-white/[0.04] flex items-center justify-between text-[11px] text-gray-300">
+                        <div className="flex items-center gap-2">
+                          <Mic className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
+                          <span className="text-gray-400">Nova Voice:</span>
+                          <span className="font-semibold text-white">"Welcome to this step-by-step masterclass..."</span>
+                        </div>
+                        <div className="flex items-center gap-0.5 h-3">
+                          <span className="w-0.5 h-2 bg-indigo-400 animate-bounce" />
+                          <span className="w-0.5 h-3 bg-indigo-400 animate-bounce delay-75" />
+                          <span className="w-0.5 h-1.5 bg-indigo-400 animate-bounce delay-150" />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Quick topic test pill */}
+                    <div className="pt-2 flex items-center justify-between text-xs text-gray-400">
+                      <span>Curriculum Generator:</span>
+                      <span className="text-indigo-300 font-mono text-[11px]">5 Stages Ready</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Performance Metric Strip */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-24 p-6 rounded-3xl bg-white/[0.02] border border-white/[0.06]">
+              <div className="p-4 text-left">
+                <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">5 Tiers</div>
+                <div className="text-xs text-gray-400 mt-1">Basic to production curriculum</div>
+              </div>
+              <div className="p-4 text-left border-l border-white/[0.06]">
+                <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">3 Tracks</div>
+                <div className="text-xs text-gray-400 mt-1">Foundation, core and master tiers</div>
+              </div>
+              <div className="p-4 text-left border-l border-white/[0.06]">
+                <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">Synced</div>
+                <div className="text-xs text-gray-400 mt-1">Speech, code and karaoke subtitles</div>
+              </div>
+              <div className="p-4 text-left border-l border-white/[0.06]">
+                <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">100% Gated</div>
+                <div className="text-xs text-gray-400 mt-1">Host and administrator verification</div>
+              </div>
+            </div>
+
+            {/* Asymmetrical Bento Feature Matrix (Anti-slop diversified grid) */}
+            <div className="space-y-6 mb-24">
+              <div className="text-left max-w-xl">
+                <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+                  Engineered for commercial mastery.
+                </h2>
+                <p className="text-xs sm:text-sm text-gray-400 mt-2">
+                  Four synchronized systems that make autonomous education feel like private 1-on-1 tutoring.
                 </p>
               </div>
 
-              <div className="p-6 rounded-3xl bg-gray-900/80 border border-gray-800">
-                <div className="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center mb-4">
-                  <Video className="w-5 h-5" />
-                </div>
-                <h3 className="font-extrabold text-white text-base mb-2">AI Video Storyboards</h3>
-                <p className="text-xs text-gray-400 leading-relaxed">
-                  Synthesized videos with dynamic canvas layouts, live code typing, architecture diagrams, and speech narration.
-                </p>
-              </div>
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 text-left">
+                {/* Tile 1: 5-Stage Adaptive Roadmaps (Col 7) */}
+                <div className="md:col-span-7 double-bezel-card">
+                  <div className="double-bezel-inner p-8 flex flex-col justify-between h-full space-y-6">
+                    <div>
+                      <div className="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4 border border-indigo-500/20">
+                        <Layers className="w-5 h-5" />
+                      </div>
+                      <h3 className="text-lg font-bold text-white mb-2">5-Stage Structured Roadmaps</h3>
+                      <p className="text-xs text-gray-400 leading-relaxed max-w-[50ch]">
+                        Every skill search generates an exhaustive curriculum: Stage 1 Foundations, Stage 2 Core Syntax, Stage 3 Asynchronous Pipelines, Stage 4 Production Hardening, and Stage 5 Capstone.
+                      </p>
+                    </div>
 
-              <div className="p-6 rounded-3xl bg-gray-900/80 border border-gray-800">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
-                  <ShieldCheck className="w-5 h-5" />
+                    <div className="grid grid-cols-3 gap-2 pt-4 border-t border-white/[0.06] text-xs">
+                      <div className="p-3 rounded-xl bg-[#07090e] border border-white/[0.04]">
+                        <div className="font-bold text-emerald-400">🌱 Basic</div>
+                        <div className="text-[10px] text-gray-400 mt-0.5">Start to finish</div>
+                      </div>
+                      <div className="p-3 rounded-xl bg-[#07090e] border border-white/[0.04]">
+                        <div className="font-bold text-sky-400">⚡ Main Body</div>
+                        <div className="text-[10px] text-gray-400 mt-0.5">Core architecture</div>
+                      </div>
+                      <div className="p-3 rounded-xl bg-[#07090e] border border-white/[0.04]">
+                        <div className="font-bold text-purple-400">👑 Master</div>
+                        <div className="text-[10px] text-gray-400 mt-0.5">Zero-trust scale</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-extrabold text-white text-base mb-2">Host & Admin Protection</h3>
-                <p className="text-xs text-gray-400 leading-relaxed">
-                  Private learning environment where administrators verify student applications and curate assignments.
+
+                {/* Tile 2: Neural Video Narration & Synced Subtitles (Col 5) */}
+                <div className="md:col-span-5 double-bezel-card">
+                  <div className="double-bezel-inner p-8 flex flex-col justify-between h-full space-y-6">
+                    <div>
+                      <div className="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4 border border-purple-500/20">
+                        <Video className="w-5 h-5" />
+                      </div>
+                      <h3 className="text-lg font-bold text-white mb-2">Synchronized AI Video Lessons</h3>
+                      <p className="text-xs text-gray-400 leading-relaxed">
+                        Multimodal scene generation creates storyboards with real-world analogies, blueprint diagrams, and live syntax execution.
+                      </p>
+                    </div>
+
+                    <div className="p-3.5 rounded-xl bg-[#07090e] border border-white/[0.04] text-[11px] font-mono text-indigo-300">
+                      ✓ Real-time Web Speech narration<br />
+                      ✓ Synchronized karaoke subtitles<br />
+                      ✓ Exportable lesson transcripts
+                    </div>
+                  </div>
+                </div>
+
+                {/* Tile 3: Interactive Practice & Companion Lab (Col 5) */}
+                <div className="md:col-span-5 double-bezel-card">
+                  <div className="double-bezel-inner p-8 flex flex-col justify-between h-full space-y-6">
+                    <div>
+                      <div className="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-4 border border-sky-500/20">
+                        <Terminal className="w-5 h-5" />
+                      </div>
+                      <h3 className="text-lg font-bold text-white mb-2">Companion Lab & Quizzes</h3>
+                      <p className="text-xs text-gray-400 leading-relaxed">
+                        Test your comprehension with milestone quizzes, execution scratchpads, and persistent progress tracking.
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2 text-xs text-emerald-400 font-semibold">
+                      <Award className="w-4 h-4" />
+                      <span>100% Milestone verification</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Tile 4: Institutional Verification & Security (Col 7) */}
+                <div className="md:col-span-7 double-bezel-card">
+                  <div className="double-bezel-inner p-8 flex flex-col justify-between h-full space-y-6">
+                    <div>
+                      <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4 border border-emerald-500/20">
+                        <ShieldCheck className="w-5 h-5" />
+                      </div>
+                      <h3 className="text-lg font-bold text-white mb-2">Host & Admin Gated Authorization</h3>
+                      <p className="text-xs text-gray-400 leading-relaxed max-w-[50ch]">
+                        Strict role hierarchy protects platform integrity. Unapproved accounts cannot access curricula. Admins manage students, while the Host retains singular authority over admin promotions.
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-3 text-xs text-gray-400">
+                      <span className="px-2.5 py-1 rounded-lg bg-[#07090e] border border-white/[0.06]">Phone Verification</span>
+                      <span className="px-2.5 py-1 rounded-lg bg-[#07090e] border border-white/[0.06]">Admin Approval Queue</span>
+                      <span className="px-2.5 py-1 rounded-lg bg-[#07090e] border border-white/[0.06]">Encrypted Password Reset</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Closing Conversion Island */}
+            <div className="double-bezel-card">
+              <div className="double-bezel-inner p-8 sm:p-12 text-center space-y-6">
+                <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+                  Ready to master any domain at your own pace?
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-400 max-w-md mx-auto leading-relaxed">
+                  Register for access or sign in to generate your first custom roadmap with AI video masterclasses.
                 </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                  <button
+                    onClick={() => handleOpenAuth('register')}
+                    className="group px-7 py-3.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm shadow-xl shadow-indigo-600/25 flex items-center gap-3 transition-all hover:scale-[1.02]"
+                  >
+                    <span>Create Your Account</span>
+                    <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </div>
+                  </button>
+                  <button
+                    onClick={() => handleOpenAuth('login')}
+                    className="px-6 py-3.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] text-gray-300 border border-white/[0.08] font-semibold text-sm transition-all"
+                  >
+                    Sign In to Existing Account
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         ) : !isApproved ? (
-          /* SCENARIO 2: LOGGED IN USER IS PENDING HOST/ADMIN APPROVAL */
+          /* =========================================================================
+              SCENARIO 2: LOGGED IN USER PENDING HOST/ADMIN APPROVAL
+          ========================================================================== */
           <PendingApprovalView />
         ) : (
-          /* SCENARIO 3: APPROVED USER (OR HOST) HAS FULL ACCESS */
-          <>
+          /* =========================================================================
+              SCENARIO 3: APPROVED STUDENT OR HOST/ADMIN WORKSPACE
+          ========================================================================== */
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
             {/* ADMIN PANEL VIEW (ONLY FOR ADMIN OR HOST) */}
             {currentTab === 'admin' && isAdmin && <AdminPanel />}
 
-            {/* COURSES SEARCH VIEW */}
+            {/* COURSES SEARCH & ROADMAP GENERATOR VIEW */}
             {currentTab === 'courses' && (
               <CourseSearch
                 courses={courses}
@@ -282,51 +509,49 @@ export const AppContent: React.FC = () => {
               />
             )}
 
-            {/* ROADMAP & VIDEO VIEW */}
+            {/* 5-STAGE ROADMAP & AI VIDEO MASTERCLASS VIEW */}
             {currentTab === 'roadmap' && selectedCourse && (
               <div className="space-y-8">
-                {/* AI Video Player Overlay */}
+                {/* AI Video Masterclass Player Overlay */}
                 {activeVideo && (
-                  <div className="max-w-6xl mx-auto px-4 pt-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                      <div className="lg:col-span-2">
-                        <AIVideoPlayer
-                          video={activeVideo}
-                          onClose={() => setActiveVideo(null)}
-                          onLessonComplete={() => {
-                            handleToggleLessonCompletion(activeVideo.lessonId, false);
-                          }}
-                          isCompleted={userProgress?.completedLessons.includes(activeVideo.lessonId)}
-                        />
-                      </div>
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 animate-in fade-in duration-300">
+                    <div className="lg:col-span-8">
+                      <AIVideoPlayer
+                        video={activeVideo}
+                        onClose={() => setActiveVideo(null)}
+                        onLessonComplete={() => {
+                          handleToggleLessonCompletion(activeVideo.lessonId, false);
+                        }}
+                        isCompleted={userProgress?.completedLessons.includes(activeVideo.lessonId)}
+                      />
+                    </div>
 
-                      <div className="lg:col-span-1">
-                        <LessonCompanion
-                          video={activeVideo}
-                          onQuizCompleted={handleQuizCompleted}
-                          savedScore={userProgress?.quizScores?.[activeVideo.lessonId]}
-                        />
-                      </div>
+                    <div className="lg:col-span-4">
+                      <LessonCompanion
+                        video={activeVideo}
+                        onQuizCompleted={handleQuizCompleted}
+                        savedScore={userProgress?.quizScores?.[activeVideo.lessonId]}
+                      />
                     </div>
                   </div>
                 )}
 
-                {/* AI Video Generating Loader banner */}
+                {/* AI Video Generating Loader Banner */}
                 {isGeneratingVideo && (
-                  <div className="max-w-6xl mx-auto px-4 pt-6">
-                    <div className="p-8 rounded-3xl bg-indigo-950/40 border border-indigo-500/40 text-center space-y-3">
-                      <Sparkles className="w-10 h-10 text-amber-300 animate-spin mx-auto" />
-                      <div className="text-lg font-bold text-white">
-                        Synthesizing AI Video Storyboard & Voice Narration...
+                  <div className="double-bezel-card">
+                    <div className="double-bezel-inner p-8 text-center space-y-3">
+                      <Sparkles className="w-8 h-8 text-indigo-400 animate-spin mx-auto" />
+                      <div className="text-base font-bold text-white tracking-tight">
+                        Synthesizing AI Video Storyboard & Neural Voice Narration
                       </div>
-                      <p className="text-xs text-indigo-200">
-                        Analyzing curriculum topic, generating visual diagrams, code walkthrough, and synchronized speech.
+                      <p className="text-xs text-gray-400 max-w-md mx-auto">
+                        Generating multi-scene canvas visual assets, interactive code snippets, and synchronized speech for this lesson.
                       </p>
                     </div>
                   </div>
                 )}
 
-                {/* The 5-stage Roadmap */}
+                {/* The 5-Stage Roadmap View */}
                 <RoadmapView
                   course={selectedCourse}
                   progress={userProgress}
@@ -336,7 +561,7 @@ export const AppContent: React.FC = () => {
                 />
               </div>
             )}
-          </>
+          </div>
         )}
       </main>
 
@@ -352,15 +577,15 @@ export const AppContent: React.FC = () => {
         onClose={() => setIsSettingsModalOpen(false)}
       />
 
-      {/* Footer */}
-      <footer className="border-t border-gray-900 bg-gray-950 py-6 px-4 text-center text-xs text-gray-500">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      {/* Commercial Product Footer */}
+      <footer className="border-t border-white/[0.06] bg-[#07090e] py-8 px-4 sm:px-6 text-xs text-gray-500 mt-16">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-gray-400">CognitiveForge AI Platform</span>
-            <span>• Basic to Advanced Autonomous Video Learning</span>
+            <span className="font-bold text-white">CognitiveForge AI</span>
+            <span>• Commercial Autonomous Learning Infrastructure</span>
           </div>
           <div className="text-[11px] text-gray-500">
-            Host & Admin Approval Protection Active • Phone Recovery Enabled
+            Host Gatekeeper Protocol Active • Phone-Based Recovery System
           </div>
         </div>
       </footer>

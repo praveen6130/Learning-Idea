@@ -236,63 +236,63 @@ export const AdminPanel: React.FC = () => {
       {/* Top Metrics Cards */}
       {stats && (
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-3 mb-8">
-          <div className="p-4 rounded-2xl bg-gray-900/80 border border-gray-800">
+          <div className="p-4 rounded-2xl bg-[#0c1017] border border-white/[0.08] text-left">
             <div className="text-xs text-gray-400 font-medium">Pending Requests</div>
-            <div className="text-2xl font-black text-amber-400 mt-1 flex items-center gap-2">
+            <div className="text-2xl font-black text-amber-400 mt-1 flex items-center gap-2 font-mono">
               {stats.pendingApprovals}
               {stats.pendingApprovals > 0 && (
                 <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
               )}
             </div>
-            <div className="text-[11px] text-gray-500 mt-0.5">Need your approval</div>
+            <div className="text-[10px] text-gray-500 mt-0.5">Need host decision</div>
           </div>
 
-          <div className="p-4 rounded-2xl bg-gray-900/80 border border-gray-800">
+          <div className="p-4 rounded-2xl bg-[#0c1017] border border-white/[0.08] text-left">
             <div className="text-xs text-gray-400 font-medium">Approved Students</div>
-            <div className="text-2xl font-black text-emerald-400 mt-1">{stats.approvedStudents}</div>
-            <div className="text-[11px] text-gray-500 mt-0.5">Active learners</div>
+            <div className="text-2xl font-black text-emerald-400 mt-1 font-mono">{stats.approvedStudents}</div>
+            <div className="text-[10px] text-gray-500 mt-0.5">Active learners</div>
           </div>
 
-          <div className="p-4 rounded-2xl bg-gray-900/80 border border-gray-800">
+          <div className="p-4 rounded-2xl bg-[#0c1017] border border-white/[0.08] text-left">
             <div className="text-xs text-gray-400 font-medium">Administrators</div>
-            <div className="text-2xl font-black text-purple-400 mt-1">{stats.totalAdmins}</div>
-            <div className="text-[11px] text-gray-500 mt-0.5">Host & Instructors</div>
+            <div className="text-2xl font-black text-purple-400 mt-1 font-mono">{stats.totalAdmins}</div>
+            <div className="text-[10px] text-gray-500 mt-0.5">Host & instructors</div>
           </div>
 
-          <div className="p-4 rounded-2xl bg-gray-900/80 border border-gray-800">
+          <div className="p-4 rounded-2xl bg-[#0c1017] border border-white/[0.08] text-left">
             <div className="text-xs text-gray-400 font-medium">Total Registered</div>
-            <div className="text-2xl font-black text-blue-400 mt-1">{stats.totalUsers}</div>
-            <div className="text-[11px] text-gray-500 mt-0.5">Platform accounts</div>
+            <div className="text-2xl font-black text-indigo-400 mt-1 font-mono">{stats.totalUsers}</div>
+            <div className="text-[10px] text-gray-500 mt-0.5">Platform accounts</div>
           </div>
 
-          <div className="p-4 rounded-2xl bg-gray-900/80 border border-gray-800">
+          <div className="p-4 rounded-2xl bg-[#0c1017] border border-white/[0.08] text-left">
             <div className="text-xs text-gray-400 font-medium">AI Roadmaps</div>
-            <div className="text-2xl font-black text-cyan-400 mt-1">{stats.totalCourses}</div>
-            <div className="text-[11px] text-gray-500 mt-0.5">Basic to Advanced</div>
+            <div className="text-2xl font-black text-sky-400 mt-1 font-mono">{stats.totalCourses}</div>
+            <div className="text-[10px] text-gray-500 mt-0.5">Basic to advanced</div>
           </div>
 
-          <div className="p-4 rounded-2xl bg-gray-900/80 border border-gray-800">
+          <div className="p-4 rounded-2xl bg-[#0c1017] border border-white/[0.08] text-left">
             <div className="text-xs text-gray-400 font-medium">AI Videos</div>
-            <div className="text-2xl font-black text-rose-400 mt-1">{stats.totalVideosGenerated}</div>
-            <div className="text-[11px] text-gray-500 mt-0.5">Lessons generated</div>
+            <div className="text-2xl font-black text-rose-400 mt-1 font-mono">{stats.totalVideosGenerated}</div>
+            <div className="text-[10px] text-gray-500 mt-0.5">Lessons generated</div>
           </div>
         </div>
       )}
 
       {/* Tabs Bar */}
-      <div className="flex border-b border-gray-800 mb-6 gap-2 overflow-x-auto pb-2">
+      <div className="flex border-b border-white/[0.06] mb-6 gap-2 overflow-x-auto pb-3">
         <button
           onClick={() => setActiveTab('pending')}
-          className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 whitespace-nowrap transition-all ${
+          className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 whitespace-nowrap transition-all ${
             activeTab === 'pending'
-              ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30 shadow-md'
-              : 'text-gray-400 hover:text-gray-200 hover:bg-gray-800/60'
+              ? 'bg-amber-500/15 text-amber-300 border border-amber-500/30'
+              : 'text-gray-400 hover:text-white hover:bg-white/[0.04]'
           }`}
         >
           <Clock className="w-4 h-4" />
           <span>Approval Queue</span>
           {pendingUsers.length > 0 && (
-            <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-amber-500 text-gray-950 font-bold">
+            <span className="px-1.5 py-0.5 rounded-full text-[10px] bg-amber-500 text-gray-950 font-bold">
               {pendingUsers.length}
             </span>
           )}
@@ -300,16 +300,16 @@ export const AdminPanel: React.FC = () => {
 
         <button
           onClick={() => setActiveTab('choose-student')}
-          className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 whitespace-nowrap transition-all ${
+          className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 whitespace-nowrap transition-all ${
             activeTab === 'choose-student'
-              ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30 shadow-md'
-              : 'text-gray-400 hover:text-gray-200 hover:bg-gray-800/60'
+              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
+              : 'text-gray-400 hover:text-white hover:bg-white/[0.04]'
           }`}
         >
           <GraduationCap className="w-4 h-4" />
           <span>Choose Students & Assign</span>
           {selectedStudentIds.length > 0 && (
-            <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-blue-500 text-white font-bold">
+            <span className="px-1.5 py-0.5 rounded-full text-[10px] bg-white/20 text-white font-bold">
               {selectedStudentIds.length} Selected
             </span>
           )}
@@ -317,10 +317,10 @@ export const AdminPanel: React.FC = () => {
 
         <button
           onClick={() => setActiveTab('all-users')}
-          className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 whitespace-nowrap transition-all ${
+          className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 whitespace-nowrap transition-all ${
             activeTab === 'all-users'
-              ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30 shadow-md'
-              : 'text-gray-400 hover:text-gray-200 hover:bg-gray-800/60'
+              ? 'bg-purple-600 text-white shadow-md shadow-purple-600/30'
+              : 'text-gray-400 hover:text-white hover:bg-white/[0.04]'
           }`}
         >
           <Users className="w-4 h-4" />
@@ -329,10 +329,10 @@ export const AdminPanel: React.FC = () => {
 
         <button
           onClick={() => setActiveTab('analytics')}
-          className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 whitespace-nowrap transition-all ${
+          className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 whitespace-nowrap transition-all ${
             activeTab === 'analytics'
-              ? 'bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 shadow-md'
-              : 'text-gray-400 hover:text-gray-200 hover:bg-gray-800/60'
+              ? 'bg-sky-600 text-white shadow-md shadow-sky-600/30'
+              : 'text-gray-400 hover:text-white hover:bg-white/[0.04]'
           }`}
         >
           <History className="w-4 h-4" />

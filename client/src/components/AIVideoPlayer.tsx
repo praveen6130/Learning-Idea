@@ -16,12 +16,8 @@ import {
   Code, 
   Terminal, 
   Award, 
-  MessageSquareQuote,
-  ChevronRight,
-  ChevronLeft,
   X,
-  Mic,
-  Sliders
+  Mic
 } from 'lucide-react';
 
 interface AIVideoPlayerProps {
@@ -157,7 +153,6 @@ export const AIVideoPlayer: React.FC<AIVideoPlayerProps> = ({
       window.speechSynthesis.cancel();
     }
     if (isPlaying && !isMuted) {
-      // Find scene for new time
       let acc = 0;
       for (const sc of video.scenes) {
         if (newTime >= acc && newTime < acc + sc.durationSeconds) {
@@ -188,11 +183,10 @@ export const AIVideoPlayer: React.FC<AIVideoPlayerProps> = ({
     }
   };
 
-  // Video recording / export simulation
+  // Video recording / export package simulation
   const handleDownloadVideo = () => {
     setIsDownloading(true);
     setTimeout(() => {
-      // Generate WebM dummy or text package for download
       const content = `AI Video Lesson Export: ${video.title}
 Course: ${video.topic}
 Duration: ${video.durationFormatted}
@@ -210,7 +204,7 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
       link.click();
       URL.revokeObjectURL(url);
       setIsDownloading(false);
-    }, 1200);
+    }, 1000);
   };
 
   const formatTime = (seconds: number) => {
@@ -222,26 +216,26 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
   return (
     <div
       ref={containerRef}
-      className={`bg-gray-950 rounded-3xl overflow-hidden border border-gray-800 shadow-2xl flex flex-col relative ${
+      className={`rounded-3xl overflow-hidden border border-white/[0.08] shadow-2xl flex flex-col relative bg-[#07090e] ${
         isFullscreen ? 'fixed inset-0 z-50 rounded-none' : 'w-full'
       }`}
     >
-      {/* Video Player Header Bar */}
-      <div className="bg-gray-900/90 border-b border-gray-800 px-5 py-3 flex items-center justify-between z-20">
+      {/* Video Player Header HUD */}
+      <div className="bg-[#0c1017]/95 border-b border-white/[0.06] px-5 py-3 flex items-center justify-between z-20 backdrop-blur-xl">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center shadow-md">
-            <Sparkles className="w-4 h-4 text-white animate-spin" />
+          <div className="w-8 h-8 rounded-xl bg-indigo-600 flex items-center justify-center shadow-md shadow-indigo-600/30">
+            <Sparkles className="w-4 h-4 text-white" />
           </div>
-          <div>
+          <div className="text-left">
             <div className="flex items-center gap-2">
-              <span className="font-bold text-sm text-white truncate max-w-xs sm:max-w-md">
+              <span className="font-bold text-xs sm:text-sm text-white truncate max-w-xs sm:max-w-md">
                 {video.title}
               </span>
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 shrink-0">
-                AI GENERATED VIDEO
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 shrink-0">
+                AI VIDEO
               </span>
             </div>
-            <div className="text-[11px] text-gray-400">
+            <div className="text-[11px] text-gray-400 font-mono">
               Stage {video.levelNumber} • Scene {activeSceneIndex + 1} of {video.scenes.length}: {activeScene.title}
             </div>
           </div>
@@ -249,7 +243,7 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
 
         <div className="flex items-center gap-2">
           {/* AI Narrator voice indicator */}
-          <div className="hidden sm:flex items-center gap-2 px-2.5 py-1 rounded-lg bg-gray-950 border border-gray-800 text-[11px] text-gray-300">
+          <div className="hidden sm:flex items-center gap-2 px-2.5 py-1 rounded-xl bg-[#07090e] border border-white/[0.06] text-[11px] text-gray-300">
             <Mic className={`w-3.5 h-3.5 ${isSpeaking ? 'text-emerald-400 animate-pulse' : 'text-gray-500'}`} />
             <span className="truncate max-w-[120px]">{activeVoiceName.split(' ')[0]} Voice</span>
           </div>
@@ -257,8 +251,8 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
           <button
             onClick={handleDownloadVideo}
             disabled={isDownloading}
-            className="p-2 rounded-lg bg-gray-800 hover:bg-gray-750 text-gray-300 hover:text-white transition-colors text-xs flex items-center gap-1.5"
-            title="Download Video & Lesson Package"
+            className="p-2 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-gray-300 hover:text-white transition-colors text-xs flex items-center gap-1.5"
+            title="Download Video Script & Lesson Package"
           >
             <Download className="w-3.5 h-3.5" />
             <span className="hidden md:inline">{isDownloading ? 'Exporting...' : 'Export'}</span>
@@ -266,7 +260,7 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
 
           <button
             onClick={onClose}
-            className="p-2 rounded-lg bg-gray-800 hover:bg-red-900/40 text-gray-400 hover:text-red-300 transition-colors"
+            className="p-2 rounded-xl bg-white/[0.04] hover:bg-rose-500/20 text-gray-400 hover:text-rose-300 transition-colors"
             title="Close video"
           >
             <X className="w-4 h-4" />
@@ -275,68 +269,66 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
       </div>
 
       {/* THE DYNAMIC AI VIDEO STAGE (VISUAL CANVAS) */}
-      <div className="relative w-full aspect-video bg-gradient-to-br from-gray-950 via-gray-900 to-indigo-950 flex flex-col items-center justify-center p-6 overflow-hidden select-none">
-        {/* Animated background ambient grids */}
+      <div className="relative w-full aspect-video bg-[#05070b] flex flex-col items-center justify-center p-6 overflow-hidden select-none">
+        {/* Subtle background ambient grid */}
         <div 
-          className="absolute inset-0 opacity-15 pointer-events-none"
+          className="absolute inset-0 opacity-10 pointer-events-none"
           style={{
-            backgroundImage: `radial-gradient(circle at 25px 25px, rgba(99, 102, 241, 0.4) 2%, transparent 0%), radial-gradient(circle at 75px 75px, rgba(168, 85, 247, 0.4) 2%, transparent 0%)`,
-            backgroundSize: '100px 100px'
+            backgroundImage: `radial-gradient(circle at 20px 20px, rgba(255, 255, 255, 0.4) 1px, transparent 0)`,
+            backgroundSize: '40px 40px'
           }}
         />
 
-        {/* AI Tutor HUD Waveform (Animated when speaking) */}
-        <div className="absolute top-4 right-4 flex items-center gap-2 bg-gray-950/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-gray-800 z-10">
+        {/* AI Tutor HUD Waveform */}
+        <div className="absolute top-4 right-4 flex items-center gap-2 bg-[#0c1017]/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 z-10 shadow-lg">
           <div className="flex items-center gap-1 h-3">
             <span className={`w-1 rounded-full bg-indigo-400 transition-all ${isSpeaking ? 'h-3 animate-bounce' : 'h-1'}`} />
-            <span className={`w-1 rounded-full bg-blue-400 transition-all ${isSpeaking ? 'h-4 animate-bounce delay-75' : 'h-1'}`} />
+            <span className={`w-1 rounded-full bg-sky-400 transition-all ${isSpeaking ? 'h-4 animate-bounce delay-75' : 'h-1'}`} />
             <span className={`w-1 rounded-full bg-purple-400 transition-all ${isSpeaking ? 'h-2 animate-bounce delay-150' : 'h-1'}`} />
-            <span className={`w-1 rounded-full bg-pink-400 transition-all ${isSpeaking ? 'h-3.5 animate-bounce delay-100' : 'h-1'}`} />
+            <span className={`w-1 rounded-full bg-emerald-400 transition-all ${isSpeaking ? 'h-3.5 animate-bounce delay-100' : 'h-1'}`} />
           </div>
           <span className="text-[10px] font-semibold text-gray-300">
-            {isSpeaking ? 'AI Tutor Narrating' : 'Narrator Ready'}
+            {isSpeaking ? 'AI Voice Narrating' : 'Narrator Ready'}
           </span>
         </div>
 
-        {/* =========================================================================
-            SCENE 1: HOOK & INTRODUCTION
-        ========================================================================== */}
+        {/* SCENE 1: HOOK & INTRODUCTION */}
         {activeScene.type === 'hook' && (
           <div className="max-w-2xl w-full text-center space-y-4 animate-in fade-in zoom-in-95 duration-500 z-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-bold">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/15 text-indigo-300 border border-indigo-500/30 text-xs font-bold">
               <Sparkles className="w-3.5 h-3.5 text-amber-300" />
               <span>{activeScene.visual.badgeText || `Stage ${video.levelNumber} Masterclass`}</span>
             </div>
 
-            <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight drop-shadow-md">
+            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight drop-shadow-md">
               {activeScene.visual.headline}
             </h2>
 
-            <p className="text-xs sm:text-sm text-indigo-200/80 max-w-lg mx-auto font-medium">
+            <p className="text-xs sm:text-sm text-gray-400 max-w-lg mx-auto font-medium">
               {activeScene.visual.subheadline}
             </p>
 
-            {/* Creative Real-World Mental Model / Metaphor */}
+            {/* Creative Mental Model / Real-World Metaphor Card */}
             {activeScene.visual.metaphor && (
-              <div className="p-3.5 rounded-2xl bg-gradient-to-r from-indigo-950/80 via-purple-950/70 to-blue-950/80 border border-indigo-500/40 text-left backdrop-blur-md shadow-xl max-w-lg mx-auto">
-                <div className="flex items-center gap-2 text-amber-300 text-xs font-bold mb-1">
-                  <span className="text-sm">💡</span>
-                  <span className="uppercase tracking-wider text-[10px] text-amber-300 font-bold">Creative Analogy:</span>
+              <div className="p-4 rounded-2xl bg-[#0c1017]/90 border border-indigo-500/30 text-left backdrop-blur-md shadow-xl max-w-lg mx-auto space-y-1.5">
+                <div className="flex items-center gap-2 text-amber-300 text-xs font-bold">
+                  <span>💡</span>
+                  <span className="uppercase tracking-wider text-[10px] text-amber-400 font-bold">Creative Analogy:</span>
                   <span className="text-white font-semibold truncate">{activeScene.visual.metaphor.title}</span>
                 </div>
-                <p className="text-xs text-indigo-100/90 leading-relaxed font-normal">
+                <p className="text-xs text-gray-300 leading-relaxed font-normal">
                   {activeScene.visual.metaphor.analogy}
                 </p>
               </div>
             )}
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
               {activeScene.visual.points?.map((pt, i) => (
                 <div
                   key={i}
-                  className="p-3 rounded-2xl bg-gray-900/80 border border-gray-800/90 text-left backdrop-blur-sm shadow-md"
+                  className="p-3 rounded-2xl bg-[#0c1017]/80 border border-white/[0.06] text-left shadow-md"
                 >
-                  <div className="w-5 h-5 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-[10px] font-bold mb-1.5">
+                  <div className="w-5 h-5 rounded-full bg-indigo-500/20 text-indigo-300 flex items-center justify-center text-[10px] font-bold mb-1.5">
                     0{i + 1}
                   </div>
                   <div className="text-xs font-semibold text-gray-200">{pt}</div>
@@ -346,12 +338,10 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
           </div>
         )}
 
-        {/* =========================================================================
-            SCENE 2: SYSTEM ARCHITECTURE & DIAGRAM
-        ========================================================================== */}
+        {/* SCENE 2: SYSTEM ARCHITECTURE & DIAGRAM */}
         {activeScene.type === 'diagram' && (
           <div className="max-w-3xl w-full text-center space-y-4 animate-in fade-in zoom-in-95 duration-500 z-10">
-            <div className="flex items-center justify-center gap-2 text-xs font-bold text-blue-400 uppercase tracking-wider">
+            <div className="flex items-center justify-center gap-2 text-xs font-bold text-sky-400 uppercase tracking-wider">
               <Cpu className="w-4 h-4" />
               <span>{activeScene.visual.headline}</span>
             </div>
@@ -368,13 +358,13 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
                     key={node.id}
                     className={`p-3.5 rounded-2xl border transition-all text-left relative overflow-hidden ${
                       isActive
-                        ? 'bg-blue-950/70 border-blue-400 shadow-lg shadow-blue-500/20 scale-102'
-                        : 'bg-gray-900/60 border-gray-800 opacity-60'
+                        ? 'bg-indigo-950/50 border-indigo-500/70 shadow-lg shadow-indigo-500/20 scale-[1.02]'
+                        : 'bg-[#0c1017]/80 border-white/[0.06] opacity-60'
                     }`}
                   >
                     <div className="flex items-center justify-between mb-1.5">
                       <span className="text-[10px] font-mono text-gray-400">Step 0{i + 1}</span>
-                      <span className={`w-2 h-2 rounded-full ${isActive ? 'bg-blue-400 animate-ping' : 'bg-gray-700'}`} />
+                      <span className={`w-2 h-2 rounded-full ${isActive ? 'bg-indigo-400 animate-ping' : 'bg-gray-700'}`} />
                     </div>
 
                     <div className="font-bold text-xs text-white mb-1">{node.label}</div>
@@ -386,9 +376,7 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
           </div>
         )}
 
-        {/* =========================================================================
-            SCENE 3: LIVE CODE & IMPLEMENTATION
-        ========================================================================== */}
+        {/* SCENE 3: LIVE CODE & IMPLEMENTATION */}
         {activeScene.type === 'code' && (
           <div className="max-w-2xl w-full animate-in fade-in zoom-in-95 duration-500 z-10">
             <div className="flex items-center justify-between text-xs mb-2">
@@ -396,15 +384,14 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
                 <Code className="w-4 h-4" />
                 <span>{activeScene.visual.headline}</span>
               </div>
-              <span className="text-[11px] text-gray-500">Live Syntax Execution</span>
+              <span className="text-[11px] text-gray-400 font-mono">Live Syntax Execution</span>
             </div>
 
             {/* Simulated IDE Window */}
-            <div className="bg-gray-950 rounded-2xl border border-gray-800 shadow-2xl overflow-hidden font-mono text-xs">
-              {/* Window controls header */}
-              <div className="bg-gray-900 px-4 py-2 border-b border-gray-800 flex items-center justify-between">
+            <div className="bg-[#07090e] rounded-2xl border border-white/10 shadow-2xl overflow-hidden font-mono text-xs">
+              <div className="bg-[#0c1017] px-4 py-2 border-b border-white/[0.06] flex items-center justify-between">
                 <div className="flex items-center gap-1.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
                   <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
                 </div>
@@ -412,13 +399,11 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
                 <span className="text-[10px] text-emerald-400 font-bold">READY</span>
               </div>
 
-              {/* Code editor body */}
-              <div className="p-4 text-gray-300 max-h-48 overflow-y-auto leading-relaxed text-[11px] sm:text-xs">
+              <div className="p-4 text-gray-300 max-h-48 overflow-y-auto leading-relaxed text-[11px] sm:text-xs text-left">
                 <pre className="whitespace-pre-wrap">{activeScene.visual.code || '// Execution active'}</pre>
               </div>
 
-              {/* Mini Terminal Output */}
-              <div className="bg-gray-900/90 border-t border-gray-800 px-3 py-1.5 flex items-center gap-2 text-[10px] text-gray-400">
+              <div className="bg-[#0c1017] border-t border-white/[0.06] px-3 py-1.5 flex items-center gap-2 text-[10px] text-gray-400">
                 <Terminal className="w-3 h-3 text-emerald-400" />
                 <span>Status: Compiled successfully • 0 errors • Execution time: 14ms</span>
               </div>
@@ -426,19 +411,17 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
           </div>
         )}
 
-        {/* =========================================================================
-            SCENE 4: PRO-TIPS & PITFALLS
-        ========================================================================== */}
+        {/* SCENE 4: PRO-TIPS & PITFALLS */}
         {activeScene.type === 'tips_and_pitfalls' && (
-          <div className="max-w-2xl w-full space-y-3 animate-in fade-in zoom-in-95 duration-500 z-10">
+          <div className="max-w-2xl w-full space-y-3 animate-in fade-in zoom-in-95 duration-500 z-10 text-left">
             <div className="text-center mb-2">
               <h3 className="text-lg sm:text-xl font-bold text-white">{activeScene.visual.headline}</h3>
               <p className="text-xs text-gray-400">{activeScene.visual.subheadline}</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {/* Recommended Patterns (DO) */}
-              <div className="p-4 rounded-2xl bg-emerald-950/40 border border-emerald-500/40 shadow-md">
+              {/* Best Practices (DO) */}
+              <div className="p-4 rounded-2xl bg-emerald-950/20 border border-emerald-500/30 shadow-md">
                 <div className="text-xs font-bold text-emerald-400 flex items-center gap-1.5 mb-2.5 uppercase tracking-wider">
                   <CheckCircle className="w-3.5 h-3.5" />
                   <span>Best Practices (DO)</span>
@@ -453,8 +436,8 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
                 </ul>
               </div>
 
-              {/* Critical Traps (DON'T) */}
-              <div className="p-4 rounded-2xl bg-rose-950/40 border border-rose-500/40 shadow-md">
+              {/* Traps (DON'T) */}
+              <div className="p-4 rounded-2xl bg-rose-950/20 border border-rose-500/30 shadow-md">
                 <div className="text-xs font-bold text-rose-400 flex items-center gap-1.5 mb-2.5 uppercase tracking-wider">
                   <AlertCircle className="w-3.5 h-3.5" />
                   <span>Costly Traps (AVOID)</span>
@@ -472,26 +455,24 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
           </div>
         )}
 
-        {/* =========================================================================
-            SCENE 5: RECAP & CELEBRATION
-        ========================================================================== */}
+        {/* SCENE 5: RECAP & CELEBRATION */}
         {activeScene.type === 'recap_and_quiz' && (
           <div className="max-w-xl w-full text-center space-y-4 animate-in fade-in zoom-in-95 duration-500 z-10">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-amber-500 to-yellow-300 flex items-center justify-center mx-auto shadow-xl shadow-amber-500/30 text-gray-950">
-              <Award className="w-9 h-9" />
+            <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mx-auto shadow-xl text-amber-400">
+              <Award className="w-8 h-8" />
             </div>
 
             <div>
               <h2 className="text-2xl sm:text-3xl font-black text-white">
-                {activeScene.visual.headline || 'Skill Stage Accomplished! 🎉'}
+                {activeScene.visual.headline || 'Skill Stage Accomplished!'}
               </h2>
-              <p className="text-xs sm:text-sm text-gray-300 mt-1">
-                You have mastered the foundations of {video.lessonTitle}. Take the quiz below to cement your knowledge!
+              <p className="text-xs sm:text-sm text-gray-400 mt-1">
+                You have finished the masterclass for {video.lessonTitle}. Take the quiz to cement your knowledge!
               </p>
             </div>
 
-            <div className="p-3.5 rounded-2xl bg-gray-900/90 border border-indigo-500/40 text-left">
-              <div className="text-[11px] font-bold text-indigo-400 uppercase tracking-wider mb-1">
+            <div className="p-3.5 rounded-2xl bg-[#0c1017] border border-indigo-500/30 text-left">
+              <div className="text-[10px] font-bold text-indigo-400 uppercase tracking-wider mb-1">
                 Challenge Mission
               </div>
               <div className="text-xs text-gray-200 font-medium">
@@ -501,11 +482,9 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
           </div>
         )}
 
-        {/* =========================================================================
-            REAL-TIME SYNCHRONIZED KARAOKE SUBTITLES
-        ========================================================================== */}
+        {/* REAL-TIME SYNCHRONIZED KARAOKE SUBTITLES */}
         {showSubtitles && activeSubtitle && (
-          <div className="absolute bottom-6 max-w-xl mx-auto px-4 py-2 rounded-2xl bg-gray-950/85 backdrop-blur-md border border-gray-700/80 shadow-2xl text-center z-20 pointer-events-none">
+          <div className="absolute bottom-6 max-w-xl mx-auto px-4 py-2 rounded-2xl bg-[#07090e]/90 backdrop-blur-md border border-white/10 shadow-2xl text-center z-20 pointer-events-none">
             <span className="text-xs sm:text-sm font-semibold text-yellow-300 drop-shadow">
               "{activeSubtitle.text}"
             </span>
@@ -514,7 +493,7 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
       </div>
 
       {/* TIMELINE SCRUBBER BAR */}
-      <div className="bg-gray-900/90 px-4 pt-3 pb-1 border-t border-gray-800">
+      <div className="bg-[#0c1017] px-4 pt-3 pb-1 border-t border-white/[0.06]">
         <div className="relative flex items-center group">
           <input
             type="range"
@@ -523,20 +502,20 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
             step={0.1}
             value={currentTime}
             onChange={(e) => handleSeek(parseFloat(e.target.value))}
-            className="w-full h-1.5 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-indigo-500 hover:h-2 transition-all"
+            className="w-full h-1.5 bg-white/10 rounded-lg appearance-none cursor-pointer accent-indigo-500 hover:h-2 transition-all"
           />
         </div>
 
-        {/* Scene Jump Pills */}
+        {/* Scene Jump Chapter Pills */}
         <div className="flex items-center justify-between gap-1 mt-2 overflow-x-auto pb-1">
           {video.scenes.map((scene, idx) => (
             <button
               key={scene.sceneNumber}
               onClick={() => handleJumpToScene(idx)}
-              className={`px-2 py-0.5 rounded text-[10px] font-semibold whitespace-nowrap transition-colors flex items-center gap-1 ${
+              className={`px-2 py-0.5 rounded-lg text-[10px] font-semibold whitespace-nowrap transition-colors flex items-center gap-1 ${
                 activeSceneIndex === idx
-                  ? 'bg-indigo-600/30 text-indigo-300 border border-indigo-500/40'
-                  : 'text-gray-500 hover:text-gray-300'
+                  ? 'bg-indigo-600 text-white shadow-sm'
+                  : 'text-gray-400 hover:text-white hover:bg-white/[0.04]'
               }`}
             >
               <span>{idx + 1}. {scene.title.split(' ')[0]}</span>
@@ -546,12 +525,12 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
       </div>
 
       {/* PLAYER CONTROLS FOOTER */}
-      <div className="bg-gray-900 px-4 py-3 flex items-center justify-between text-xs border-t border-gray-800/80">
+      <div className="bg-[#07090e] px-4 py-3 flex items-center justify-between text-xs border-t border-white/[0.06]">
         <div className="flex items-center gap-3">
           {/* Play/Pause Button */}
           <button
             onClick={togglePlay}
-            className="w-9 h-9 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white flex items-center justify-center shadow-lg shadow-indigo-600/30 transition-transform active:scale-95"
+            className="w-9 h-9 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white flex items-center justify-center shadow-lg shadow-indigo-600/30 transition-transform active:scale-95"
           >
             {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 ml-0.5" />}
           </button>
@@ -559,7 +538,7 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
           {/* Replay Button */}
           <button
             onClick={() => handleSeek(0)}
-            className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
+            className="p-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/[0.04] transition-colors"
             title="Replay from start"
           >
             <RotateCcw className="w-4 h-4" />
@@ -577,7 +556,7 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
           <select
             value={activeVoiceName}
             onChange={(e) => setActiveVoiceName(e.target.value)}
-            className="bg-gray-950 border border-gray-800 rounded-lg px-2 py-1 text-[11px] text-gray-300 focus:outline-none hidden sm:block"
+            className="bg-[#0c1017] border border-white/10 rounded-xl px-2.5 py-1 text-[11px] text-gray-300 focus:outline-none hidden sm:block cursor-pointer"
           >
             <option value="Nova (Warm AI Educator)">Voice: Nova (Educator)</option>
             <option value="Orion (Deep Tech Lead)">Voice: Orion (Tech Lead)</option>
@@ -588,7 +567,7 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
           <select
             value={playbackSpeed}
             onChange={(e) => setPlaybackSpeed(parseFloat(e.target.value))}
-            className="bg-gray-950 border border-gray-800 rounded-lg px-2 py-1 text-[11px] text-gray-300 focus:outline-none"
+            className="bg-[#0c1017] border border-white/10 rounded-xl px-2 py-1 text-[11px] text-gray-300 focus:outline-none cursor-pointer"
           >
             <option value="0.75">0.75x</option>
             <option value="1">1.0x</option>
@@ -600,10 +579,10 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
           {/* CC Toggle */}
           <button
             onClick={() => setShowSubtitles(!showSubtitles)}
-            className={`px-2 py-1 rounded text-[11px] font-bold border transition-colors ${
+            className={`px-2 py-1 rounded-lg text-[11px] font-bold border transition-colors ${
               showSubtitles
-                ? 'bg-blue-500/20 text-blue-300 border-blue-500/30'
-                : 'text-gray-500 border-gray-800'
+                ? 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30'
+                : 'text-gray-500 border-white/[0.08]'
             }`}
           >
             CC
@@ -612,7 +591,7 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
           {/* Mute/Unmute */}
           <button
             onClick={() => setIsMuted(!isMuted)}
-            className="p-1.5 rounded text-gray-400 hover:text-white transition-colors"
+            className="p-1.5 rounded-lg text-gray-400 hover:text-white transition-colors"
           >
             {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
           </button>
@@ -620,7 +599,7 @@ ${video.scenes.map((s) => `[Scene ${s.sceneNumber}: ${s.title}]\n${s.narration}`
           {/* Fullscreen */}
           <button
             onClick={toggleFullscreen}
-            className="p-1.5 rounded text-gray-400 hover:text-white transition-colors"
+            className="p-1.5 rounded-lg text-gray-400 hover:text-white transition-colors"
           >
             {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
           </button>

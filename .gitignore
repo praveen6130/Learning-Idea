@@ -39,3 +39,13 @@ Thumbs.db
 
 # Database files
 server/data/db.json.bak
+
+# Agent & tool scratch directories
+.agents/
+.hermes/
+.inferencesh/
+.terramind/
+.windsurf/
+.zencoder/
+skills-lock.json
+
